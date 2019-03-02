@@ -1,0 +1,235 @@
+.topMenu {
+  font-family: "Century Gothic";
+  padding: 17px 2% 17px 5%;
+  background-color: transparent;
+  transition: 0.3s ease background-color;
+  padding-left: 5%;
+  padding-right: 2%;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.topMenu.fixedNav {
+  background-color: #212429;
+}
+.topMenu .navbar-toggler:focus {
+  outline: none;
+}
+.topMenu #nav-icon3 {
+  width: 30px;
+  height: 20px;
+  margin-bottom: 25px;
+  margin-right: 13px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.topMenu #nav-icon3 span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #af9a68;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+.topMenu #nav-icon3 span:nth-child(1) {
+  top: 0px;
+}
+.topMenu #nav-icon3 span:nth-child(2), .topMenu #nav-icon3 span:nth-child(3) {
+  top: 50%;
+}
+.topMenu #nav-icon3 span:nth-child(4) {
+  top: 100%;
+}
+.topMenu #nav-icon3.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+.topMenu #nav-icon3.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.topMenu #nav-icon3.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.topMenu #nav-icon3.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+.topMenu .navbar-toggler span {
+  height: 2px;
+  width: 25px;
+  background-color: #af9a68;
+  margin: 3px 0;
+}
+.topMenu .navbar-brand {
+  margin-left: 26px;
+}
+.topMenu .navbar-brand img {
+  max-height: 50px;
+  margin-top: -3px;
+}
+.topMenu .socials {
+  order: -1;
+  visibility: hidden;
+  transition: 0.3s ease all;
+}
+.topMenu.fixedNav .socials {
+  max-width: auto;
+  visibility: visible;
+  transition: 0.3s ease all;
+}
+.topMenu .socials svg {
+  height: 18px;
+  fill: #af9a68;
+  transform: scale(1);
+  transition: 0.5s ease transform;
+}
+.topMenu .socials svg:hover {
+  transform: scale(1.1);
+  transition: 0.5s ease transform;
+}
+
+#navbarMenu li a {
+  color: #c6c7c1;
+}
+
+#navbarMenu .menu-tooth {
+  max-height: 48px;
+  margin-right: 5%;
+}
+
+#navbarMenu li.active a {
+  color: #af9a68;
+}
+
+#navbarMenu .navigation {
+  text-transform: uppercase;
+  margin: auto;
+}
+
+#navbarMenu .navigation a {
+  font-size: 13px;
+  padding: 8px 30px;
+  transition: 0.5s ease color;
+}
+#navbarMenu .navigation a:hover {
+  color: #af9a68;
+  transition: 0.5s ease color;
+}
+
+#navbarMenu .languages a {
+  font-size: 14px;
+  position: relative;
+  padding-bottom: 16px;
+  font-weight: bold;
+  transition: 0.5s ease color;
+}
+#navbarMenu .languages a::after {
+  content: "";
+  width: 0;
+  height: 0;
+  margin: auto;
+  transition: 0.5s ease all;
+}
+#navbarMenu .languages a:hover {
+  color: #af9a68;
+  display: flex;
+  flex-direction: column;
+}
+#navbarMenu .languages a:hover::after {
+  height: 2px;
+  width: 80%;
+  margin: auto;
+  background-color: #af9a68;
+  transition: 0.5s ease all;
+}
+
+#navbarMenu .languages li.active a {
+  display: flex;
+  flex-direction: column;
+}
+#navbarMenu .languages li.active a::after {
+  content: "";
+  height: 2px;
+  width: 80%;
+  margin: auto;
+  background-color: #af9a68;
+}
+
+@media screen and (max-width: 1280px) {
+  .topMenu {
+    padding-left: 2%;
+  }
+
+  #navbarMenu .menu-tooth {
+    margin-right: 2%;
+  }
+}
+@media screen and (max-width: 1150px) {
+  #navbarMenu .navigation a {
+    padding: 8px 20px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  #navbarMenu .navigation a {
+    padding: 8px 15px;
+  }
+}
+@media screen and (max-width: 991px) {
+  #navbarMenu .navigation {
+    padding: 8px 15px;
+  }
+  #navbarMenu .navigation a {
+    font-size: 16px;
+  }
+  #navbarMenu .socials {
+    order: 0;
+    justify-content: center;
+  }
+  #navbarMenu .socials svg {
+    height: 25px;
+  }
+  #navbarMenu .languages a {
+    font-size: 16px;
+  }
+  #navbarMenu .menu-tooth {
+    display: none;
+  }
+
+  #navbarMenu .socials > li:not(:last-child),
+#navbarMenu .languages > li:not(:last-child) {
+    margin-right: 35px;
+  }
+}
+@media screen and (min-width: 320px) {
+  .topMenu .socials {
+    transition: 0.5s ease all;
+  }
+}
+
+/*# sourceMappingURL=menu.css.map */

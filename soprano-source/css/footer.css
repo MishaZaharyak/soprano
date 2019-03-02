@@ -1,0 +1,189 @@
+.footer {
+  position: relative;
+  font-family: "Century Gothic";
+}
+@media screen and (max-width: 1100px) {
+  .footer {
+    background-image: url("../images/Path49.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: calc(100% + 10px) 100%;
+  }
+}
+.footer .navbar {
+  display: flex;
+  flex-direction: column;
+}
+.footer .navbar div {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  padding-right: 95px;
+}
+.footer .navbar div .navigation {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  text-transform: uppercase;
+}
+.footer .navbar div .navigation a {
+  font-size: 13px;
+  padding: 8px 30px;
+  transition: 0.5s ease color;
+  line-height: 13px;
+  color: #212429;
+}
+.footer .navbar div .navigation a:hover {
+  color: #af9a68;
+  transition: 0.5s ease color;
+}
+.footer .navbar div .socials {
+  flex-direction: column;
+}
+.footer .navbar div .socials svg {
+  height: 18px;
+  fill: #af9a68;
+  transform: scale(1);
+  transition: 0.5s ease transform;
+}
+.footer .navbar div .socials svg:hover {
+  transform: scale(1.1);
+  transition: 0.5s ease transform;
+}
+.footer .navbar .navbar-brand {
+  max-height: 73px;
+}
+.footer .info {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 100px 30px 100px;
+}
+.footer .info span {
+  color: #212429;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: bold;
+}
+.footer .info span::after {
+  content: "";
+  height: 1px;
+  margin: auto;
+  margin-top: 8px;
+  width: 80%;
+  background-color: #212429;
+}
+.footer .info button {
+  color: #212429;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: bold;
+  background-color: transparent;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+.footer .info button:hover {
+  color: #af9a68;
+}
+.footer .info button:hover::after {
+  background-color: #af9a68;
+  width: 100%;
+  transition: 0.5s ease width;
+}
+.footer .info button:focus {
+  outline: none;
+  box-shadow: none;
+}
+.footer .info button::after {
+  content: "";
+  height: 1px;
+  margin: auto;
+  margin-top: 8px;
+  width: 80%;
+  background-color: #212429;
+  transition: 0.5s ease width;
+}
+.footer .copyright {
+  background-color: #212429;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .copyright p {
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 11px;
+  line-height: 16px;
+  color: #af9a68;
+}
+
+@media screen and (max-width: 992px) {
+  .footer .navbar div {
+    padding-right: 45px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .footer .navbar div {
+    padding-right: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer .navbar div .socials {
+    flex-direction: row;
+  }
+  .footer .navbar div .socials a {
+    padding: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer .navbar div .navigation a {
+    padding: 8px 20px;
+  }
+  .footer .info {
+    padding: 40px 30px 30px 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .footer .navbar div .navigation {
+    flex-direction: column;
+  }
+  .footer .navbar div .navigation a {
+    padding: 20px 20px;
+  }
+  .footer .info {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+  }
+  .footer .info span {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    line-height: 18px;
+  }
+  .footer .info span::after {
+    width: 20%;
+  }
+  .footer .info button {
+    align-self: center;
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 320px) {
+  .footer .navbar div {
+    transition: 0.5s ease padding;
+  }
+  .footer .navbar div .navigation a {
+    transition: 0.5s ease padding;
+  }
+  .footer .info {
+    transition: 0.5s ease padding;
+  }
+}
+
+/*# sourceMappingURL=footer.css.map */

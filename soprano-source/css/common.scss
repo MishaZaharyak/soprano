@@ -1,0 +1,987 @@
+@import './vars.scss';
+// advantages section
+
+body {
+    font-family: $centuryGothicFont;
+}
+
+
+.advantages {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 180px 0 0;
+    max-width: 960px;
+    justify-content: center;
+    font-family: $centuryGothicFont;
+
+    div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        max-width: 200px;
+        min-width: 200px;
+        text-align: center;
+        margin: 25px 10px 0;
+
+        h6 {
+            max-width: 150px;
+            word-wrap: wrap;
+            font-size: 17px;
+            line-height: 20px;
+            color: $dark-light;
+            font-weight: bold;
+        }
+
+        small {
+            font-size: 12px;
+            line-height: 16px;
+            color: $text-fade-color;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .advantages {
+        padding: 165px 35px 0 35px;
+
+        div {
+            max-width: 180px;
+            min-width: 180px;
+        }
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .advantages {
+        padding: 145px 35px 0 35px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .advantages {
+        padding: 125px 35px 0 35px;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .advantages {
+        transition: .5s ease all; 
+    }
+}
+
+// end advantages section
+
+// page links
+.pages-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 110px 25px 50px;
+    font-family: $centuryGothicFont;
+
+    background-image: url('../images/Layer0.png');
+    background-repeat: no-repeat;
+    background-position: -57px 0;
+    background-size: calc(100% + 80px) auto;
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0 60px;
+        text-align: center; 
+
+        li {
+            display: flex;
+            justify-content: center;
+
+            a {
+                text-decoration: none;
+                font-size: 22px;
+                padding: 20px 10px;
+                line-height: 30px;
+                color: $dark-text-color;
+                font-weight: bold;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                transition: .5s ease color;
+
+                &::after {
+                    content: '';
+                    height: 1px;
+                    margin: auto;
+                    margin-top: 10px;
+                    width: 80%;
+                    background-color: $text-fade-color;
+                    transition: .5s ease width;
+                }
+
+                &:hover {
+                    color: $active-color;
+                    transition: .5s ease color;
+
+                    &::after {
+                        background-color: $active-color; 
+                        width: 100%;
+                        transition: .5s ease width;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .pages-links {
+        background-position: -41px 0;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .pages-links {
+        background-position: -14px 0;
+    }
+}
+
+@media screen and (max-width: 669px) {
+    .pages-links {
+        background-position: -9px 0;
+    }
+}
+// end page links
+
+// about clinic
+.about-clinic {
+    font-family: $centuryGothicFont;
+    padding: 95px 50px 60px 50px;
+    margin: 0;
+    background-image: url('../images/Path44.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: calc(100% + 10px) 92%;
+
+
+    div.first {
+        padding-right: 100px;
+    }
+
+    .slider {
+        .slide {
+            text-align: right;
+
+            img {
+                max-height: 500px;
+                max-width: 412px;
+                display: inline;
+                margin-right: 3px;
+            }       
+        }
+    }
+
+    article.last {
+        padding: 0;
+
+        h2 {
+            font-size: 30px;
+            line-height: 30px;
+            color: $dark-text-color;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        p {
+            max-width: 530px;
+            // height: 260px;
+            font-size: 12px;
+            line-height: 20px;
+            color: $dark-text-color;
+        }
+
+        button {
+            font-size: 12px;
+            line-height: 20px;
+            color: $dark-text-color;
+            font-weight: bold;
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            margin-top: 60px; 
+            padding: 0;
+            max-width: 80px;
+            border: none;
+            cursor: pointer;
+            transition: .5s ease color;
+
+            &:hover {
+                color: $active-color;
+                transition: .5s ease color;
+
+                &::after {
+                    width: 100%;
+                    background-color: $active-color;
+                    transition: .5s ease all;
+                }
+            }
+
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+
+            &::after {
+                content: '';
+                height: 1px;
+                margin: auto;
+                margin-top: 7px;
+                width: 80%;
+                background-color: $text-fade-color;
+                transition: .5s ease all;
+            }
+        }
+    }
+
+    .arrows {
+        position: relative;
+        // height: 50px;
+
+        .position-absolute {
+            top: 0;
+            right: 206px;
+        }
+
+        .slick-new-prev {
+            background: url('../images/Group35.png') no-repeat 100% 50%;
+            transform: rotate(180deg);
+            width: 10px;
+            height: 18px;
+            border: none;
+            position: absolute;
+            top: 19px;
+            right: 4px;
+            z-index: 1;
+    
+            &:hover {
+                cursor: pointer;
+            }
+    
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+    
+        .slick-new-next {
+            background: url('../images/Group35.png') no-repeat 100% 0;
+            width: 18px;
+            height: 36px;
+            border: none;
+            position: absolute;
+            top: 10px;
+            right: -18px;
+            z-index: 1;
+    
+            &:hover {
+                cursor: pointer;
+            }
+    
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .about-clinic {
+        div.first  {
+            padding-right: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .about-clinic {
+
+        div.first {
+            padding-right: 0;
+            order: 1;
+        }
+
+        .slider {
+            .slide {
+                text-align: center;
+
+                img {
+                    max-width: 100%;
+                    max-height: auto;
+                } 
+            }
+        }
+
+        article.last {
+            text-align: center;
+
+            h4 {
+                margin-bottom: 30px;
+            }
+    
+            p {
+                max-width: 800px;
+                margin: auto;
+                font-size: 15px;
+                margin-bottom: 20px;
+            }
+    
+            button {
+                margin: 40px auto 30px;
+            }
+        }
+
+        .arrows {
+            position: relative;
+    
+            .position-absolute {
+                top: 0;
+                right: 50%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .about-clinic {
+        article.last {    
+            p {
+                max-width: 600px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .about-clinic {
+        padding: 60px 0;
+
+        .arrows {
+            display: none;
+        }
+
+        .slider {
+            .slide {
+    
+                img {
+                    margin-right: 0;
+                }       
+            }
+        }
+
+        article.last {    
+            padding: 0 30px;
+
+            p {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .about-clinic {
+        div.first  {
+            transition: .5s ease padding;
+        }
+    }
+}
+// end about clinic
+
+
+// articles-promotions
+.articles-promotions {
+    padding: 50px 160px 50px;
+    font-family: $centuryGothicFont;
+
+    background-image: url('../images/Path49.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: calc(100% + 10px) 100%;
+
+    .header {
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            font-size: 30px;
+            line-height: 30px;
+            color: $dark-text-color;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        button {
+            background-color: transparent;
+            color: $active-color;
+            display: flex;
+            flex-direction: column;
+            margin-top: 26px; 
+            text-transform: uppercase;
+            padding: 0;
+            max-width: 80px;
+            font-size: 13px;
+            line-height: 16px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: .5s ease color;
+
+            &:hover {
+                color: $text-fade-color;
+                transition: .5s ease color;
+                &::after {
+                    width: 100%;
+                    background-color: $text-fade-color;
+                    transition: .5s ease all;
+                }
+            }
+
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+
+            &::after {
+                content: '';
+                height: 1px;
+                margin: auto;
+                margin-top: 7px;
+                width: 80%;
+                background-color: $active-color;
+                transition: .5s ease all;
+            }
+        }
+    }
+
+    .articles {
+        display: flex;
+        justify-content: space-between;
+
+        img {
+            max-width: 305px;
+        }
+
+        h3 {
+            font-size: 22px;
+            line-height: 22px;
+            color: $dark-text-color;
+            font-weight: bold;
+            margin-top: 20px; 
+        }
+
+        p {
+            font-size: 12px;
+            line-height: 20px;
+            color: $dark-text-color;
+            max-width: 305px;
+        }
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .articles-promotions {
+        padding: 50px 70px 50px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .articles-promotions {
+        padding: 90px 70px 10px;
+        .articles {
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                max-width: 500px;
+            }
+
+            article {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .articles-promotions {
+        transition: .5s ease padding;
+
+        .articles {
+            transition: .5s ease all;
+        }
+    }
+}
+// end articles-promotions
+
+// reviews 
+.reviews {
+    padding: 100px 100px;
+    font-family: $centuryGothicFont;
+    margin: 0;
+    background-image: url('../images/black-sm-path.png');
+    background-color: $clip-bg-color;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: calc(100% + 10px) 95%;
+
+    div.first {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        padding-left: 210px;
+        justify-content: center;
+
+        h2 {
+            font-size: 30px;
+            line-height: 30px;
+            color: $light-text-color-2;
+            font-weight: bold;
+
+            span {
+                display: block;
+            }
+        }
+
+        button {
+            color: $light-text-color;
+            display: flex;
+            flex-direction: column;
+            font-size: 12px;
+            line-height: 16px;
+            font-weight: bold;
+            background-color: transparent;
+            text-transform: uppercase;
+            margin-top: 50px;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                color: $active-color;
+
+                &::after {
+                    background-color: $active-color; 
+                    width: 100%;
+                    transition: .5s ease width;
+                }
+            }
+
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+
+            &::after {
+                content: '';
+                height: 1px;
+                margin: auto;
+                margin-top: 8px;
+                width: 80%;
+                background-color: $light-text-color;
+                transition: .5s ease width;
+            }
+        }
+    }
+
+    div.last {
+        position: relative;
+        padding-left: 40px;
+        padding-right: 0;
+
+        .slider {
+            .slide {
+
+                margin: 0 3px;
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 25px;
+
+                    img {
+                        border-radius: 50%;
+                        width: 50px;
+                        height: 50px;
+                    }
+
+                    h5 {
+                        font-size: 22px;
+                        line-height: 22px;
+                        color: $light-text-color-2;
+                        font-weight: bold;
+                        margin-left: 20px;
+                    }
+                }
+
+                p {
+                    max-width: 454px;
+                    // max-height: 137px;
+                    font-size: 12px;
+                    line-height: 20px;
+                    color: $active-color;
+                }
+
+                span {
+                    font-size: 12px;
+                    line-height: 20px;
+                    color: $light-text-color-2;
+                    font-weight: bold;
+                }
+            }
+        }
+    
+        .position-absolute {
+            top: calc(50% - 17px);
+            left: 0;
+        }
+
+        .slick-new-prev {
+            background: url('../images/Group7.png') no-repeat 100% 50%;
+            transform: rotate(180deg);
+            width: 10px;
+            height: 18px;
+            border: none;
+            position: absolute;
+            top: 19px;
+            display: block;
+            right: 4px;
+            z-index: 1;
+    
+            &:hover {
+                cursor: pointer;
+            }
+    
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+    
+        .slick-new-next {
+            background: url('../images/Group7.png') no-repeat 100% 0;
+            width: 18px;
+            height: 36px;
+            border: none;
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: -18px;
+            z-index: 1;
+    
+            &:hover {
+                cursor: pointer;
+            }
+    
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1220px) {
+    .reviews {
+        padding: 100px 50px;
+
+        div.first {
+            padding-left: 110px;
+        }
+    }
+}
+
+@media screen and (max-width: 993px) {
+    .reviews {
+        div.first {
+            padding-left: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .reviews {
+        div.first {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 100%;
+            padding: 0 15px;
+            margin-bottom: 40px;
+
+            h2 span {
+                display: inline;
+            }
+
+            button {
+                margin-top: 30px;
+            }
+        }
+
+        div.last {
+            max-width: 500px;
+            margin: auto;
+
+            .slider {
+                .slide {
+                    div {
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .reviews {
+
+        div.first h2 {
+            text-align: center;
+        }
+    
+        div.last {
+            padding-left: 0;
+
+            .slider .slide {
+                text-align: center;
+
+                p {
+                    margin: auto;
+                }
+            }
+            .position-absolute {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .reviews {
+        transition: .5s ease padding;
+
+        div.first {
+            transition: .5s ease all;
+
+            button {
+                transition: .5s ease margin;
+            }
+        }
+    
+        div.last {
+        }
+    }
+}
+// end reviews
+
+// about company
+.about-company {
+    padding: 100px 200px 100px 300px;
+    font-family: $centuryGothicFont;
+
+    background-image: url('../images/Rectangle16.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: calc(100% + 10px) 100%;
+
+    h2 {
+        font-size: 30px;
+        line-height: 30px;
+        color: $text-fade-color;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    div {
+        max-width: 816px;
+        padding-right: 50px;
+        max-height: 175px;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: 2px;
+        }
+         
+        &::-webkit-scrollbar-track {
+            background-color: $active-alpha;
+        }
+         
+        &::-webkit-scrollbar-thumb {
+            background-color: $active-color;
+        }
+
+        p {
+            font-size: 12px;
+            line-height: 20px;
+            color: $text-fade-color;    
+        }
+    }
+}
+
+@media screen and (max-width: 1220px) {
+    .about-company {
+        padding: 100px 100px 100px 215px;
+    }
+}
+
+@media screen and (max-width: 993px) {
+    .about-company {
+        padding: 100px 100px 100px 110px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-company {
+        padding: 100px 30px 100px 50px;
+
+        div {
+            max-height: 220px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .about-company {
+        padding: 100px 20px 100px 30px;
+
+        h2 {
+            text-align: center;
+        }
+
+        div {
+            padding-right: 10px;
+        }
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .about-company {
+        transition: .5s ease padding;
+        div {
+            transition: .5s ease height;
+        }
+    }
+}
+// end about company
+
+// personal care
+.personal-care {
+    padding: 125px 355px 100px 100px;
+    display: flex;
+    justify-content: flex-end;
+
+    background-image: url('../images/image-gradient.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: calc(100% + 100px) 95%;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 170px;
+        font-family: $centuryGothicFont;
+
+        h2 {
+            font-size: 30px;
+            line-height: 30px;
+            color: $dark-text-color;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        button {
+            font-size: 12px;
+            line-height: 20px;
+            color: $dark-text-color;
+            font-weight: bold;
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            text-transform: uppercase;
+            margin-top: 60px; 
+            padding: 0;
+            max-width: 80px;
+            border: none;
+            cursor: pointer;
+            transition: .5s ease color;
+
+            &:hover {
+                color: $active-color;
+                transition: .5s ease color;
+
+                &::after {
+                    width: 100%;
+                    background-color: $active-color;
+                    transition: .5s ease all;
+                }
+            }
+
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+
+            &::after {
+                content: '';
+                height: 1px;
+                margin: auto;
+                margin-top: 7px;
+                width: 80%;
+                background-color: $text-fade-color;
+                transition: .5s ease all;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1220px) {
+    .personal-care {
+        background-size: calc(100% + 216px) 95%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .personal-care {
+        padding: 100px 160px 100px 100px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .personal-care {
+        background-size: calc(100% + 360px) 95%;
+        background-position: -108px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .personal-care {
+        padding: 100px 50px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .personal-care {
+        background-size: calc(100% + 552px) 95%;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .personal-care {
+        transition: .5s ease padding;
+    }
+}
+//end personall care

@@ -1,0 +1,273 @@
+@import './vars.scss';
+
+.topMenu {
+    font-family: $centuryGothicFont;
+    padding: 17px 2% 17px 5%;
+    background-color: transparent;
+    transition: .3s ease background-color;
+    padding-left: 5%;
+    padding-right: 2%;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    &.fixedNav {
+        background-color: $dark-light;
+    }
+
+    .navbar-toggler:focus {
+        outline: none;
+    }
+    
+    #nav-icon3 {
+        width: 30px;
+        height: 20px;
+        margin-bottom: 25px;
+        margin-right: 13px;
+        position: relative;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+
+
+        span  {
+            display: block;
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background: $active-color;
+            opacity: 1;
+            left: 0;
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transition: .25s ease-in-out;
+            -moz-transition: .25s ease-in-out;
+            -o-transition: .25s ease-in-out;
+            transition: .25s ease-in-out;
+
+            &:nth-child(1) {
+                top: 0px;
+            }
+
+            &:nth-child(2), &:nth-child(3) {
+                top: 50%;
+            }
+
+            &:nth-child(4) {
+                top: 100%;
+            }
+        }
+
+        &.open {
+            span:nth-child(1) {
+                top: 18px;
+                width: 0%;
+                left: 50%;
+            }
+
+            span:nth-child(2) {
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+
+            span:nth-child(3) {
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }
+
+            span:nth-child(4) {
+                top: 18px;
+                width: 0%;
+                left: 50%;
+            }
+        }
+    }
+
+    .navbar-toggler span {
+        height: 2px;
+        width: 25px;
+        background-color: $active-color;
+        margin: 3px 0;
+    }
+    
+    .navbar-brand {
+        margin-left: 26px;
+    }
+    
+    .navbar-brand img {
+        max-height: 50px;
+        margin-top: -3px;
+    }
+    
+    .socials {
+        order: -1;
+        visibility: hidden;
+        transition: .3s ease all;
+    }
+
+    &.fixedNav .socials {
+        max-width: auto;
+        visibility: visible;
+        transition: .3s ease all;
+    }
+    
+    .socials svg {
+        height: 18px;
+        fill: $active-color;
+        transform: scale(1);
+        transition: .5s ease transform;
+
+        &:hover {
+            transform: scale(1.1);
+            transition: .5s ease transform;
+        }
+    }  
+}
+
+#navbarMenu li a {
+    color: $light-text-color;
+}
+
+#navbarMenu .menu-tooth {
+    max-height: 48px;
+    margin-right: 5%;
+}
+
+#navbarMenu li.active a {
+    color: $active-color;
+}
+
+#navbarMenu .navigation {
+    text-transform: uppercase;
+    margin: auto;
+}
+
+#navbarMenu .navigation a {
+    font-size: 13px;
+    padding: 8px 30px;
+    transition: .5s ease color;
+
+
+    &:hover {
+        color: $active-color;
+        transition: .5s ease color;
+    }
+}
+
+#navbarMenu .languages a {
+    font-size: 14px;
+    position: relative;
+    padding-bottom: 16px;
+    font-weight: bold;
+    transition: .5s ease color;
+
+    &::after {
+        content: '';
+        width: 0;
+        height: 0;
+        margin: auto;
+        transition: .5s ease all;
+    }
+
+    &:hover {
+        color: $active-color;
+        display: flex;
+        flex-direction: column;
+
+        &::after {
+            height: 2px;
+            width: 80%;
+            margin: auto;
+            background-color: $active-color;
+            transition: .5s ease all;
+        }
+    }
+}
+
+#navbarMenu .languages li.active a {
+    display: flex;
+    flex-direction: column;
+    &::after {
+        content: '';
+        height: 2px;
+        width: 80%;
+        margin: auto;
+        background-color: $active-color;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .topMenu {
+        padding-left: 2%;
+    }
+    #navbarMenu .menu-tooth {
+        margin-right: 2%;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    #navbarMenu .navigation a {
+        padding: 8px 20px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    #navbarMenu .navigation a {
+        padding: 8px 15px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #navbarMenu {
+        .navigation {
+            padding: 8px 15px;
+
+            a {
+                font-size: 16px;
+            }
+        }
+
+        .socials {
+            order: 0;
+            justify-content: center;
+
+            svg {
+                height: 25px;
+            }
+        }
+
+        .languages a {
+            font-size: 16px;
+        } 
+
+        .menu-tooth {
+            display: none;
+        }
+    }
+
+    #navbarMenu .socials > li:not(:last-child),
+    #navbarMenu .languages > li:not(:last-child) {
+        margin-right: 35px;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .topMenu {
+        .socials {
+            transition: .5s ease all;
+        }
+    }
+}

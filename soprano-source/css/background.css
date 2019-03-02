@@ -1,0 +1,109 @@
+body {
+  background-image: url("../images/Group3.png"), url("../images/Path1.png"), url("../images/Rectangle8.png"), url("../images/Group10.png"), url("../images/Path49.png");
+  background-repeat: no-repeat;
+  background-position: -57px 497px, 0 0, 0px 793px, -49px 102%, 0 100%;
+  background-size: calc(100% + 80px) auto, calc(100% + 10px) 890px, calc(100% + 10px) 567px, calc(100% + 80px) auto, calc(100% + 10px) 567px;
+}
+
+@media screen and (max-width: 1350px) {
+  body {
+    background-position: -57px 541px, 0 0, 0 793px, -49px 101%, 0 100%;
+    background-size: calc(100% + 80px) auto, calc(100% + 10px) 890px, calc(100% + 10px) 567px, calc(100% + 80px) auto, calc(100% + 10px) 567px;
+  }
+}
+@media screen and (max-width: 1220px) {
+  body {
+    background-position: -41px 446px, 0 0, 0 663px, -49px 100%, 0 100%;
+    background-size: calc(100% + 80px) auto, calc(100% + 10px) 765px, calc(100% + 10px) 550px, calc(100% + 80px) auto, calc(100% + 10px) 567px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  body {
+    background-position: -41px 483px, 0 0, 0 663px, 0, 0;
+    background-size: calc(100% + 80px) auto, calc(100% + 10px) 765px, calc(100% + 10px) 550px, 0, 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  body {
+    background-size: calc(100% + 80px) auto, calc(100% + 10px) 644px, calc(100% + 10px) 550px, 0, 0;
+    background-position: -41px 390px, 0 0, 0 562px, 0, 0;
+  }
+}
+@media screen and (max-width: 900px) {
+  body {
+    background-size: calc(100% + 80px) auto, calc(100% + 10px) 598px, calc(100% + 10px) 550px, 0, 0;
+    background-position: -41px 345px, 0 0, 0 523px, 0, 0;
+  }
+}
+@media screen and (max-width: 869px) {
+  body {
+    background-size: calc(100% + 80px) auto, calc(100% + 10px) 598px, calc(100% + 10px) 738px, 0, 0;
+    background-position: -41px 345px, 0 0, 0 523px, 0, 0;
+  }
+}
+@media screen and (max-width: 837px) {
+  body {
+    background-position: -41px 345px, 0 0, 0 523px, 0, 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  body {
+    background-size: calc(100% + 80px) auto, calc(100% + 10px) 598px, calc(100% + 10px) 764px, 0, 0;
+    background-position: -41px 391px, 0 0, 0 523px, 0, 0;
+  }
+}
+@media screen and (max-width: 680px) {
+  body {
+    background-size: calc(100% + 80px) auto, calc(100% + 10px) 566px, calc(100% + 10px) 864px, 0, 0;
+    background-position: -14px 434px, 0 0, 0 499px, 0, 0;
+  }
+}
+@media screen and (max-width: 669px) {
+  body {
+    background-size: calc(100% + 80px) auto, calc(100% + 10px) 593px, calc(100% + 10px) 864px, 0, 0;
+    background-position: -9px 492px, 0 0, 0 499px, 0, 0;
+  }
+}
+@media screen and (max-width: 590px) {
+  body {
+    background-size: calc(100% + 80px) auto, calc(100% + 10px) 593px, calc(100% + 10px) 864px, 0, 0;
+    background-position: -9px 492px, 0 0, 0 499px, 0, 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  body {
+    background-size: calc(100% + 80px) auto, calc(100% + 10px) 660px, calc(100% + 10px) 864px, 0, 0;
+    background-position: -9px 492px, 0 0, 0 499px, 0, 0;
+  }
+}
+@media screen and (max-width: 469px) {
+  body {
+    background-size: calc(100% + 80px) auto, calc(100% + 10px) 660px, calc(100% + 10px) 2000px, 0, 0;
+    background-position: -9px 492px, 0 0, 0 499px, 0, 0;
+  }
+}
+@media screen and (max-width: 425px) {
+  body {
+    background-size: calc(100% + 80px) auto, calc(100% + 10px) 660px, calc(100% + 10px) 2000px, 0, 0;
+    background-position: -9px 492px, 0 0, 0 499px, 0, 0;
+  }
+}
+@media screen and (max-width: 400px) {
+  body {
+    background-size: calc(100% + 80px) auto, calc(100% + 10px) 660px, calc(100% + 10px) 2000px, 0, 0;
+    background-position: -9px 492px, 0 0, 0 499px, 0, 0;
+  }
+}
+@media screen and (max-width: 386px) {
+  body {
+    background-size: calc(100% + 80px) auto, calc(100% + 10px) 660px, calc(100% + 10px) 2000px, 0, 0;
+    background-position: -9px 492px, 0 0, 0 499px, 0, 0;
+  }
+}
+@media screen and (min-width: 320px) {
+  body {
+    transition: 0.5s ease background-position;
+  }
+}
+
+/*# sourceMappingURL=background.css.map */
