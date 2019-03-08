@@ -661,10 +661,10 @@ header {
 
 // 404 page
 header.page-not-found {
-    background-image: url('../images/Icons/broken-tooth.png'), url('../images/Path1.png');
+    background-image: url('../images/Icons/broken-tooth.png');
     background-repeat: no-repeat;
-    background-position: 84% 50%, 0 0;
-    background-size: auto, calc(100% + 10px) calc(100% + 100px);
+    background-position: 84% 50%;
+    background-size: auto;
     padding: 240px 0 150px 320px;
     position: relative;
     font-family: $centuryGothicFont;
@@ -782,7 +782,7 @@ header.page-not-found {
 
 @media screen and (min-width: 320px) {
     header.page-not-found {
-        transition: .5s ease padding;
+        transition: .5s ease padding, .5s ease background-position;
     }
 }
 // end 404 page

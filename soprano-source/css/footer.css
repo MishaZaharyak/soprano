@@ -187,10 +187,7 @@
 }
 .footer.page-not-found {
   padding-top: 150px;
-  background-image: url("../images/Path49.png");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: calc(100% + 10px) 100%;
+  background-image: none;
 }
 
 /*# sourceMappingURL=footer.css.map */

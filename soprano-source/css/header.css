@@ -549,10 +549,10 @@ header .info button::after {
   }
 }
 header.page-not-found {
-  background-image: url("../images/Icons/broken-tooth.png"), url("../images/Path1.png");
+  background-image: url("../images/Icons/broken-tooth.png");
   background-repeat: no-repeat;
-  background-position: 84% 50%, 0 0;
-  background-size: auto, calc(100% + 10px) calc(100% + 100px);
+  background-position: 84% 50%;
+  background-size: auto;
   padding: 240px 0 150px 320px;
   position: relative;
   font-family: "Century Gothic";
@@ -653,7 +653,7 @@ header.page-not-found .text .info button:nth-child(2) {
 }
 @media screen and (min-width: 320px) {
   header.page-not-found {
-    transition: 0.5s ease padding;
+    transition: 0.5s ease padding, 0.5s ease background-position;
   }
 }
 

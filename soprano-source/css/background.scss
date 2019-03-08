@@ -144,17 +144,30 @@ body.main {
     }
 }
 
+// 404 page
+body.page-not-found {
+    background-image: url('../images/Layer0rotate.png'), url('../images/Path49.png'), url('../images/Path1.png');
+    background-repeat: no-repeat;
+    background-position: -54px 30%, 0 100%, 0 0;
+    background-size: calc(100% + 80px) auto, calc(100% + 10px) 50%, calc(100% + 10px) 70% ;
+}
 
-// 404
-body.page-not-found .bg-line {
-    position: relative;
-    img {
-        position: absolute;
-        bottom: -72px;
-        left: -35px;
-        z-index: 1;
-        transform: rotate(180deg);
-        width: calc(100% + 59px);
+@media screen and (max-width: 1000px) {
+    body.page-not-found {
+        background-position: -54px 43%, 0 100%, 0 0;
     }
 }
-// end 404
+
+@media screen and (max-width: 600px) {
+    body.page-not-found {
+        background-image: none, url('../images/Path49.png'), url('../images/Path1.png');
+        background-size: 0, calc(100% + 10px) 60%, calc(100% + 10px) 70% ;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    body.page-not-found {
+        transition: .5s ease background-position;
+    }
+}
+// end 404 page
