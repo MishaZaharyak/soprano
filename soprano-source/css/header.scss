@@ -1,5 +1,6 @@
 @import './vars.scss';
 
+// main page
 header {
     &.header {
         position: relative;
@@ -656,3 +657,132 @@ header {
         }
     }
 }
+// end main page
+
+// 404 page
+header.page-not-found {
+    background-image: url('../images/Icons/broken-tooth.png'), url('../images/Path1.png');
+    background-repeat: no-repeat;
+    background-position: 84% 50%, 0 0;
+    background-size: auto, calc(100% + 10px) calc(100% + 100px);
+    padding: 240px 0 150px 320px;
+    position: relative;
+    font-family: $centuryGothicFont;
+            
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h1 {
+            color: $active-color;
+            font-size: 50px;
+            line-height: 50px;
+            font-weight: bold;
+            margin-bottom: 20px; 
+        }
+
+        p {
+            color: $light-text-color-2;
+            font-size: 14px;
+            letter-spacing: 0px;
+            line-height: 14px;
+            margin-bottom: 0;
+        }
+
+        .info {
+            display: flex;
+            padding: 35px 0 0;
+            justify-content: flex-start;
+    
+            button {
+                color: $light-text-color;
+                display: flex;
+                flex-direction: column;
+                font-size: 12px;
+                line-height: 16px;
+                font-weight: bold;
+                background-color: transparent;
+                text-transform: uppercase;
+                border: none;
+                cursor: pointer;
+    
+                &:hover {
+                    color: $active-color;
+    
+                    &::after {
+                        background-color: $active-color; 
+                        width: 100%;
+                        transition: .5s ease width;
+                    }
+                }
+    
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+    
+                &::after {
+                    content: '';
+                    height: 1px;
+                    margin: auto;
+                    margin-top: 8px;
+                    width: 80%;
+                    background-color: $light-text-color;
+                    transition: .5s ease width;
+                }
+
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &:nth-child(2) {
+                    padding: 1px 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1190px) {
+    header.page-not-found {
+        padding-left: 150px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    header.page-not-found {
+        background-position: 50% 30%, 0 0;
+        padding: 240px 90px 150px;
+        text-align: center;
+
+        .text .info {
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header.page-not-found {
+        padding: 240px 50px 150px;
+
+        .text h1 {
+            font-size: 30px;
+            line-height: 30px; 
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header.page-not-found {
+        background-position: 50% 20%, 0 0;
+        padding: 240px 30px 150px;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    header.page-not-found {
+        transition: .5s ease padding;
+    }
+}
+// end 404 page

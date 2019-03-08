@@ -548,5 +548,113 @@ header .info button::after {
     transition: 0.5s ease all;
   }
 }
+header.page-not-found {
+  background-image: url("../images/Icons/broken-tooth.png"), url("../images/Path1.png");
+  background-repeat: no-repeat;
+  background-position: 84% 50%, 0 0;
+  background-size: auto, calc(100% + 10px) calc(100% + 100px);
+  padding: 240px 0 150px 320px;
+  position: relative;
+  font-family: "Century Gothic";
+}
+header.page-not-found .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header.page-not-found .text h1 {
+  color: #af9a68;
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+header.page-not-found .text p {
+  color: #d2d3cd;
+  font-size: 14px;
+  letter-spacing: 0px;
+  line-height: 14px;
+  margin-bottom: 0;
+}
+header.page-not-found .text .info {
+  display: flex;
+  padding: 35px 0 0;
+  justify-content: flex-start;
+}
+header.page-not-found .text .info button {
+  color: #c6c7c1;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: bold;
+  background-color: transparent;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+header.page-not-found .text .info button:hover {
+  color: #af9a68;
+}
+header.page-not-found .text .info button:hover::after {
+  background-color: #af9a68;
+  width: 100%;
+  transition: 0.5s ease width;
+}
+header.page-not-found .text .info button:focus {
+  outline: none;
+  box-shadow: none;
+}
+header.page-not-found .text .info button::after {
+  content: "";
+  height: 1px;
+  margin: auto;
+  margin-top: 8px;
+  width: 80%;
+  background-color: #c6c7c1;
+  transition: 0.5s ease width;
+}
+header.page-not-found .text .info button:first-child {
+  padding-left: 0;
+}
+header.page-not-found .text .info button:nth-child(2) {
+  padding: 1px 20px;
+}
+
+@media screen and (max-width: 1190px) {
+  header.page-not-found {
+    padding-left: 150px;
+  }
+}
+@media screen and (max-width: 992px) {
+  header.page-not-found {
+    background-position: 50% 30%, 0 0;
+    padding: 240px 90px 150px;
+    text-align: center;
+  }
+  header.page-not-found .text .info {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  header.page-not-found {
+    padding: 240px 50px 150px;
+  }
+  header.page-not-found .text h1 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+@media screen and (max-width: 500px) {
+  header.page-not-found {
+    background-position: 50% 20%, 0 0;
+    padding: 240px 30px 150px;
+  }
+}
+@media screen and (min-width: 320px) {
+  header.page-not-found {
+    transition: 0.5s ease padding;
+  }
+}
 
 /*# sourceMappingURL=header.css.map */

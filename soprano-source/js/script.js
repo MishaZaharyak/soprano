@@ -1,70 +1,81 @@
 $(document).ready(() => {
-  $(".slider.big").slick({
-    autoplay:false,
-    arrows: true,
-    autoplaySpeed:3000, //  Slide Delay
-    speed:800, // Transition Speed
-    slidesToShow:1, // Number Of Carousel
-    slidesToScroll:1, // Slide To Move
-    pauseOnHover:false,
-    respondTo: 'slider',
-    dots: false,
-    infinite: true,
-    cssEase: 'linear',
-    // appendArrows: $('.slide .text'),
-    prevArrow: $('.slick-new-prev.big'),
-    nextArrow: $('.slick-new-next.big'),
-    responsive:[
-      {breakpoint:681,settings:{
-        arrows: false
-      }}
-    ],
-  });
+  const sliderBig = $('.slider.big');
 
-  $(".slider.small").slick({
-    autoplay:false,
-    fade: true,
-    arrows: true,
-    autoplaySpeed:3000, //  Slide Delay
-    speed:800, // Transition Speed
-    slidesToShow:1, // Number Of Carousel
-    pauseOnHover:false,
-    respondTo: 'slider',
-    dots: false,
-    prevArrow: $('.slick-new-prev.small'),
-    nextArrow: $('.slick-new-next.small'),
-    responsive:[
-      {breakpoint:992,settings:{
-        centerMode: true,
-        centerPadding: '80px',
-      }},
-      {breakpoint:681,settings:{
-        arrows: false,
-        fade: false
-      }}
-    ],
-  });
+  if(sliderBig.length) {
+    $(sliderBig).slick({
+      autoplay:false,
+      arrows: true,
+      autoplaySpeed:3000, //  Slide Delay
+      speed:800, // Transition Speed
+      slidesToShow:1, // Number Of Carousel
+      slidesToScroll:1, // Slide To Move
+      pauseOnHover:false,
+      respondTo: 'slider',
+      dots: false,
+      infinite: true,
+      cssEase: 'linear',
+      // appendArrows: $('.slide .text'),
+      prevArrow: $('.slick-new-prev.big'),
+      nextArrow: $('.slick-new-next.big'),
+      responsive:[
+        {breakpoint:681,settings:{
+          arrows: false
+        }}
+      ],
+    });
+  }
+ 
+  const sliderSmall = $('.slider.small')
 
-  $(".reviews .slider").slick({
-    autoplay:false,
-    fade: true,
-    arrows: true,
-    autoplaySpeed:3000, //  Slide Delay
-    speed:800, // Transition Speed
-    slidesToShow:1, // Number Of Carousel
-    pauseOnHover:false,
-    respondTo: 'slider',
-    dots: false,
-    prevArrow: $('.reviews .slick-new-prev'),
-    nextArrow: $('.reviews .slick-new-next'),
-    responsive:[
-      {breakpoint:681,settings:{
-        arrows: false,
-        fade: false
-      }}
-    ],
-  })
+  if (sliderSmall.length) {
+    $(sliderSmall).slick({
+      autoplay:false,
+      fade: true,
+      arrows: true,
+      autoplaySpeed:3000, //  Slide Delay
+      speed:800, // Transition Speed
+      slidesToShow:1, // Number Of Carousel
+      pauseOnHover:false,
+      respondTo: 'slider',
+      dots: false,
+      prevArrow: $('.slick-new-prev.small'),
+      nextArrow: $('.slick-new-next.small'),
+      responsive:[
+        {breakpoint:992,settings:{
+          centerMode: true,
+          centerPadding: '80px',
+        }},
+        {breakpoint:681,settings:{
+          arrows: false,
+          fade: false
+        }}
+      ],
+    });
+  }
+ 
+  const reviewSlider = $(".reviews .slider")
 
+  if (reviewSlider.length) {
+    $(reviewSlider).slick({
+      autoplay:false,
+      fade: true,
+      arrows: true,
+      autoplaySpeed:3000, //  Slide Delay
+      speed:800, // Transition Speed
+      slidesToShow:1, // Number Of Carousel
+      pauseOnHover:false,
+      respondTo: 'slider',
+      dots: false,
+      prevArrow: $('.reviews .slick-new-prev'),
+      nextArrow: $('.reviews .slick-new-next'),
+      responsive:[
+        {breakpoint:681,settings:{
+          arrows: false,
+          fade: false
+        }}
+      ],
+    })
+  }
 })
 
 // smooth scroll
