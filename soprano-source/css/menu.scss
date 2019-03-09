@@ -139,6 +139,17 @@
 
 #navbarMenu li a {
     color: $light-text-color;
+    display: flex;
+    flex-direction: column;
+
+    &::after {
+        content: '';
+        height: 1px;
+        margin: auto;
+        margin-top: 8px;
+        width: 80%;
+        background-color: transparent;
+    }
 }
 
 #navbarMenu .menu-tooth {
@@ -148,6 +159,10 @@
 
 #navbarMenu li.active a {
     color: $active-color;
+
+    &::after {
+        background-color: $active-color;
+    }
 }
 
 #navbarMenu .navigation {
@@ -167,44 +182,34 @@
     }
 }
 
-#navbarMenu .languages a {
+#navbarMenu .languages li a {
     font-size: 14px;
     position: relative;
     padding-bottom: 16px;
     font-weight: bold;
     transition: .5s ease color;
-
-    &::after {
-        content: '';
-        width: 0;
-        height: 0;
-        margin: auto;
-        transition: .5s ease all;
-    }
-
-    &:hover {
-        color: $active-color;
-        display: flex;
-        flex-direction: column;
-
-        &::after {
-            height: 2px;
-            width: 80%;
-            margin: auto;
-            background-color: $active-color;
-            transition: .5s ease all;
-        }
-    }
-}
-
-#navbarMenu .languages li.active a {
     display: flex;
     flex-direction: column;
+
     &::after {
         content: '';
         height: 2px;
         width: 80%;
         margin: auto;
+        background-color: transparent;
+        transition: .5s ease all;
+    }
+
+    &:hover {
+        color: $active-color;
+    }
+}
+
+#navbarMenu .languages li.active a {
+    &::after {
+        content: '';
+        height: 2px;
+        width: 80%;
         background-color: $active-color;
     }
 }
@@ -232,6 +237,10 @@
 
 @media screen and (max-width: 991px) {
     #navbarMenu {
+        li a::after, li.active a::after {
+            content: none;
+        }
+
         .navigation {
             padding: 8px 15px;
 

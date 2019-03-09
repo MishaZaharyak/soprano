@@ -1,20 +1,23 @@
 $(document).ready(() => {
+
+  const sliderOptions = {
+    autoplay:false,
+    arrows: true,
+    autoplaySpeed:3000, //  Slide Delay
+    speed:800, // Transition Speed
+    slidesToShow:1, // Number Of Carousel
+    slidesToScroll:1, // Slide To Move
+    pauseOnHover:false,
+    dots: false,
+    infinite: true,
+    cssEase: 'linear',
+  }
+
   const sliderBig = $('.slider.big');
 
   if(sliderBig.length) {
     $(sliderBig).slick({
-      autoplay:false,
-      arrows: true,
-      autoplaySpeed:3000, //  Slide Delay
-      speed:800, // Transition Speed
-      slidesToShow:1, // Number Of Carousel
-      slidesToScroll:1, // Slide To Move
-      pauseOnHover:false,
-      respondTo: 'slider',
-      dots: false,
-      infinite: true,
-      cssEase: 'linear',
-      // appendArrows: $('.slide .text'),
+      ...sliderOptions,
       prevArrow: $('.slick-new-prev.big'),
       nextArrow: $('.slick-new-next.big'),
       responsive:[
@@ -25,19 +28,12 @@ $(document).ready(() => {
     });
   }
  
-  const sliderSmall = $('.slider.small')
+  const sliderSmall = $('.slider.small-s')
 
   if (sliderSmall.length) {
     $(sliderSmall).slick({
-      autoplay:false,
+      ...sliderOptions,
       fade: true,
-      arrows: true,
-      autoplaySpeed:3000, //  Slide Delay
-      speed:800, // Transition Speed
-      slidesToShow:1, // Number Of Carousel
-      pauseOnHover:false,
-      respondTo: 'slider',
-      dots: false,
       prevArrow: $('.slick-new-prev.small'),
       nextArrow: $('.slick-new-next.small'),
       responsive:[
@@ -57,15 +53,8 @@ $(document).ready(() => {
 
   if (reviewSlider.length) {
     $(reviewSlider).slick({
-      autoplay:false,
+      ...sliderOptions,
       fade: true,
-      arrows: true,
-      autoplaySpeed:3000, //  Slide Delay
-      speed:800, // Transition Speed
-      slidesToShow:1, // Number Of Carousel
-      pauseOnHover:false,
-      respondTo: 'slider',
-      dots: false,
       prevArrow: $('.reviews .slick-new-prev'),
       nextArrow: $('.reviews .slick-new-next'),
       responsive:[
@@ -89,22 +78,35 @@ $(document).ready(() => {
 
 function fixedMenu() {
   const windowScroll = window.scrollY;
-  const menu = document.querySelector('.topMenu')
+  const menu = document.querySelector('.topMenu');
+  const openButton = menu.querySelector('.navbar-toggler');
   const topOfMenu = menu.offsetTop;
-  // const menuHeight = menu.offsetHeight;
+  const windowWidth = window.innerWidth; 
 
   if (windowScroll > topOfMenu) {
-      // document.body.style.paddingTop = menuHeight + 'px';
       menu.classList.add('fixedNav');
-
+      
   } else {
-      // document.body.style.paddingTop = 0;
+
+    if (windowWidth < 992) {
+
+      if (!openButton.classList.contains('open')) {
+        menu.classList.remove('fixedNav');
+
+      } else {
+        menu.classList.add('fixedNav');
+      }
+
+    } else {
       menu.classList.remove('fixedNav');
+    }
   }
 }
 
 // fixed menu 
 $(window).scroll(function() {
+  fixedMenu();
+}).resize(function() {
   fixedMenu();
 })
 

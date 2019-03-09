@@ -116,6 +116,16 @@
 
 #navbarMenu li a {
   color: #c6c7c1;
+  display: flex;
+  flex-direction: column;
+}
+#navbarMenu li a::after {
+  content: "";
+  height: 1px;
+  margin: auto;
+  margin-top: 8px;
+  width: 80%;
+  background-color: transparent;
 }
 
 #navbarMenu .menu-tooth {
@@ -125,6 +135,9 @@
 
 #navbarMenu li.active a {
   color: #af9a68;
+}
+#navbarMenu li.active a::after {
+  background-color: #af9a68;
 }
 
 #navbarMenu .navigation {
@@ -142,42 +155,31 @@
   transition: 0.5s ease color;
 }
 
-#navbarMenu .languages a {
+#navbarMenu .languages li a {
   font-size: 14px;
   position: relative;
   padding-bottom: 16px;
   font-weight: bold;
   transition: 0.5s ease color;
-}
-#navbarMenu .languages a::after {
-  content: "";
-  width: 0;
-  height: 0;
-  margin: auto;
-  transition: 0.5s ease all;
-}
-#navbarMenu .languages a:hover {
-  color: #af9a68;
   display: flex;
   flex-direction: column;
 }
-#navbarMenu .languages a:hover::after {
+#navbarMenu .languages li a::after {
+  content: "";
   height: 2px;
   width: 80%;
   margin: auto;
-  background-color: #af9a68;
+  background-color: transparent;
   transition: 0.5s ease all;
 }
-
-#navbarMenu .languages li.active a {
-  display: flex;
-  flex-direction: column;
+#navbarMenu .languages li a:hover {
+  color: #af9a68;
 }
+
 #navbarMenu .languages li.active a::after {
   content: "";
   height: 2px;
   width: 80%;
-  margin: auto;
   background-color: #af9a68;
 }
 
@@ -201,6 +203,9 @@
   }
 }
 @media screen and (max-width: 991px) {
+  #navbarMenu li a::after, #navbarMenu li.active a::after {
+    content: none;
+  }
   #navbarMenu .navigation {
     padding: 8px 15px;
   }

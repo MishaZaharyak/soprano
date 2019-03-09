@@ -14,6 +14,7 @@
     .navbar {
         display: flex;
         flex-direction: column;
+        padding: 0;
 
         div {
             display: flex;
@@ -69,13 +70,14 @@
         justify-content: space-between;
         padding: 40px 100px 30px 100px;
 
-        span {
+        span, a {
             color: $dark-light;
             display: flex;
             flex-direction: column;
             font-size: 12px;
             line-height: 16px;
             font-weight: bold;
+            transition: .5s ease color;
 
             &::after {
                 content: '';
@@ -84,6 +86,22 @@
                 margin-top: 8px;
                 width: 80%;
                 background-color: $dark-light;
+                transition: .5s ease background-color, .5s ease width;
+            }
+        }
+
+        a {
+            transition: .5s ease color;
+
+            &:hover {
+                color: $active-color;
+                transition: .5s ease color;
+
+                &::after {
+                    background-color: $active-color;
+                    width: 100%;
+                    transition: .5s ease background-color, .5s ease width;
+                }
             }
         }
 
@@ -97,6 +115,7 @@
             background-color: transparent;
             text-transform: uppercase;
             border: none;
+            padding: 0;
             cursor: pointer;
 
             &:hover {
@@ -193,7 +212,7 @@
             text-align: center;
             padding-top: 20px;
     
-            span {
+            span, a {
                 display: flex;
                 flex-direction: column;
                 padding-top: 20px;
@@ -203,6 +222,10 @@
                     width: 20%;
                 }
             }
+
+            a:hover::after {
+                width: 20%;
+            }
     
             button {
                 align-self: center;
@@ -211,8 +234,6 @@
         }
     }
 }
-
-
 
 @media screen and (min-width: 320px) {
     .footer {
@@ -242,3 +263,42 @@
     background-image: none;
 }
 // end 404 page
+
+// article page
+.footer.article-page {
+    background-image: url('../images/Path49.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: calc(100% + 10px) 100%;
+    padding-top: 160px;
+    overflow: hidden;
+
+    img.rotate-lines {
+        z-index: 0;
+        position: absolute;
+        width: 100%;
+        transform: rotate(8deg);
+        top: 16px;
+        left: 0;
+    }
+    .info {
+        z-index: 5;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer.article-page {
+        padding-top: 80px;
+
+        img.rotate-lines {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .footer.article-page {
+        transition: .5s ease padding;
+    }
+}
+// end article page
