@@ -67,6 +67,36 @@ $(document).ready(() => {
   }
 })
 
+var closeWindow;
+
+// open thank you window and close it after 4 second
+function openThankYouWindow() {
+  const thankYouWindow = document.querySelector('.thank-you');
+
+  clearInterval(closeWindow);
+
+  thankYouWindow.classList.add('open');
+
+  setTimeout(function() {
+
+    if (thankYouWindow.classList.contains('open')) {
+      thankYouWindow.classList.add('open-active');
+    }
+  }, 100)
+
+  closeWindow = setInterval(function() {
+    thankYouWindow.classList.remove('open-active');
+
+    setTimeout(function() {
+
+      if (!thankYouWindow.classList.contains('open-active')) {
+        thankYouWindow.classList.remove('open');
+      }
+    }, 500)
+
+  }, 4000)
+}
+
 // smooth scroll
 // $(document).on("click","a[target=_self]", function(event) {
 //     const target = $(this.getAttribute('href'));

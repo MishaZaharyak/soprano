@@ -1,3 +1,5 @@
+@import './vars.scss';
+
 .a-link {
     text-decoration: none;
     color: inherit;
@@ -10,3 +12,95 @@
         color: inherit;
     }
 }
+
+// thank you modal 
+.thank-you {
+    background-image: url('../images/Fon.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 0 0;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 2000;
+    font-family: $centuryGothicFont;
+    overflow: hidden;
+    opacity: 0;
+    transform: scale(.8);
+    display: none;
+    transition: opacity .5s ease, transform .5s ease;
+
+    &.open {
+        display: block;
+    }
+
+    &.open-active {
+        opacity: 1;
+        transform: scale(1);
+        transition: opacity .5s ease, transform .5s ease;
+    }
+
+    .logo {
+        text-align: center;
+        padding-top: 65px;
+
+        img {
+            max-width: 130px;
+        }
+    }
+
+    .text {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+
+        h1 {
+            font-size: 48px;
+            line-height: 48px;
+            margin: auto;
+            max-width: 430px;
+            color: $active-color;
+            font-weight: bold;
+            text-align: center;
+            z-index: 2;
+    
+            .thin {
+                font-weight: lighter;
+            }
+        }
+    }
+
+    img.rotate-lines {
+        z-index: 0;
+        position: absolute;
+        width: 100%;
+        transform: rotate(190deg);
+        bottom: 16px;
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .thank-you .text h1 {
+        font-size: 30px;
+        line-height: 30px;
+        max-width: 320px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .thank-you .text h1 {
+        font-size: 20px;
+        line-height: 20px;
+        max-width: 220px;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .thank-you .text h1 {
+        transition: .5s ease all;
+    }
+}
+// end thank you modal 

@@ -2,6 +2,7 @@
   position: relative;
   font-family: "Century Gothic";
 }
+
 @media screen and (max-width: 1100px) {
   .footer {
     background-image: url("../images/Path49.png");
@@ -10,89 +11,145 @@
     background-size: calc(100% + 10px) 100%;
   }
 }
+
 .footer .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 0;
 }
+
 .footer .navbar div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   margin-bottom: 20px;
   padding-right: 95px;
 }
+
 .footer .navbar div .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin: auto;
   text-transform: uppercase;
 }
+
 .footer .navbar div .navigation a {
   font-size: 13px;
   padding: 8px 30px;
-  transition: 0.5s ease color;
+  -webkit-transition: .5s ease color;
+  transition: .5s ease color;
   line-height: 13px;
   color: #212429;
 }
+
 .footer .navbar div .navigation a:hover {
   color: #af9a68;
-  transition: 0.5s ease color;
+  -webkit-transition: .5s ease color;
+  transition: .5s ease color;
 }
+
 .footer .navbar div .socials {
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .footer .navbar div .socials svg {
   height: 18px;
   fill: #af9a68;
-  transform: scale(1);
-  transition: 0.5s ease transform;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: .5s ease transform;
+  transition: .5s ease transform;
 }
+
 .footer .navbar div .socials svg:hover {
-  transform: scale(1.1);
-  transition: 0.5s ease transform;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: .5s ease transform;
+  transition: .5s ease transform;
 }
+
 .footer .navbar .navbar-brand {
   max-height: 73px;
 }
+
 .footer .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 40px 100px 30px 100px;
 }
+
 .footer .info span, .footer .info a {
   color: #212429;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-size: 12px;
   line-height: 16px;
   font-weight: bold;
-  transition: 0.5s ease color;
+  -webkit-transition: .5s ease color;
+  transition: .5s ease color;
 }
+
 .footer .info span::after, .footer .info a::after {
-  content: "";
+  content: '';
   height: 1px;
   margin: auto;
   margin-top: 8px;
   width: 80%;
   background-color: #212429;
-  transition: 0.5s ease background-color, 0.5s ease width;
+  -webkit-transition: .5s ease background-color, .5s ease width;
+  transition: .5s ease background-color, .5s ease width;
 }
+
 .footer .info a {
-  transition: 0.5s ease color;
+  -webkit-transition: .5s ease color;
+  transition: .5s ease color;
 }
+
 .footer .info a:hover {
   color: #af9a68;
-  transition: 0.5s ease color;
+  -webkit-transition: .5s ease color;
+  transition: .5s ease color;
 }
+
 .footer .info a:hover::after {
   background-color: #af9a68;
   width: 100%;
-  transition: 0.5s ease background-color, 0.5s ease width;
+  -webkit-transition: .5s ease background-color, .5s ease width;
+  transition: .5s ease background-color, .5s ease width;
 }
+
 .footer .info button {
   color: #212429;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-size: 12px;
   line-height: 16px;
   font-weight: bold;
@@ -102,34 +159,49 @@
   padding: 0;
   cursor: pointer;
 }
+
 .footer .info button:hover {
   color: #af9a68;
 }
+
 .footer .info button:hover::after {
   background-color: #af9a68;
   width: 100%;
-  transition: 0.5s ease width;
+  -webkit-transition: .5s ease width;
+  transition: .5s ease width;
 }
+
 .footer .info button:focus {
   outline: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
+
 .footer .info button::after {
-  content: "";
+  content: '';
   height: 1px;
   margin: auto;
   margin-top: 8px;
   width: 80%;
   background-color: #212429;
-  transition: 0.5s ease width;
+  -webkit-transition: .5s ease width;
+  transition: .5s ease width;
 }
+
 .footer .copyright {
   background-color: #212429;
   height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .footer .copyright p {
   margin-bottom: 0;
   text-align: center;
@@ -143,19 +215,29 @@
     padding-right: 45px;
   }
 }
+
 @media screen and (max-width: 850px) {
   .footer .navbar div {
     padding-right: 0;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .footer .navbar div .socials {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .footer .navbar div .socials a {
     padding: 30px;
   }
 }
+
 @media screen and (max-width: 768px) {
   .footer .navbar div .navigation a {
     padding: 8px 20px;
@@ -164,21 +246,33 @@
     padding: 40px 30px 30px 30px;
   }
 }
+
 @media screen and (max-width: 600px) {
   .footer .navbar div .navigation {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .footer .navbar div .navigation a {
     padding: 20px 20px;
   }
   .footer .info {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-align: center;
     padding-top: 20px;
   }
   .footer .info span, .footer .info a {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding-top: 20px;
     line-height: 18px;
   }
@@ -189,21 +283,28 @@
     width: 20%;
   }
   .footer .info button {
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     margin-top: 20px;
   }
 }
+
 @media screen and (min-width: 320px) {
   .footer .navbar div {
-    transition: 0.5s ease padding;
+    -webkit-transition: .5s ease padding;
+    transition: .5s ease padding;
   }
   .footer .navbar div .navigation a {
-    transition: 0.5s ease padding;
+    -webkit-transition: .5s ease padding;
+    transition: .5s ease padding;
   }
   .footer .info {
-    transition: 0.5s ease padding;
+    -webkit-transition: .5s ease padding;
+    transition: .5s ease padding;
   }
 }
+
 .footer.page-not-found {
   padding-top: 150px;
   background-image: none;
@@ -217,14 +318,17 @@
   padding-top: 160px;
   overflow: hidden;
 }
+
 .footer.article-page img.rotate-lines {
   z-index: 0;
   position: absolute;
   width: 100%;
-  transform: rotate(8deg);
+  -webkit-transform: rotate(8deg);
+          transform: rotate(8deg);
   top: 16px;
   left: 0;
 }
+
 .footer.article-page .info {
   z-index: 5;
 }
@@ -237,10 +341,11 @@
     display: none;
   }
 }
+
 @media screen and (min-width: 320px) {
   .footer.article-page {
-    transition: 0.5s ease padding;
+    -webkit-transition: .5s ease padding;
+    transition: .5s ease padding;
   }
 }
-
 /*# sourceMappingURL=footer.css.map */

@@ -11,100 +11,118 @@ body.main {
     background-size: calc(100% + 80px) auto, calc(100% + 10px) 890px, calc(100% + 10px) 567px, calc(100% + 80px) auto, calc(100% + 10px) 567px;
   }
 }
+
 @media screen and (max-width: 1220px) {
   body.main {
     background-position: -41px 446px, 0 0, 0 663px, -49px 100%, 0 100%;
     background-size: calc(100% + 80px) auto, calc(100% + 10px) 765px, calc(100% + 10px) 550px, calc(100% + 80px) auto, calc(100% + 10px) 567px;
   }
 }
+
 @media screen and (max-width: 1100px) {
   body.main {
     background-position: -41px 483px, 0 0, 0 663px, 0, 0;
     background-size: calc(100% + 80px) auto, calc(100% + 10px) 765px, calc(100% + 10px) 550px, 0, 0;
   }
 }
+
 @media screen and (max-width: 991px) {
   body.main {
     background-size: calc(100% + 80px) auto, calc(100% + 10px) 644px, calc(100% + 10px) 550px, 0, 0;
     background-position: -41px 390px, 0 0, 0 562px, 0, 0;
   }
 }
+
 @media screen and (max-width: 900px) {
   body.main {
     background-size: calc(100% + 80px) auto, calc(100% + 10px) 598px, calc(100% + 10px) 550px, 0, 0;
     background-position: -41px 345px, 0 0, 0 523px, 0, 0;
   }
 }
+
 @media screen and (max-width: 869px) {
   body.main {
     background-size: calc(100% + 80px) auto, calc(100% + 10px) 598px, calc(100% + 10px) 738px, 0, 0;
     background-position: -41px 345px, 0 0, 0 523px, 0, 0;
   }
 }
+
 @media screen and (max-width: 837px) {
   body.main {
     background-position: -41px 345px, 0 0, 0 523px, 0, 0;
   }
 }
+
 @media screen and (max-width: 800px) {
   body.main {
     background-size: calc(100% + 80px) auto, calc(100% + 10px) 598px, calc(100% + 10px) 764px, 0, 0;
     background-position: -41px 391px, 0 0, 0 523px, 0, 0;
   }
 }
+
 @media screen and (max-width: 680px) {
   body.main {
     background-size: calc(100% + 80px) auto, calc(100% + 10px) 566px, calc(100% + 10px) 864px, 0, 0;
     background-position: -14px 434px, 0 0, 0 499px, 0, 0;
   }
 }
+
 @media screen and (max-width: 669px) {
   body.main {
     background-size: calc(100% + 80px) auto, calc(100% + 10px) 593px, calc(100% + 10px) 864px, 0, 0;
     background-position: -9px 492px, 0 0, 0 499px, 0, 0;
   }
 }
+
 @media screen and (max-width: 590px) {
   body.main {
     background-size: calc(100% + 80px) auto, calc(100% + 10px) 593px, calc(100% + 10px) 864px, 0, 0;
     background-position: -9px 492px, 0 0, 0 499px, 0, 0;
   }
 }
+
 @media screen and (max-width: 500px) {
   body.main {
     background-size: calc(100% + 80px) auto, calc(100% + 10px) 660px, calc(100% + 10px) 864px, 0, 0;
     background-position: -9px 492px, 0 0, 0 499px, 0, 0;
   }
 }
+
 @media screen and (max-width: 469px) {
   body.main {
     background-size: calc(100% + 80px) auto, calc(100% + 10px) 660px, calc(100% + 10px) 2000px, 0, 0;
     background-position: -9px 492px, 0 0, 0 499px, 0, 0;
   }
 }
+
 @media screen and (max-width: 425px) {
   body.main {
     background-size: calc(100% + 80px) auto, calc(100% + 10px) 660px, calc(100% + 10px) 2000px, 0, 0;
     background-position: -9px 492px, 0 0, 0 499px, 0, 0;
   }
 }
+
 @media screen and (max-width: 400px) {
   body.main {
     background-size: calc(100% + 80px) auto, calc(100% + 10px) 660px, calc(100% + 10px) 2000px, 0, 0;
     background-position: -9px 492px, 0 0, 0 499px, 0, 0;
   }
 }
+
 @media screen and (max-width: 386px) {
   body.main {
     background-size: calc(100% + 80px) auto, calc(100% + 10px) 660px, calc(100% + 10px) 2000px, 0, 0;
     background-position: -9px 492px, 0 0, 0 499px, 0, 0;
   }
 }
+
 @media screen and (min-width: 320px) {
   body.main {
-    transition: 0.5s ease background-position;
+    -webkit-transition: .5s ease background-position;
+    transition: .5s ease background-position;
   }
 }
+
 body.page-not-found {
   background-image: url("../images/Layer0rotate.png"), url("../images/Path49.png"), url("../images/Path1.png");
   background-repeat: no-repeat;
@@ -117,16 +135,18 @@ body.page-not-found {
     background-position: -54px 43%, 0 100%, 0 0;
   }
 }
+
 @media screen and (max-width: 600px) {
   body.page-not-found {
     background-image: none, url("../images/Path49.png"), url("../images/Path1.png");
     background-size: 0, calc(100% + 10px) 60%, calc(100% + 10px) 70%;
   }
 }
+
 @media screen and (min-width: 320px) {
   body.page-not-found {
-    transition: 0.5s ease background-position;
+    -webkit-transition: .5s ease background-position;
+    transition: .5s ease background-position;
   }
 }
-
 /*# sourceMappingURL=background.css.map */
