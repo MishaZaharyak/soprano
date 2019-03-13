@@ -87,44 +87,21 @@ header {
                 &:not(.max-w-900) {
                     min-width: 100%;
                 }
-                button.detaile {
-                    background-color: transparent;
+                button.button-link {
                     color: $active-color;
-                    display: flex;
-                    flex-direction: column;
-                    text-transform: uppercase;
                     margin-top: 26px; 
-                    padding: 0;
                     max-width: 80px;
-                    font-size: 13px;
-                    line-height: 16px;
-                    font-weight: bold;
-                    transition: .5s ease color;
 
                     &:hover {
                         color: $light-text-color-2;
-                        transition: .5s ease color;
 
                         &::after {
                             background-color: $light-text-color-2; 
-                            width: 100%;
-                            transition: .5s ease width;
                         }
                     }
 
-                    &:focus {
-                        outline: none;
-                        box-shadow: none;
-                    }
-
                     &::after {
-                        content: '';
-                        height: 1px;
-                        margin: auto;
-                        margin-top: 7px;
-                        width: 80%;
                         background-color: $active-color;
-                        transition: .5s ease width;
                     }
                 }
             }
@@ -194,81 +171,30 @@ header {
         }
     }
 
-    .info {
-        display: flex;
-        justify-content: space-between;
+    .contact-info {
         padding: 25px 100px 0 100px;
 
-        span, a {
+        span {
             color: $light-text-color;
-            display: flex;
-            flex-direction: column;
-            font-size: 12px;
-            line-height: 16px;
-            font-weight: bold;
-            transition: .5s ease color;
 
             &::after {
-                content: '';
-                height: 1px;
-                margin: auto;
-                margin-top: 8px;
-                width: 80%;
                 background-color: $light-text-color;
-                transition: .5s ease background-color, .5s ease width;
-            }
-        }
-
-        a {
-            transition: .5s ease color;
-
-            &:hover {
-                color: $active-color;
-                transition: .5s ease color;
-
-                &::after {
-                    background-color: $active-color;
-                    width: 100%;
-                    transition: .5s ease background-color, .5s ease width;
-                }
             }
         }
 
         button {
             color: $light-text-color;
-            display: flex;
-            flex-direction: column;
-            font-size: 12px;
-            line-height: 16px;
-            font-weight: bold;
-            background-color: transparent;
-            text-transform: uppercase;
-            border: none;
-            cursor: pointer;
 
             &:hover {
                 color: $active-color;
 
                 &::after {
                     background-color: $active-color; 
-                    width: 100%;
-                    transition: .5s ease width;
                 }
             }
 
-            &:focus {
-                outline: none;
-                box-shadow: none;
-            }
-
             &::after {
-                content: '';
-                height: 1px;
-                margin: auto;
-                margin-top: 8px;
-                width: 80%;
                 background-color: $light-text-color;
-                transition: .5s ease width;
             }
         }
     }
@@ -319,6 +245,7 @@ header {
                 color: $active-alpha;
                 font-weight: 100;
                 -webkit-text-fill-color: $active-alpha;
+                transition: font-size .5s ease;
             }
 
             &:focus {
@@ -326,6 +253,7 @@ header {
 
                 &::placeholder {
                     font-size: 9px;
+                    transition: font-size .5s ease;
                 }
             }
         }
@@ -340,6 +268,7 @@ header {
             font-size: 13px;
             margin: 20px 0 25px;
             transition: .5s ease all;
+            border-radius: 2px;
 
             &:hover {
                 background-color: $active-alpha;
@@ -429,7 +358,7 @@ header {
         height: calc(473px - 130px);
     }
 
-    header .info {
+    header .contact-info {
         padding: 60px 100px 0 100px;
     }
 }
@@ -485,7 +414,7 @@ header {
         top: 42%;
     }
 
-    header .info {
+    header .contact-info {
         padding: 60px 50px 0 50px;
     }
 }
@@ -549,7 +478,7 @@ header {
         padding: 0 40px;
         text-align: center;
 
-        h1, button.detaile, p {
+        h1, button.button-link, p {
             max-width: 100%;
         }
 
@@ -558,7 +487,7 @@ header {
             line-height: 30px;
         }
 
-        button.detaile {
+        button.button-link {
             margin: 19px auto;
         }
 
@@ -579,18 +508,18 @@ header {
         display: none;
     }
 
-    header .info {
+    header .contact-info {
         padding: 40px 20px 0 20px;
     }
 }
 
 @media screen and (max-width: 500px) {
-    header .info {
+    header .contact-info {
         flex-direction: column;
         text-align: center;
         padding-top: 20px;
 
-        span, a {
+        span {
             display: flex;
             flex-direction: column;
             padding-top: 20px;
@@ -599,10 +528,6 @@ header {
             &::after {
                 width: 20%;
             }
-        }
-
-        a:hover::after {
-            width: 20%;
         }
 
         button {
@@ -633,7 +558,7 @@ header {
             transition: .5s ease right, .5s ease height;
         }
 
-        .info {
+        .contact-info {
             transition: .5s ease padding;
 
             button {
@@ -711,46 +636,23 @@ header.page-not-found {
             margin-bottom: 0;
         }
 
-        .info {
-            display: flex;
+        .contact-info {
             padding: 35px 0 0;
             justify-content: flex-start;
     
             button {
                 color: $light-text-color;
-                display: flex;
-                flex-direction: column;
-                font-size: 12px;
-                line-height: 16px;
-                font-weight: bold;
-                background-color: transparent;
-                text-transform: uppercase;
-                border: none;
-                cursor: pointer;
     
                 &:hover {
                     color: $active-color;
     
                     &::after {
                         background-color: $active-color; 
-                        width: 100%;
-                        transition: .5s ease width;
                     }
                 }
     
-                &:focus {
-                    outline: none;
-                    box-shadow: none;
-                }
-    
                 &::after {
-                    content: '';
-                    height: 1px;
-                    margin: auto;
-                    margin-top: 8px;
-                    width: 80%;
                     background-color: $light-text-color;
-                    transition: .5s ease width;
                 }
 
                 &:first-child {
@@ -758,7 +660,7 @@ header.page-not-found {
                 }
 
                 &:nth-child(2) {
-                    padding: 1px 20px;
+                    padding: 0 20px;
                 }
             }
         }
@@ -777,7 +679,7 @@ header.page-not-found {
         padding: 240px 90px 150px;
         text-align: center;
 
-        .text .info {
+        .text .contact-info {
             justify-content: center;
         }
     }
@@ -818,45 +720,195 @@ header.article-page {
     font-family: $centuryGothicFont;
     text-align: center;
     background-color: $clip-bg-color;
-
-    h1 {
-        font-size: 50px;
-        line-height: 50px;
-        color: $light-text-color-2;
-        font-weight: bold;
-        text-align: center;
-    }
-
-    span {
-        font-size: 10px;
-        letter-spacing: 0px;
-        line-height: 13px;
-        color: $text-fade-color;
-    }
-
-    span.angle svg {
-        height: 7px;
-        width: 10px;
-        fill: $text-fade-color;
-    }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     header.article-page {
-    
-        h1 {
-            font-size: 30px;
-            line-height: 30px;
-        }
-    }
-}
-
-@media screen and (min-width: 320px) {
-    header.article-page {
-    
-        h1 {
-            transition: .5s ease all;
-        }
+        padding: 145px 30px 70px;
     }
 }
 // end article page
+
+// clinic page
+header.clinic-page {
+    background-image: url('../images/black-sm-path.png');
+    background-repeat: no-repeat;
+    background-position: 0 -100px;
+    background-size: calc(100% + 10px) calc(100% + 100px);
+    padding: 145px 100px 150px;
+    font-family: $centuryGothicFont;
+    text-align: center;
+    background-color: $clip-bg-color;
+
+    h1 {
+        color: $active-color;
+    }
+
+    .contact-info {
+        padding: 55px 0 0;
+
+        span {
+            color: $light-text-color;
+
+            &::after {
+                background-color: $light-text-color;
+            }
+        }
+
+        button {
+            color: $light-text-color;
+
+            &:hover {
+                color: $active-color;
+
+                &::after {
+                    background-color: $active-color; 
+                }
+            }
+
+            &::after {
+                background-color: $light-text-color;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header.clinic-page {
+        padding: 145px 30px 70px;
+
+        .contact-info {
+            flex-direction: column;
+            text-align: center;
+            padding-top: 20px;
+    
+            span {
+                display: flex;
+                flex-direction: column;
+                padding-top: 20px;
+                line-height: 18px;
+    
+                &::after {
+                    width: 20%;
+                }
+            }
+    
+            button {
+                align-self: center;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+// end clinic page
+
+// contact page
+header.contact-page {
+    background-image: url('../images/black-sm-path.png');
+    background-repeat: no-repeat;
+    background-position: 0 -100px;
+    background-size: calc(100% + 10px) calc(100% + 100px);
+    padding: 145px 100px 290px;
+    font-family: $centuryGothicFont;
+    text-align: center;
+    background-color: white;
+
+    section {
+        margin-left: 35px;
+    }
+
+    h1 {
+        color: $active-color;
+    }
+
+    .contact-info {
+        padding: 55px 0 0;
+        align-items: center;
+
+        span {
+            color: $light-text-color;
+
+            &::after {
+                background-color: $light-text-color;
+            }
+        }
+
+        a.big {
+            font-size: 25px;
+            line-height: 25px;
+            color: $light-text-color-2;
+            text-align: center;
+            margin-bottom: 10px;
+
+            &:last-of-type {
+                margin-bottom: 25px;
+            }
+        }
+
+        button {
+            color: $light-text-color;
+
+            &.lover-case {
+                text-transform: lowercase;
+            }
+
+            &:hover {
+                color: $active-color;
+
+                &::after {
+                    background-color: $active-color; 
+                }
+            }
+
+            &::after {
+                background-color: $light-text-color;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header.contact-page {
+        padding: 145px 30px 70px;
+
+        section {
+            margin-left: 0;
+        }
+
+        .contact-info {
+            flex-direction: column;
+            text-align: center;
+            padding-top: 20px;
+    
+            span {
+                display: flex;
+                flex-direction: column;
+                padding-top: 20px;
+                line-height: 18px;
+    
+                &::after {
+                    width: 20%;
+                }
+            }
+
+            a.big {
+                font-size: 18px;
+                line-height: 18px;
+
+                &:first-of-type {
+                    margin-top: 20px;
+                }
+    
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+    
+            button {
+                align-self: center;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+// end contact page

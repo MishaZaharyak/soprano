@@ -12,7 +12,7 @@
   }
 }
 
-.footer .navbar {
+.footer .navbar-f {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,7 +23,7 @@
   padding: 0;
 }
 
-.footer .navbar div {
+.footer .navbar-f div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,7 +32,7 @@
   padding-right: 95px;
 }
 
-.footer .navbar div .navigation {
+.footer .navbar-f div .navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -44,7 +44,7 @@
   text-transform: uppercase;
 }
 
-.footer .navbar div .navigation a {
+.footer .navbar-f div .navigation a {
   font-size: 13px;
   padding: 8px 30px;
   -webkit-transition: .5s ease color;
@@ -53,20 +53,20 @@
   color: #212429;
 }
 
-.footer .navbar div .navigation a:hover {
+.footer .navbar-f div .navigation a:hover {
   color: #af9a68;
   -webkit-transition: .5s ease color;
   transition: .5s ease color;
 }
 
-.footer .navbar div .socials {
+.footer .navbar-f div .socials {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
-.footer .navbar div .socials svg {
+.footer .navbar-f div .socials svg {
   height: 18px;
   fill: #af9a68;
   -webkit-transform: scale(1);
@@ -75,117 +75,15 @@
   transition: .5s ease transform;
 }
 
-.footer .navbar div .socials svg:hover {
+.footer .navbar-f div .socials svg:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transition: .5s ease transform;
   transition: .5s ease transform;
 }
 
-.footer .navbar .navbar-brand {
+.footer .navbar-f .navbar-brand {
   max-height: 73px;
-}
-
-.footer .info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 40px 100px 30px 100px;
-}
-
-.footer .info span, .footer .info a {
-  color: #212429;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: bold;
-  -webkit-transition: .5s ease color;
-  transition: .5s ease color;
-}
-
-.footer .info span::after, .footer .info a::after {
-  content: '';
-  height: 1px;
-  margin: auto;
-  margin-top: 8px;
-  width: 80%;
-  background-color: #212429;
-  -webkit-transition: .5s ease background-color, .5s ease width;
-  transition: .5s ease background-color, .5s ease width;
-}
-
-.footer .info a {
-  -webkit-transition: .5s ease color;
-  transition: .5s ease color;
-}
-
-.footer .info a:hover {
-  color: #af9a68;
-  -webkit-transition: .5s ease color;
-  transition: .5s ease color;
-}
-
-.footer .info a:hover::after {
-  background-color: #af9a68;
-  width: 100%;
-  -webkit-transition: .5s ease background-color, .5s ease width;
-  transition: .5s ease background-color, .5s ease width;
-}
-
-.footer .info button {
-  color: #212429;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: bold;
-  background-color: transparent;
-  text-transform: uppercase;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-
-.footer .info button:hover {
-  color: #af9a68;
-}
-
-.footer .info button:hover::after {
-  background-color: #af9a68;
-  width: 100%;
-  -webkit-transition: .5s ease width;
-  transition: .5s ease width;
-}
-
-.footer .info button:focus {
-  outline: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-.footer .info button::after {
-  content: '';
-  height: 1px;
-  margin: auto;
-  margin-top: 8px;
-  width: 80%;
-  background-color: #212429;
-  -webkit-transition: .5s ease width;
-  transition: .5s ease width;
 }
 
 .footer .copyright {
@@ -242,7 +140,7 @@
   .footer .navbar div .navigation a {
     padding: 8px 20px;
   }
-  .footer .info {
+  .footer .contact-info {
     padding: 40px 30px 30px 30px;
   }
 }
@@ -257,7 +155,7 @@
   .footer .navbar div .navigation a {
     padding: 20px 20px;
   }
-  .footer .info {
+  .footer .contact-info {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -265,7 +163,7 @@
     text-align: center;
     padding-top: 20px;
   }
-  .footer .info span, .footer .info a {
+  .footer .contact-info span {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -276,13 +174,10 @@
     padding-top: 20px;
     line-height: 18px;
   }
-  .footer .info span::after, .footer .info a::after {
+  .footer .contact-info span::after {
     width: 20%;
   }
-  .footer .info a:hover::after {
-    width: 20%;
-  }
-  .footer .info button {
+  .footer .contact-info button {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
@@ -299,7 +194,7 @@
     -webkit-transition: .5s ease padding;
     transition: .5s ease padding;
   }
-  .footer .info {
+  .footer .contact-info {
     -webkit-transition: .5s ease padding;
     transition: .5s ease padding;
   }
@@ -329,7 +224,7 @@
   left: 0;
 }
 
-.footer.article-page .info {
+.footer.article-page .contact-info {
   z-index: 5;
 }
 
@@ -346,6 +241,206 @@
   .footer.article-page {
     -webkit-transition: .5s ease padding;
     transition: .5s ease padding;
+  }
+}
+
+.footer.clinic-page {
+  background-image: url("../images/Path49.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: calc(100% + 10px) 100%;
+  padding-top: 160px;
+  overflow: hidden;
+}
+
+.footer.clinic-page .rotate-lines {
+  z-index: 0;
+  position: absolute;
+  width: calc(100% + 200px);
+  top: -15px;
+  left: -120px;
+  -webkit-transform: rotate(2deg);
+          transform: rotate(2deg);
+}
+
+.footer.clinic-page .contact-info {
+  z-index: 5;
+}
+
+@media screen and (max-width: 600px) {
+  .footer.clinic-page {
+    padding-top: 80px;
+  }
+  .footer.clinic-page img.rotate-lines {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .footer.article-page {
+    -webkit-transition: .5s ease padding;
+    transition: .5s ease padding;
+  }
+}
+
+.footer.contact-page {
+  background-image: url("../images/Layer0.png"), url("../images/Path49.png");
+  background-repeat: no-repeat;
+  background-position: -49px 287px, 0 0;
+  background-size: calc(100% + 80px) auto, calc(100% + 10px) 100%;
+  padding-top: 160px;
+  overflow: visible;
+}
+
+.footer.contact-page nav {
+  margin-top: 150px;
+}
+
+.footer.contact-page .map-cont {
+  margin: -400px 0 0;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+  padding: 0 50px;
+  max-height: 530px;
+  position: relative;
+}
+
+.footer.contact-page .map-cont div {
+  position: absolute;
+  bottom: 30%;
+  right: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer.contact-page .map-cont div p.text {
+  background-color: #af9a68;
+  color: #212429;
+  font-size: 12px;
+  line-height: 13px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 0 10px;
+  padding: 10px;
+}
+
+.footer.contact-page .map-cont img.map {
+  max-width: 1230px;
+  width: 100%;
+}
+
+.footer.contact-page .rotate-lines {
+  z-index: 0;
+  position: absolute;
+  width: calc(100% + 200px);
+  top: 230px;
+  left: -52px;
+  -webkit-transform: rotate(-2deg);
+          transform: rotate(-2deg);
+}
+
+.footer.contact-page .contact-info {
+  z-index: 5;
+}
+
+@media screen and (max-width: 1150px) {
+  .footer.contact-page {
+    background-position: -49px 228px, 0 0;
+  }
+  .footer.contact-page .map-cont div {
+    right: 44%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .footer.contact-page {
+    background-position: -49px 145px, 0 0;
+  }
+  .footer.contact-page .map-cont div {
+    right: 43%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer.contact-page {
+    padding-top: 40px;
+    background-image: none, url("../images/Path49.png");
+  }
+  .footer.contact-page .map-cont {
+    margin: 0;
+    padding: 0;
+  }
+  .footer.contact-page .map-cont div {
+    right: 41%;
+  }
+  .footer.contact-page .map-cont div .point {
+    max-width: 17px;
+  }
+  .footer.contact-page .map-cont div p.text {
+    padding: 5px;
+  }
+  .footer.contact-page nav {
+    margin-top: 70px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer.contact-page .map-cont div {
+    right: 39%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer.contact-page .map-cont div {
+    right: 37%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .footer.contact-page .map-cont div {
+    right: 33%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .footer.contact-page .map-cont div {
+    right: 30%;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .footer.contact-page {
+    -webkit-transition: .5s ease padding, .5s ease background-position;
+    transition: .5s ease padding, .5s ease background-position;
+  }
+  .footer.contact-page .map-cont {
+    -webkit-transition: .5s ease padding, .5s ease margin;
+    transition: .5s ease padding, .5s ease margin;
+  }
+  .footer.contact-page .map-cont div {
+    -webkit-transition: .5s ease right;
+    transition: .5s ease right;
+  }
+  .footer.contact-page .map-cont div .point {
+    -webkit-transition: .5s ease width;
+    transition: .5s ease width;
+  }
+  .footer.contact-page .map-cont div p.text {
+    -webkit-transition: .5s ease padding;
+    transition: .5s ease padding;
+  }
+  .footer.contact-page nav {
+    -webkit-transition: .5s ease margin;
+    transition: .5s ease margin;
   }
 }
 /*# sourceMappingURL=footer.css.map */

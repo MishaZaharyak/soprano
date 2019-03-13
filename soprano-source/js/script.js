@@ -3,10 +3,10 @@ $(document).ready(() => {
   const sliderOptions = {
     autoplay:false,
     arrows: true,
-    autoplaySpeed:3000, //  Slide Delay
-    speed:800, // Transition Speed
-    slidesToShow:1, // Number Of Carousel
-    slidesToScroll:1, // Slide To Move
+    autoplaySpeed:3000,
+    speed:800,
+    slidesToShow:1,
+    slidesToScroll:1,
     pauseOnHover:false,
     dots: false,
     infinite: true,
@@ -65,36 +65,58 @@ $(document).ready(() => {
       ],
     })
   }
+
+  const doctorsSlider = $('.doctors-slider');
+
+  if (doctorsSlider.length) {
+    $(doctorsSlider).slick({
+      ...sliderOptions,
+      slidesToShow:5,
+      slidesToScroll:1,
+      infinite: false,
+      asNavFor: '',
+      dots: true,
+      focusOnSelect: true,
+      prevArrow: $(doctorsSlider).parent().find('.slick-new-prev.small'),
+      nextArrow: $(doctorsSlider).parent().find('.slick-new-next.small'),
+    })
+  }
 })
 
 var closeWindow;
 
-// open thank you window and close it after 4 second
-function openThankYouWindow() {
-  const thankYouWindow = document.querySelector('.thank-you');
+// open modal window and close it if autoclose set to true
+function openModalWindow(selector, autoclose=false) {
+  const modalWindow = document.querySelector(selector);
 
-  clearInterval(closeWindow);
+  if (autoclose) clearInterval(closeWindow);
 
-  thankYouWindow.classList.add('open');
+  modalWindow.classList.add('open');
 
   setTimeout(function() {
 
-    if (thankYouWindow.classList.contains('open')) {
-      thankYouWindow.classList.add('open-active');
+    if (modalWindow.classList.contains('open')) {
+      modalWindow.classList.add('open-active');
     }
   }, 100)
 
-  closeWindow = setInterval(function() {
-    thankYouWindow.classList.remove('open-active');
+  if (autoclose) {
+    closeWindow = setInterval(function() {
+      closeModalWindow(modalWindow)
+    }, 4000)
+  }
+}
 
-    setTimeout(function() {
+// close modal window 
+function closeModalWindow(modal) {
+  modal.classList.remove('open-active');
 
-      if (!thankYouWindow.classList.contains('open-active')) {
-        thankYouWindow.classList.remove('open');
-      }
-    }, 500)
+  setTimeout(function() {
 
-  }, 4000)
+    if (!modal.classList.contains('open-active')) {
+      modal.classList.remove('open');
+    }
+  }, 500)
 }
 
 // smooth scroll

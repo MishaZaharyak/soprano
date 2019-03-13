@@ -4,22 +4,6 @@
 
 // advantages section
 
-body {
-    font-family: $centuryGothicFont;
-
-    &::-webkit-scrollbar {
-        width: 8px;
-    }
-     
-    &::-webkit-scrollbar-track {
-        background-color: $active-alpha;
-    }
-     
-    &::-webkit-scrollbar-thumb {
-        background-color: $active-color;
-    }
-}
-
 .advantages {
     display: flex;
     flex-wrap: wrap;
@@ -109,36 +93,24 @@ body {
             display: flex;
             justify-content: center;
 
-            a {
-                text-decoration: none;
+            .button-link {
+                text-transform: none;
                 font-size: 22px;
                 padding: 20px 10px;
                 line-height: 30px;
                 color: $dark-text-color;
-                font-weight: bold;
                 text-align: center;
-                display: flex;
-                flex-direction: column;
-                transition: .5s ease color;
 
                 &::after {
-                    content: '';
-                    height: 1px;
-                    margin: auto;
                     margin-top: 10px;
-                    width: 80%;
                     background-color: $text-fade-color;
-                    transition: .5s ease width;
                 }
 
                 &:hover {
                     color: $active-color;
-                    transition: .5s ease color;
 
                     &::after {
                         background-color: $active-color; 
-                        width: 100%;
-                        transition: .5s ease width;
                     }
                 }
             }
@@ -207,102 +179,24 @@ body {
 
         p {
             max-width: 530px;
-            // height: 260px;
             font-size: 12px;
             line-height: 20px;
             color: $dark-text-color;
         }
 
-        button {
-            font-size: 12px;
-            line-height: 20px;
+        .button-link {
             color: $dark-text-color;
-            font-weight: bold;
-            background-color: transparent;
-            display: flex;
-            flex-direction: column;
-            margin-top: 60px; 
-            padding: 0;
-            max-width: 80px;
-            border: none;
-            cursor: pointer;
-            transition: .5s ease color;
 
             &:hover {
                 color: $active-color;
-                transition: .5s ease color;
 
                 &::after {
-                    width: 100%;
                     background-color: $active-color;
-                    transition: .5s ease all;
                 }
             }
 
-            &:focus {
-                outline: none;
-                box-shadow: none;
-            }
-
             &::after {
-                content: '';
-                height: 1px;
-                margin: auto;
-                margin-top: 7px;
-                width: 80%;
                 background-color: $text-fade-color;
-                transition: .5s ease all;
-            }
-        }
-    }
-
-    .arrows {
-        position: relative;
-        // height: 50px;
-
-        .position-absolute {
-            top: 0;
-            right: 206px;
-        }
-
-        .slick-new-prev {
-            background: url('../images/Group35.png') no-repeat 100% 50%;
-            transform: rotate(180deg);
-            width: 10px;
-            height: 18px;
-            border: none;
-            position: absolute;
-            top: 19px;
-            right: 4px;
-            z-index: 1;
-    
-            &:hover {
-                cursor: pointer;
-            }
-    
-            &:focus {
-                outline: none;
-                box-shadow: none;
-            }
-        }
-    
-        .slick-new-next {
-            background: url('../images/Group35.png') no-repeat 100% 0;
-            width: 18px;
-            height: 36px;
-            border: none;
-            position: absolute;
-            top: 10px;
-            right: -18px;
-            z-index: 1;
-    
-            &:hover {
-                cursor: pointer;
-            }
-    
-            &:focus {
-                outline: none;
-                box-shadow: none;
             }
         }
     }
@@ -354,11 +248,8 @@ body {
             }
         }
 
-        .arrows {
-            position: relative;
-    
+        .dark-arrows {
             .position-absolute {
-                top: 0;
                 right: 50%;
             }
         }
@@ -379,7 +270,7 @@ body {
     .about-clinic {
         padding: 60px 0;
 
-        .arrows {
+        .dark-arrows {
             display: none;
         }
 
@@ -437,45 +328,21 @@ body {
             text-align: center;
         }
 
-        button {
-            background-color: transparent;
+        button.button-link {
             color: $active-color;
-            display: flex;
-            flex-direction: column;
             margin-top: 26px; 
-            text-transform: uppercase;
-            padding: 0;
             max-width: 80px;
-            font-size: 13px;
-            line-height: 16px;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-            transition: .5s ease color;
 
             &:hover {
                 color: $text-fade-color;
-                transition: .5s ease color;
+
                 &::after {
-                    width: 100%;
                     background-color: $text-fade-color;
-                    transition: .5s ease all;
                 }
             }
 
-            &:focus {
-                outline: none;
-                box-shadow: none;
-            }
-
             &::after {
-                content: '';
-                height: 1px;
-                margin: auto;
-                margin-top: 7px;
-                width: 80%;
                 background-color: $active-color;
-                transition: .5s ease all;
             }
         }
     }
@@ -569,42 +436,20 @@ body {
             }
         }
 
-        button {
+        button.button-link {
             color: $light-text-color;
-            display: flex;
-            flex-direction: column;
-            font-size: 12px;
-            line-height: 16px;
-            font-weight: bold;
-            background-color: transparent;
-            text-transform: uppercase;
             margin-top: 50px;
-            border: none;
-            cursor: pointer;
 
             &:hover {
                 color: $active-color;
 
                 &::after {
                     background-color: $active-color; 
-                    width: 100%;
-                    transition: .5s ease width;
                 }
             }
 
-            &:focus {
-                outline: none;
-                box-shadow: none;
-            }
-
             &::after {
-                content: '';
-                height: 1px;
-                margin: auto;
-                margin-top: 8px;
-                width: 80%;
                 background-color: $light-text-color;
-                transition: .5s ease width;
             }
         }
     }
@@ -738,7 +583,7 @@ body {
                 display: inline;
             }
 
-            button {
+            button.button-link {
                 margin-top: 30px;
             }
         }
@@ -790,7 +635,7 @@ body {
             transition: .5s ease all;
 
             button {
-                transition: .5s ease margin;
+                transition: .5s ease all;
             }
         }
     
@@ -916,46 +761,21 @@ body {
             text-align: center;
         }
 
-        button {
-            font-size: 12px;
-            line-height: 20px;
+        button.button-link {
             color: $dark-text-color;
-            font-weight: bold;
-            background-color: transparent;
-            display: flex;
-            flex-direction: column;
-            text-transform: uppercase;
             margin-top: 60px; 
-            padding: 0;
             max-width: 80px;
-            border: none;
-            cursor: pointer;
-            transition: .5s ease color;
 
             &:hover {
                 color: $active-color;
-                transition: .5s ease color;
 
                 &::after {
-                    width: 100%;
                     background-color: $active-color;
-                    transition: .5s ease all;
                 }
             }
 
-            &:focus {
-                outline: none;
-                box-shadow: none;
-            }
-
             &::after {
-                content: '';
-                height: 1px;
-                margin: auto;
-                margin-top: 7px;
-                width: 80%;
                 background-color: $text-fade-color;
-                transition: .5s ease all;
             }
         }
     }
@@ -1029,57 +849,6 @@ body.article-page .main {
                 }       
             }
         }
-
-        .arrows {
-            position: relative;
-            // height: 50px;
-    
-            .position-absolute {
-                top: 0;
-                right: 206px;
-            }
-    
-            .slick-new-prev {
-                background: url('../images/Group35.png') no-repeat 100% 50%;
-                transform: rotate(180deg);
-                width: 10px;
-                height: 18px;
-                border: none;
-                position: absolute;
-                top: 19px;
-                right: 4px;
-                z-index: 1;
-        
-                &:hover {
-                    cursor: pointer;
-                }
-        
-                &:focus {
-                    outline: none;
-                    box-shadow: none;
-                }
-            }
-        
-            .slick-new-next {
-                background: url('../images/Group35.png') no-repeat 100% 0;
-                width: 18px;
-                height: 36px;
-                border: none;
-                position: absolute;
-                top: 10px;
-                right: -18px;
-                z-index: 1;
-        
-                &:hover {
-                    cursor: pointer;
-                }
-        
-                &:focus {
-                    outline: none;
-                    box-shadow: none;
-                }
-            }
-        }
     }
 
     .last {
@@ -1102,42 +871,9 @@ body.article-page .main {
             color: $dark-text-color;
         }
 
-        .info {
-            display: flex;
-            justify-content: space-between;
+        .contact-info {
             margin-top: 50px;
-
-            a {
-                transition: .5s ease color;
-
-                &:hover {
-                    color: $active-color;
-                    transition: .5s ease color;
-
-                    &::after {
-                        background-color: $active-color;
-                        width: 100%;
-                        transition: .5s ease background-color, .5s ease width;
-                    }
-                }
-            }
-
-            a, span {
-                display: flex;
-                flex-direction: column;
-                font-size: 14px;
-                line-height: 16px;
-
-                &::after {
-                    content: '';
-                    height: 1px;
-                    margin: auto;
-                    margin-top: 8px;
-                    width: 80%;
-                    background-color: $dark-text-color;
-                    transition: .5s ease background-color, .5s ease width;
-                }
-            }
+            padding: 0;
         }
     }
 }
@@ -1179,7 +915,7 @@ body.article-page .main {
                 }
             }
 
-            .arrows .position-absolute {
+            .dark-arrows .position-absolute {
                 right: 50%;
             }
         }
@@ -1207,7 +943,7 @@ body.article-page .main {
                 }       
             }
     
-            .arrows {
+            .dark-arrows {
                 display: none;
             }
         }
@@ -1224,12 +960,12 @@ body.article-page .main {
 }
 
 @media screen and (max-width: 500px) {
-    body.article-page .main .last .info {
+    body.article-page .main .last .contact-info {
         flex-direction: column;
         text-align: center;
         margin-top: 30px;
 
-        span, a {
+        span {
             display: flex;
             flex-direction: column;
             padding-top: 20px;
@@ -1239,9 +975,10 @@ body.article-page .main {
                 width: 20%;
             }
         }
-
-        a:hover::after {
-            width: 20%;
+        
+        button {
+            align-self: center;
+            margin-top: 20px;
         }
     }
 }
@@ -1275,10 +1012,413 @@ body.article-page .main {
                 transition: .5s ease all;
             }
 
-            .info {
+            .contact-info {
                 transition: .5s ease all;
             }
         }
     }
 }
 // end article page
+
+
+// clinic page
+// main block
+body.clinic-page .main {
+    padding: 75px 100px 110px;
+    background-image: url('../images/Rectangle8.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: calc(100% + 10px) 100%;
+
+    .first {
+        padding-right: 90px;
+
+        h4 {
+            font-size: 24px;
+            line-height: 24px;
+            color: $dark-text-color;
+            font-weight: bold;
+            margin: 25px 0;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        p {
+            font-size: 12px;
+            line-height: 20px;
+            margin-bottom: 25px;
+            color: $dark-text-color;
+        }
+    }
+
+    .last {
+        margin-top: -162px;
+
+        .slider {
+            max-height: 720px;
+
+            .slide {
+                text-align: right;
+    
+                img {
+                    max-height: 720px;
+                    max-width: 100%;
+                    display: inline;
+                    margin-right: 3px;
+                }       
+            }
+        }
+
+        .dark-arrows .position-absolute {
+            left: 50%;
+            top: 10px;
+            right: unset;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    body.clinic-page .main {
+        padding: 75px 50px 110px 100px;
+    
+        .first {
+            padding-right: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    body.clinic-page .main {
+        padding: 75px 100px 110px;
+    
+        .first {
+            padding-right: 0;
+            padding-top: 100px;
+            order: 1;
+        }
+    
+        .last {
+            margin-top: 0;
+    
+            .slider .slide {
+                text-align: center;   
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body.clinic-page .main {
+        padding: 75px 30px 110px;
+    
+        .first {
+            h4 {
+                text-align: center;
+                font-size: 18px;
+                line-height: 18px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) {
+    body.clinic-page .main {
+        transition: padding .5s ease;
+    
+        .first {
+            transition: padding .5s ease;
+
+            h4 {
+                transition: padding .5s all;
+            }
+        }
+
+        .last {
+            transition: margin .5s ease;
+    
+            .slider .slide {
+                transition: padding .5s text-align;  
+            }
+        }
+    }
+}
+// end main block
+
+// doctors section
+.doctors-section {
+    background-image: url('../images/black-sm-path.png'), url('../images/Path44.png');
+    background-repeat: no-repeat;
+    background-position: 0 0, -20px 111%;
+    background-size: calc(100% + 10px) 100%, calc(100% + 50px) 200px;
+    font-family: $centuryGothicFont;
+    padding: 100px;
+
+    & > div {
+        max-width: 1035px;
+        margin: auto;
+
+        section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 0 0 30px 10px;
+    
+            h3 {
+                font-size: 30px;
+                line-height: 30px;
+                text-align: center;
+                color: $active-color;
+                font-weight: bold;
+            }
+    
+            .button-link {
+                color: $active-color;
+    
+                &:hover {
+                    color: $light-text-color-2;
+    
+                    &::after {
+                        background-color: $light-text-color-2; 
+                    }
+                }
+    
+                &::after {
+                    background-color: $active-color;
+                }
+            }
+        }
+
+        .doctors-slider {
+            .slide {
+                margin: 0 10px;
+
+                img {
+                    max-width: 200px;
+                    max-height: 265px;
+                }
+
+                .hide {
+                    .name {
+                        font-size: 20px;
+                        line-height: 20px;
+                        color: $active-color;
+                        margin: 20px 0 2px;
+                    }
+
+                    .post {
+                        font-size: 12px;
+                        line-height: 12px;
+                        color: $active-color;
+                        font-weight: bold;
+                        margin: 0;
+                    }
+
+                    div {
+                        display: flex;
+                        padding-top: 30px;
+
+                        .experience {
+                            font-size: 12px;
+                            line-height: 12px;
+                            color: $light-text-color-3;
+                            min-width: max-content;
+                        }
+
+                        .line {
+                            position: relative;
+                            width: calc(100% - 10px);
+                            margin: 0 10px;
+
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                width: 100%;
+                                height: 1px;
+                                top: 50%;
+                                background-color: $light-text-color-3;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+// end doctors section
+
+// feedback
+.feedback {
+    padding: 70px 165px 100px 200px;
+    background-image: url('../images/Path44.png');
+    background-repeat: no-repeat;
+    background-position: -20px -100px;
+    background-size: calc(100% + 50px) calc(100% + 100px);
+    
+    & > div {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin: auto;
+        max-width: 1100px;
+
+        h2 {
+            font-size: 20px;
+            line-height: 20px;
+            color: $dark-text-color;
+            font-weight: bold;
+        }
+    
+        form {
+            display: flex;
+    
+            label {
+                margin-right: 25px;
+                margin-bottom: 0;
+            }
+    
+            input {
+                background-color: transparent;
+                padding-bottom: 4px;
+                border: 0;
+                border-bottom: 1px solid $text-fade-color;
+                width: 100%;
+                min-width: 200px;
+                color: $text-fade-color;
+                font-weight: 400;
+                font-size: 15px;
+                outline: none;
+    
+                &::placeholder {
+                    line-height: 18px;
+                    font-size: 13px;
+                    line-height: 22px;
+                    text-transform: uppercase;
+                    color: $text-fade-color;
+                    font-weight: 100;
+                    -webkit-text-fill-color: $text-fade-color;
+                    transition: .5s ease font-size;
+                }
+    
+                &:focus {
+                    &::placeholder {
+                        font-size: 9px;
+                        transition: .5s ease font-size;
+                    }
+                }
+            }
+    
+            button {
+                border: none;
+                background-color: #0c0d07;
+                color: $active-color;
+                text-transform: uppercase;
+                min-width: 150px;
+                font-size: 12px;
+                line-height: 18px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: .5s ease all;
+
+                &:hover {
+                    background-color: $active-color;
+                    color: $dark-light;
+                    transition: .5s ease all;
+                }
+    
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+        }
+    
+        p {
+            margin: 30px 0 0;
+            font-size: 11px;
+            line-height: 18px;
+            color: $text-fade-color;
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .feedback {
+        padding: 70px 100px 100px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .feedback {
+        padding: 70px 50px 100px;
+
+        & > div {
+            flex-direction: column;
+            align-items: center;
+
+            h2 {
+                margin-bottom: 40px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .feedback {
+        & > div {
+            form {
+                flex-direction: column;
+        
+                label {
+                    margin: 0 0 25px 0;
+                }
+        
+                button {
+                    max-width: 150px;
+                    width: 100%;
+                    min-width: 1px;
+                    margin: auto;
+                }
+            }
+        
+            p {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) {
+    .feedback {
+        transition: padding .5s ease;
+
+        & > div {
+            transition: all .5s ease;
+
+            h2 {
+                transition: all .5s ease;
+            }
+
+            form {
+                transition: all .5s ease;
+        
+                label {
+                    transition: margin .5s ease;
+                }
+        
+                button {
+                    transition: all .5s ease;
+                }
+            }
+        
+            p {
+                transition: text-align .5s ease;
+            }
+        }
+    }
+}
+// end feedback
+// end clinic page
