@@ -153,6 +153,8 @@
 
 @media screen and (min-width: 320px) {
     .footer {
+        transition: padding .5s ease;
+
         .navbar {
             div {
                 transition: .5s ease padding;
@@ -461,3 +463,45 @@
     }
 }
 // end prices page
+
+// services page
+body.services-page {
+    position: relative;
+    overflow: hidden;
+    overflow-y: auto;
+
+    img.lines {
+        position: absolute;
+        z-index: 0;
+        bottom: 11%;
+        left: -47px;
+        width: calc(100% + 100px);
+        transform: rotate(-3deg);
+    }
+
+    @media (max-width: 768px) {
+        img.lines {
+            display: none;
+        }
+    }
+}
+
+.footer.services-page {
+    background-image: url('../images/Path49.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: calc(100% + 10px) 100%;
+    padding-top: 100px;
+
+    & > * {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer.services-page {
+        padding-top: 50px;
+    }
+}
+// end services page

@@ -960,6 +960,7 @@ header.prices-page {
         }
     }
 }
+
 @media (max-width: 768px) {
     header.prices-page {
         padding: 145px 30px 70px;
@@ -992,3 +993,103 @@ header.prices-page {
     }
 }
 // end prices page
+
+// services page
+header.services-page {
+    background-image: url('../images/Path1-flip.png');
+    background-repeat: no-repeat;
+    background-position: 0 -100px;
+    background-size: calc(100% + 10px) calc(100% + 100px);
+    padding: 145px 100px 205px;
+    font-family: $centuryGothicFont;
+    text-align: center;
+
+    h1 {
+        color: $active-color;
+    }
+
+    .services {
+        padding: 60px 0 0;
+        margin: 0;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+
+        & > div {
+            display: flex;
+            margin-bottom: 50px;
+            justify-content: center;
+    
+            .content {
+                flex-direction: column;
+                display: flex;
+                align-items: center;
+
+                & > span {
+                    min-height: 70px;
+                }
+
+                button {
+                    color: $light-text-color-2;
+                    font-size: 22px;
+                    font-weight: bold;
+                    line-height: 22px;
+                    text-align: center;
+                    text-transform: none;
+
+                    &::after {
+                        margin-top: 12px;
+                        background-color: $light-text-color-2;
+                    }
+
+                    &:hover {
+                        color: $active-color;
+                
+                        &::after {
+                            background-color: $active-color;
+                        }
+                    }
+                }
+
+                ul {
+                    margin-top: 15px;
+
+                    li {
+                        font-size: 12px;
+                        line-height: 12px;
+                        color: $active-color;
+                        font-weight: bold;
+                        padding: 6px 0;
+                        text-align: center;
+                    }
+                }
+            }
+                      
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    header.services-page {
+        padding: 145px 50px 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    header.services-page {
+        padding: 145px 30px 0;
+        background-position: 0 0;
+        background-size: calc(100% + 10px) calc(100% + 350px);
+    }
+}
+
+@media (min-width: 320px) {
+    header.services-page {
+        transition: all .5s ease;
+
+        * {
+            transition: all .5s ease;
+        }
+    }
+}
+// end services page

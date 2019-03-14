@@ -186,6 +186,10 @@
 }
 
 @media screen and (min-width: 320px) {
+  .footer {
+    -webkit-transition: padding .5s ease;
+    transition: padding .5s ease;
+  }
   .footer .navbar div {
     -webkit-transition: .5s ease padding;
     transition: .5s ease padding;
@@ -483,6 +487,47 @@
   .footer.prices-page {
     -webkit-transition: .5s ease padding;
     transition: .5s ease padding;
+  }
+}
+
+body.services-page {
+  position: relative;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+body.services-page img.lines {
+  position: absolute;
+  z-index: 0;
+  bottom: 11%;
+  left: -47px;
+  width: calc(100% + 100px);
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+}
+
+@media (max-width: 768px) {
+  body.services-page img.lines {
+    display: none;
+  }
+}
+
+.footer.services-page {
+  background-image: url("../images/Path49.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: calc(100% + 10px) 100%;
+  padding-top: 100px;
+}
+
+.footer.services-page > * {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .footer.services-page {
+    padding-top: 50px;
   }
 }
 /*# sourceMappingURL=footer.css.map */
