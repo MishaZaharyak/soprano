@@ -1422,3 +1422,176 @@ body.clinic-page .main {
 }
 // end feedback
 // end clinic page
+
+
+// prices page
+.prices-section {
+    background-image: url('../images/Rectangle8.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: calc(100% + 10px) 100%;
+    font-family: $centuryGothicFont;
+    margin: 0;
+    padding: 50px 100px;
+
+    & > div {
+        display: flex;
+        justify-content: flex-start;
+        padding: 0 0 0 30px;
+
+        &:nth-child(odd) {
+            justify-content: flex-end;
+            padding: 0 30px 0 0;
+        }
+
+        &:nth-child(1), &:nth-child(2) {
+            margin-bottom: 100px;
+        }
+
+        .content {
+            max-width: 540px;
+            width: 100%;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+
+            img {
+                border-radius: 50%;
+                background-color: $dark-light;
+                width: 56px;
+                height: 56px;
+                padding: 9px;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 22px;
+                color: $dark-light;
+                font-weight: bold;
+                line-height: 22px;
+                text-align: center;
+                margin-bottom: 45px;
+            }
+
+            & > div {
+                width: 100%;
+                justify-content: space-between;
+                display: flex;
+                padding: 10px 0;
+
+                .name {
+                    font-size: 18px;
+                    line-height: 18px;
+                    color: $dark-light;
+                    font-weight: bold;
+                    max-width: 250px;
+                    text-align: center;
+                    min-width: max-content;
+                }
+
+                .line {
+                    position: relative;
+                    width: 100%;
+                    margin: 0 20px;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 1px;
+                        top: 50%;
+                        background-color: $active-color;
+                    }
+                }
+
+                .price {
+                    font-size: 24px;
+                    line-height: 24px;
+                    color: $active-color;
+                    font-weight: bold;
+                    min-width: max-content;
+                }
+            }              
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .prices-section {
+        padding: 50px;
+    }
+}
+
+@media (max-width: 991px) {
+    .prices-section {
+        padding: 50px;
+
+        & > div {
+            justify-content: center;
+            padding: 0;
+            margin-bottom: 50px;
+
+            &:nth-child(odd) {
+                justify-content: center;
+                padding: 0;
+            }
+    
+            &:nth-child(1), &:nth-child(2) {
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .prices-section {
+        padding: 50px 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    .prices-section {
+        & > div {
+            .content {
+
+                border-bottom: 1px solid $active-color;
+                padding-bottom: 25px;
+
+                p {
+                    margin-bottom: 25px;
+                }
+    
+                & > div {
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 20px 0;
+    
+                    .name {
+                        max-width: none;
+                        margin-bottom: 15px;
+                        min-width: 1px;
+                    }
+    
+                    .line {
+                        display: none;
+                    }
+    
+                    .price {
+                        min-width: 1px;
+                    }
+                }              
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) {
+    .prices-section {
+        transition: padding .5s ease;
+
+        * {
+            transition: all .5s ease;
+        }
+    }
+}
+// end prices page

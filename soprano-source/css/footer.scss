@@ -199,6 +199,7 @@
     }
     .contact-info {
         z-index: 5;
+        position: relative;
     }
 }
 
@@ -238,6 +239,7 @@
     }
     .contact-info {
         z-index: 5;
+        position: relative;
     }
 }
 
@@ -417,3 +419,45 @@
     }
 }
 // end contact page
+
+// prices page
+.footer.prices-page {
+    background-image: url('../images/Path49.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: calc(100% + 10px) 100%;
+    padding-top: 160px;
+    overflow: hidden;
+
+    .rotate-lines {
+        z-index: 0;
+        position: absolute;
+        width: calc(100% + 100px);
+        transform: rotate(-1deg);
+        top: 30px;
+        left: -44px;
+    }
+    .contact-info {
+        z-index: 5;
+        position: relative;
+
+        
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer.prices-page {
+        padding-top: 0;
+
+        img.rotate-lines {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .footer.prices-page {
+        transition: .5s ease padding;
+    }
+}
+// end prices page

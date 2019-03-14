@@ -846,7 +846,7 @@ header.clinic-page .contact-info button::after {
 }
 
 header.contact-page {
-  background-image: url("../images/black-sm-path.png");
+  background-image: url("../images/Path1-flip.png");
   background-repeat: no-repeat;
   background-position: 0 -100px;
   background-size: calc(100% + 10px) calc(100% + 100px);
@@ -955,6 +955,90 @@ header.contact-page .contact-info button::after {
         -ms-grid-row-align: center;
         align-self: center;
     margin-top: 20px;
+  }
+}
+
+header.prices-page {
+  background-image: url("../images/Path1-flip.png");
+  background-repeat: no-repeat;
+  background-position: 0 -100px;
+  background-size: calc(100% + 10px) calc(100% + 100px);
+  padding: 145px 100px 95px;
+  font-family: "Century Gothic";
+  text-align: center;
+  background-color: #d3d4ce;
+}
+
+header.prices-page h1 {
+  color: #af9a68;
+}
+
+header.prices-page .contact-info {
+  padding: 55px 0 0;
+}
+
+header.prices-page .contact-info span {
+  color: #c6c7c1;
+}
+
+header.prices-page .contact-info span::after {
+  background-color: #c6c7c1;
+}
+
+header.prices-page .contact-info button {
+  color: #c6c7c1;
+}
+
+header.prices-page .contact-info button:hover {
+  color: #af9a68;
+}
+
+header.prices-page .contact-info button:hover::after {
+  background-color: #af9a68;
+}
+
+header.prices-page .contact-info button::after {
+  background-color: #c6c7c1;
+}
+
+header.prices-page .contact-info button:nth-child(2) {
+  margin-left: 67px;
+}
+
+@media (max-width: 768px) {
+  header.prices-page {
+    padding: 145px 30px 70px;
+  }
+  header.prices-page .contact-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+  }
+  header.prices-page .contact-info span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 20px;
+    line-height: 18px;
+  }
+  header.prices-page .contact-info span::after {
+    width: 20%;
+  }
+  header.prices-page .contact-info button {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-top: 20px;
+  }
+  header.prices-page .contact-info button:nth-child(2) {
+    margin-left: 0;
   }
 }
 /*# sourceMappingURL=header.css.map */
