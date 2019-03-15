@@ -1643,4 +1643,103 @@ body.clinic-page .main .last .dark-arrows .position-absolute {
     transition: all .5s ease;
   }
 }
+
+.article-tiles {
+  padding: 0 100px;
+  font-family: "Century Gothic";
+  background-image: url("../images/Rectangle16.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: calc(100% + 10px) 100%;
+}
+
+.article-tiles .tiles-grid {
+  max-width: 1205px;
+  margin: auto;
+  -webkit-transform: translateY(-80px);
+          transform: translateY(-80px);
+}
+
+.article-tiles .tiles-grid .item {
+  padding: 40px;
+}
+
+.article-tiles .tiles-grid .item h4 {
+  font-size: 22px;
+  line-height: 22px;
+  color: #0c0d07;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.article-tiles .tiles-grid .item p {
+  font-size: 12px;
+  line-height: 12px;
+  color: #0c0d07;
+}
+
+.article-tiles .pagination li .page-link {
+  border: none;
+  border-radius: 5px;
+  color: #0c0d07;
+  padding: 8px 12px;
+  margin: 0 5px;
+}
+
+.article-tiles .pagination li .page-link:hover {
+  color: white;
+  background-color: rgba(175, 154, 104, 0.4);
+}
+
+.article-tiles .pagination li .page-link:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.article-tiles .pagination li.active .page-link {
+  background-color: #af9a68;
+  color: white;
+}
+
+.article-tiles .pagination * {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+@media (max-width: 1200px) {
+  .article-tiles .tiles-grid .item {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 991px) {
+  .article-tiles {
+    padding: 0 50px;
+  }
+  .article-tiles .tiles-grid {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .article-tiles .tiles-grid .item {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .article-tiles {
+    padding: 0;
+  }
+}
+
+@media (min-width: 320px) {
+  .article-tiles {
+    -webkit-transition: padding .5s ease;
+    transition: padding .5s ease;
+  }
+  .article-tiles * {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+}
 /*# sourceMappingURL=common.css.map */

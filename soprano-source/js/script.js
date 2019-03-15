@@ -200,4 +200,18 @@ $(document).on('click', '.navigation a', e => {
   e.preventDefault();
   $('.navigation a').each((i, el) => $(el).parent().removeClass('active'))
   $(e.target).parent().addClass('active')
-})
+});
+
+$(document).on('click', '.pagination a:not(.nav-arrow)', e => {
+  e.preventDefault();
+  $('.pagination a').each((i, el) => $(el).parent().removeClass('active'))
+  $(e.target).parent().addClass('active')
+});
+
+// useful page tiles
+$(".tiles").gridalicious({
+  gutter: 1,
+  width: 330,
+  selector: '.item',
+  animate: true,
+});
