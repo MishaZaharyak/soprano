@@ -44,6 +44,12 @@ body::-webkit-scrollbar-thumb {
   transition: color .5s ease;
 }
 
+.h1-breadcrum span a {
+  color: #d2d3cd;
+  -webkit-transition: color .5s ease;
+  transition: color .5s ease;
+}
+
 .h1-breadcrum span a:hover {
   color: #af9a68;
   -webkit-transition: color .5s ease;

@@ -505,3 +505,18 @@ body.services-page {
     }
 }
 // end services page
+
+// services category page
+.footer.services-category-page {
+    background-image: url('../images/Path49.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: calc(100% + 10px) 100%;
+    padding-top: 100px;
+
+    & > * {
+        position: relative;
+        z-index: 2;
+    }
+}
+// end services category page

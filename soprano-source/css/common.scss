@@ -1983,3 +1983,142 @@ body.categoryItem-page {
     }
 }
 // end services category item page
+
+// services category page
+.links-section {
+    background-image: url('../images/black-sm-path.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: calc(100% + 10px) 100%;
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+    margin-top: 50px;
+
+
+    button {
+        color: $light-text-color-2;
+        position: relative;
+        z-index: 5;
+
+        &:first-child {
+            margin-right: 40px;
+        }
+
+        &::after {
+            background-color: $light-text-color-2;
+        }
+
+        &:hover {
+            color: $active-color;
+            transition: .5s ease color;
+
+            &::after {
+                background-color: $active-color; 
+                width: 100%;
+                transition: .5s ease width, .5s ease background-color;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .links-section {
+        flex-direction: column;
+        align-items: center;
+
+        button {
+            &:first-child {
+                margin-right: 0;
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) {
+    .links-section {
+        transition: all .5s ease;
+
+        button {
+            &:first-child {
+                transition: margin .5s ease;
+            }
+        }
+    }
+}
+
+.article-with-slider-left {
+    .contact-form-section {
+        position: static;
+        margin-left: auto;
+        margin-top: 100px;
+        padding: 50px;
+        width: 412px;
+    }
+}
+
+@media (max-width: 991px) {
+    .article-with-slider-left {
+        .contact-form-section {
+            display: none;
+        }
+    }
+}
+
+body.services-category-page {
+    position: relative;
+    overflow: hidden;
+    overflow-y: auto;
+
+    img.lines {
+        position: absolute;
+        z-index: 0;
+        bottom: 3%;
+        left: -47px;
+        width: calc(100% + 100px);
+        transform: rotate(1deg);
+    }
+
+    img.lines-2 {
+        position: absolute;
+        z-index: 0;
+        top: 8%;
+        right: -22px;
+        width: calc(100% + 100px);
+    }
+
+    @media (min-width: 1441px) {
+        img.lines {
+            bottom: 0;
+        }
+
+        img.lines-2 {
+            top: 4%;
+        }
+    }
+
+    @media (max-width: 991px) {
+        img.lines {
+            bottom: 6%;
+        }
+
+        img.lines-2 {
+            top: 15%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        img.lines, img.lines-2 {
+            display: none;
+        }
+    }
+
+    @media (min-width: 320px) {
+        img.lines, img.lines-2 {
+            transition: all .5s ease;
+        }
+    }
+}
+
+// end services category page

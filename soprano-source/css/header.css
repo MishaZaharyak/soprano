@@ -382,14 +382,14 @@ header .contact-info button::after {
   header .slider .slide .imageCont img.with-black-bg {
     margin-right: 200px;
   }
-  .contact-form-section {
+  header .contact-form-section {
     width: 340px;
     padding: 50px 70px 50px 50px;
   }
 }
 
 @media screen and (max-width: 1220px) {
-  .contact-form-section {
+  header .contact-form-section {
     width: 310px;
     padding: 30px 50px 30px 50px;
     height: 340px;
@@ -425,7 +425,7 @@ header .contact-info button::after {
     font-size: 38px;
     line-height: 38px;
   }
-  .contact-form-section {
+  header .contact-form-section {
     width: 271px;
     height: 317px;
     padding: 30px 30px 30px 30px;
@@ -442,7 +442,7 @@ header .contact-info button::after {
 }
 
 @media screen and (max-width: 991px) {
-  .contact-form-section {
+  header .contact-form-section {
     display: none;
   }
   header .black-rectangle {
@@ -1319,6 +1319,181 @@ header.categoryItem-page .contact-info button:nth-child(2) {
   }
   header.categoryItem-page .contact-info button:nth-child(2) {
     margin-left: 0;
+  }
+}
+
+header.services-category-page {
+  background-image: url("../images/Path1-flip.png");
+  background-repeat: no-repeat;
+  background-position: 0 -100px;
+  background-size: calc(100% + 10px) calc(100% + 100px);
+  background-color: #d3d4ce;
+  padding: 240px 250px 150px 320px;
+  position: relative;
+  font-family: "Century Gothic";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header.services-category-page .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  z-index: 3;
+}
+
+header.services-category-page .text h1 {
+  font-size: 50px;
+  text-align: left;
+  line-height: 50px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+header.services-category-page .text p {
+  color: #d2d3cd;
+  font-size: 14px;
+  letter-spacing: 0px;
+  line-height: 14px;
+  margin-bottom: 0;
+}
+
+header.services-category-page .text .contact-info {
+  padding: 35px 0 0;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+header.services-category-page .text .contact-info button {
+  color: #c6c7c1;
+}
+
+header.services-category-page .text .contact-info button:hover {
+  color: #af9a68;
+}
+
+header.services-category-page .text .contact-info button:hover::after {
+  background-color: #af9a68;
+}
+
+header.services-category-page .text .contact-info button::after {
+  background-color: #c6c7c1;
+}
+
+header.services-category-page .text .contact-info button:first-child {
+  padding-left: 0;
+}
+
+header.services-category-page .text .contact-info button:nth-child(2) {
+  padding: 0 20px;
+}
+
+header.services-category-page > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 3;
+}
+
+header.services-category-page > div img {
+  max-width: 100px;
+}
+
+header.services-category-page > div button {
+  color: #d2d3cd;
+  margin-top: 20px;
+}
+
+header.services-category-page > div button::after {
+  background-color: #d2d3cd;
+}
+
+header.services-category-page > div button:hover {
+  color: #af9a68;
+  -webkit-transition: .5s ease color;
+  transition: .5s ease color;
+}
+
+header.services-category-page > div button:hover::after {
+  background-color: #af9a68;
+  width: 100%;
+  -webkit-transition: .5s ease width, .5s ease background-color;
+  transition: .5s ease width, .5s ease background-color;
+}
+
+@media screen and (max-width: 1190px) {
+  header.services-category-page {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  header.services-category-page {
+    padding: 240px 90px 150px;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  header.services-category-page .text .contact-info {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header.services-category-page > div {
+    min-width: 100%;
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header.services-category-page {
+    padding: 240px 50px 150px;
+  }
+  header.services-category-page .text h1 {
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header.services-category-page {
+    padding: 240px 30px 150px;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  header.page-not-found {
+    -webkit-transition: .5s ease padding;
+    transition: .5s ease padding;
   }
 }
 /*# sourceMappingURL=header.css.map */

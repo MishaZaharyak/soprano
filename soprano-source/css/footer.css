@@ -530,4 +530,17 @@ body.services-page img.lines {
     padding-top: 50px;
   }
 }
+
+.footer.services-category-page {
+  background-image: url("../images/Path49.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: calc(100% + 10px) 100%;
+  padding-top: 100px;
+}
+
+.footer.services-category-page > * {
+  position: relative;
+  z-index: 2;
+}
 /*# sourceMappingURL=footer.css.map */

@@ -45,6 +45,11 @@ body {
         color: $light-text-color-2;
         transition: color .5s ease;
 
+        a {
+            color: $light-text-color-2;
+            transition: color .5s ease;
+        }
+
         a:hover {
             color: $active-color;
             transition: color .5s ease;
