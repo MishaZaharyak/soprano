@@ -108,7 +108,8 @@ function openModalWindow(selector, autoclose=false) {
 }
 
 // close modal window 
-function closeModalWindow(modal) {
+function closeModalWindow(selector) {
+  const modal = document.querySelector(selector);
   modal.classList.remove('open-active');
 
   setTimeout(function() {
@@ -202,6 +203,7 @@ $(document).on('click', '.navigation a', e => {
   $(e.target).parent().addClass('active')
 });
 
+// pagination active page
 $(document).on('click', '.pagination a:not(.nav-arrow)', e => {
   e.preventDefault();
   $('.pagination a').each((i, el) => $(el).parent().removeClass('active'))
@@ -209,9 +211,13 @@ $(document).on('click', '.pagination a:not(.nav-arrow)', e => {
 });
 
 // useful page tiles
-$(".tiles").gridalicious({
-  gutter: 1,
-  width: 330,
-  selector: '.item',
-  animate: true,
-});
+const tiles = $('.tiles');
+
+if (tiles.length) {
+  $(tiles).gridalicious({
+    gutter: 1,
+    width: 330,
+    selector: '.item',
+    animate: true,
+  });
+}

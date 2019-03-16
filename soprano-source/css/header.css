@@ -1236,4 +1236,89 @@ header.useful-page .contact-info button:nth-child(2) {
     margin-left: 0;
   }
 }
+
+header.categoryItem-page {
+  background-image: url("../images/Path1.png");
+  background-repeat: no-repeat;
+  background-position: 0 -100px;
+  background-size: calc(100% + 10px) calc(100% + 100px);
+  padding: 145px 100px 95px;
+  font-family: "Century Gothic";
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+header.categoryItem-page h1 {
+  color: #af9a68;
+}
+
+header.categoryItem-page .contact-info {
+  padding: 55px 0 0;
+}
+
+header.categoryItem-page .contact-info span {
+  color: #c6c7c1;
+}
+
+header.categoryItem-page .contact-info span::after {
+  background-color: #c6c7c1;
+}
+
+header.categoryItem-page .contact-info button {
+  color: #c6c7c1;
+}
+
+header.categoryItem-page .contact-info button:hover {
+  color: #af9a68;
+}
+
+header.categoryItem-page .contact-info button:hover::after {
+  background-color: #af9a68;
+}
+
+header.categoryItem-page .contact-info button::after {
+  background-color: #c6c7c1;
+}
+
+header.categoryItem-page .contact-info button:nth-child(2) {
+  margin-left: 67px;
+}
+
+@media (max-width: 768px) {
+  header.categoryItem-page {
+    padding: 145px 30px 70px;
+  }
+  header.categoryItem-page .contact-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+  }
+  header.categoryItem-page .contact-info span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 20px;
+    line-height: 18px;
+  }
+  header.categoryItem-page .contact-info span::after {
+    width: 20%;
+  }
+  header.categoryItem-page .contact-info button {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-top: 20px;
+  }
+  header.categoryItem-page .contact-info button:nth-child(2) {
+    margin-left: 0;
+  }
+}
 /*# sourceMappingURL=header.css.map */

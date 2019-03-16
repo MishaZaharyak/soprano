@@ -823,7 +823,7 @@
 // end main page
 
 // article page
-body.article-page .main {
+.article-with-slider-left {
     background-image: url('../images/Rectangle8.png');
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -879,7 +879,7 @@ body.article-page .main {
 }
 
 @media screen and (max-width: 1300px) {
-    body.article-page .main {        
+    .article-with-slider-left {        
         padding-right: 50px;
 
         .first {
@@ -889,7 +889,7 @@ body.article-page .main {
 }
 
 @media screen and (max-width: 1100px) {
-    body.article-page .main {        
+    .article-with-slider-left {        
         padding-right: 30px;
         
         .first {
@@ -899,7 +899,7 @@ body.article-page .main {
 }
 
 @media screen and (max-width: 991px) {
-    body.article-page .main {        
+    .article-with-slider-left {        
         padding: 0 50px 20px;
         
         .first {
@@ -929,7 +929,7 @@ body.article-page .main {
 }
 
 @media screen and (max-width: 680px) {
-    body.article-page .main {
+    .article-with-slider-left {
         padding: 0;
         
         .first {
@@ -960,7 +960,7 @@ body.article-page .main {
 }
 
 @media screen and (max-width: 500px) {
-    body.article-page .main .last .contact-info {
+    .article-with-slider-left .last .contact-info {
         flex-direction: column;
         text-align: center;
         margin-top: 30px;
@@ -984,42 +984,15 @@ body.article-page .main {
 }
 
 @media screen and (min-width: 320px) {
-    body.article-page .main {        
+    .article-with-slider-left {        
         transition: .5s ease padding;
 
-        .first {
-            transition: .5s ease padding;
-
-            .slider {
-                .slide {
-                    transition: .5s ease text-align;
-        
-                    img {
-                        transition: .5s ease width;
-                    }       
-                }
-            }
-
-            .arrows .position-absolute {
-                transition: .5s ease right;
-            }
-        }
-
-        .last {
-            transition: .5s ease padding;
-
-            h4 {
-                transition: .5s ease all;
-            }
-
-            .contact-info {
-                transition: .5s ease all;
-            }
+        * {
+            transition: all .5s ease;
         }
     }
 }
 // end article page
-
 
 // clinic page
 // main block
@@ -1704,3 +1677,309 @@ body.clinic-page .main {
     }
 }
 // end useful page
+
+// services category item page
+body.categoryItem-page {
+    position: relative;
+    overflow: hidden;
+    overflow-y: auto;
+
+    img.lines {
+        position: absolute;
+        z-index: 0;
+        bottom: 5%;
+        left: -47px;
+        width: calc(100% + 100px);
+        -webkit-transform: rotate(-3deg);
+        transform: rotate(6deg);
+    }
+
+    img.lines-2 {
+        position: absolute;
+        z-index: 3;
+        top: 37%;
+        right: -52px;
+        width: calc(100% + 100px);
+        -webkit-transform: rotate(-3deg);
+        transform: rotate(180deg); 
+    }
+
+    // feedback
+    .feedback {
+        background-image: url('../images/Path44-flip.png');
+        background-position: -20px 0;
+        background-size: calc(100% + 50px) calc(100%);
+        position: relative;
+        z-index: 2;
+
+        * {
+            position: relative;
+            z-index: 5;
+        }
+    }
+    // end feedback
+
+    // reviews
+    .reviews {
+        background-color: unset;
+        
+        * {
+            position: relative;
+            z-index: 2;
+        }
+    }
+    // end reviews
+
+    // article with slider left
+    .article-with-slider-left {
+        background-image: none;
+        padding-top: 120px;
+
+        .last {
+            position: relative;
+            z-index: 5;
+        }
+    }
+    // end article with slider left
+}
+
+.text-section {
+    padding: 130px 0 45px 200px;
+    font-family: $centuryGothicFont;
+    position: relative;
+    margin-bottom: -120px;
+    z-index: 1;
+    transform: translateY(-53px);
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: .5;
+        background-image: url('../images/blanqueamiento-dental.png');
+        background-repeat: no-repeat;
+        background-position: 100% 0;
+        background-size: auto 100%;
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+    }
+    
+
+    & > div {
+        max-width: 620px;
+        margin-right: auto;
+        padding-bottom: 130px;
+        position: relative;
+        z-index: 1;
+
+        h4 {
+            font-size: 24px;
+            line-height: 24px;
+            color: $dark-text-color;
+            font-weight: bold;
+            margin: 25px 0;
+        }
+
+        & > p {
+            font-size: 12px;
+            line-height: 20px;
+            margin-bottom: 25px;
+            color: $dark-text-color;
+        }
+
+        .info {
+
+            small {
+                margin-bottom: 20px;
+                display: inline-block;
+                color: $dark-text-color;
+                font-weight: bold;
+            }
+
+            div {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+
+                p {
+                    font-size: 20px;
+                    line-height: 20px;
+                    color: $dark-text-color;
+                    font-weight: bold;
+                    margin: 0;
+                }
+
+                a {
+                    font-size: 12px;
+                    line-height: 12px;
+                    color: $active-color;
+                    font-weight: bold;
+                    padding: 0 15px;
+                    position: relative;
+                    cursor: pointer;
+                    transition: .5s ease color;
+                    margin-bottom: 8px;
+
+                    &::after {
+                        content: '';
+                        height: 1px;
+                        position: absolute;
+                        bottom: -7px;
+                        left: 0;
+                        width: 100%;
+                        margin: auto;
+                        background-color: $active-color;
+                        transition: .5s ease background-color;
+                    }
+
+                    &:hover {
+                        color: $dark-text-color;
+                        transition: .5s ease color;
+                
+                        &::after {
+                            background-color: $dark-text-color; 
+                            transition: .5s ease background-color;
+                        }
+                    }
+                }
+
+                span {
+                    font-size: 24px;
+                    line-height: 24px;
+                    color: $active-color;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+}   
+
+@media (min-width: 1441px) {
+    body.categoryItem-page img.lines {
+        bottom: 0%;
+    }
+}
+
+@media (max-width: 991px) {
+    body.categoryItem-page {
+        img.lines {
+            bottom: 7%;
+        }
+
+        img.lines-2 {
+            top: 35%;
+        }
+    }
+
+    .text-section {
+        padding: 130px 50px 45px;
+    
+        & > div {
+            margin: auto;
+        }
+    } 
+}
+
+ @media (max-width: 768px) {
+    body.categoryItem-page {
+        img.lines, img.lines-2 {
+            display: none;
+        }
+    }
+
+    .text-section {
+        padding: 130px 30px 45px;
+
+        & > div {
+    
+            h4 {
+                font-size: 18px;
+                line-height: 18px;
+                text-align: center;
+            }
+    
+            .info {
+    
+                div {
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+    
+                    p {
+                        font-size: 16px;
+                        line-height: 16px;
+                        margin-right: 20px;
+                        margin-bottom: 15px;
+                    }
+    
+                    a {
+                        order: 1;
+                        min-width: 100%;
+                        margin-top: 30px;
+                        font-size: 16px;
+                        line-height: 16px;
+                        padding: 0;
+    
+                        &::after {
+                            bottom: -11px;
+                            left: 0;
+                            width: 147px;
+                        }
+                    }
+    
+                    span {
+                        font-size: 18px;
+                        line-height: 18px;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .text-section {
+        
+        &::after {
+            content: none;
+        }
+
+        & > div {
+
+            .info {
+    
+                div {
+    
+                    span {
+                        font-size: 18px;
+                        line-height: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) {
+    body.categoryItem-page {
+        img.lines {
+            transition: all .5s ease;
+        }
+
+        img.lines-2 {
+            transition: all .5s ease;
+        }
+    }
+
+    .text-section {
+        transition: padding .5s ease;
+
+        * {
+            transition: all .5s ease;
+        }
+    }
+}
+// end services category item page

@@ -1174,3 +1174,85 @@ header.useful-page {
     }
 }
 // end useful page
+
+// services category item page
+header.categoryItem-page {
+    background-image: url('../images/Path1.png');
+    background-repeat: no-repeat;
+    background-position: 0 -100px;
+    background-size: calc(100% + 10px) calc(100% + 100px);
+    padding: 145px 100px 95px;
+    font-family: $centuryGothicFont;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+
+    h1 {
+        color: $active-color;
+    }
+
+    .contact-info {
+        padding: 55px 0 0;
+
+        span {
+            color: $light-text-color;
+
+            &::after {
+                background-color: $light-text-color;
+            }
+        }
+
+        button {
+            color: $light-text-color;
+
+            &:hover {
+                color: $active-color;
+
+                &::after {
+                    background-color: $active-color; 
+                }
+            }
+
+            &::after {
+                background-color: $light-text-color;
+            }
+
+            &:nth-child(2) {
+                margin-left: 67px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header.categoryItem-page {
+        padding: 145px 30px 70px;
+
+        .contact-info {
+            flex-direction: column;
+            text-align: center;
+            padding-top: 20px;
+    
+            span {
+                display: flex;
+                flex-direction: column;
+                padding-top: 20px;
+                line-height: 18px;
+    
+                &::after {
+                    width: 20%;
+                }
+            }
+    
+            button {
+                align-self: center;
+                margin-top: 20px;
+
+                &:nth-child(2) {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+// end services category item page

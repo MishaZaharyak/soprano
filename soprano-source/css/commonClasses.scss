@@ -43,6 +43,12 @@ body {
         letter-spacing: 0px;
         line-height: 13px;
         color: $light-text-color-2;
+        transition: color .5s ease;
+
+        a:hover {
+            color: $active-color;
+            transition: color .5s ease;
+        }
     }
 
     span.angle svg {
@@ -175,6 +181,7 @@ body {
 
 .dark-arrows {
     position: relative;
+    z-index: 5;
 
     .position-absolute {
         top: 0;

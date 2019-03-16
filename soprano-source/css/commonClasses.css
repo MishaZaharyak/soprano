@@ -40,6 +40,14 @@ body::-webkit-scrollbar-thumb {
   letter-spacing: 0px;
   line-height: 13px;
   color: #d2d3cd;
+  -webkit-transition: color .5s ease;
+  transition: color .5s ease;
+}
+
+.h1-breadcrum span a:hover {
+  color: #af9a68;
+  -webkit-transition: color .5s ease;
+  transition: color .5s ease;
 }
 
 .h1-breadcrum span.angle svg {
@@ -203,6 +211,7 @@ body::-webkit-scrollbar-thumb {
 
 .dark-arrows {
   position: relative;
+  z-index: 5;
 }
 
 .dark-arrows .position-absolute {
