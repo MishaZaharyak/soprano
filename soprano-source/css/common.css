@@ -1284,13 +1284,36 @@ body.clinic-page .main .last .dark-arrows .position-absolute {
 .doctors-section > div .doctors-slider .slide img {
   max-width: 200px;
   max-height: 265px;
+  opacity: 0.3;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.doctors-section > div .doctors-slider .slide.show img {
+  opacity: 1;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.doctors-section > div .doctors-slider .slide.show .hide {
+  opacity: 1;
+}
+
+.doctors-section > div .doctors-slider .slide .hide {
+  opacity: 0;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+  max-width: 200px;
+  margin-right: auto;
 }
 
 .doctors-section > div .doctors-slider .slide .hide .name {
   font-size: 1.25rem;
   line-height: 1;
   color: #af9a68;
-  margin: 20px 0 2px;
+  margin: 20px 0 0;
 }
 
 .doctors-section > div .doctors-slider .slide .hide .post {
@@ -1298,7 +1321,7 @@ body.clinic-page .main .last .dark-arrows .position-absolute {
   line-height: 12px;
   color: #af9a68;
   font-weight: bold;
-  margin: 0;
+  margin: 3px 0;
 }
 
 .doctors-section > div .doctors-slider .slide .hide div {
@@ -1320,7 +1343,7 @@ body.clinic-page .main .last .dark-arrows .position-absolute {
 .doctors-section > div .doctors-slider .slide .hide div .line {
   position: relative;
   width: calc(100% - 10px);
-  margin: 0 10px;
+  margin-left: 10px;
 }
 
 .doctors-section > div .doctors-slider .slide .hide div .line::before {
@@ -1330,6 +1353,91 @@ body.clinic-page .main .last .dark-arrows .position-absolute {
   height: 1px;
   top: 50%;
   background-color: #b6b7b2;
+}
+
+.doctors-section > div .dark-arrows .position-absolute {
+  top: -265px;
+  right: -40px;
+}
+
+.doctors-section > div .dark-arrows .slick-new-prev {
+  background: url("../images/Group7.png") no-repeat 100% 50%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  width: 10px;
+  height: 18px;
+  border: none;
+  position: absolute;
+  top: 19px;
+  right: 4px;
+  z-index: 1;
+  cursor: pointer;
+  display: block !important;
+}
+
+.doctors-section > div .dark-arrows .slick-new-prev:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.doctors-section > div .dark-arrows .slick-new-next {
+  background: url("../images/Group7.png") no-repeat 100% 0;
+  width: 18px;
+  height: 36px;
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: -18px;
+  z-index: 1;
+  cursor: pointer;
+  display: block !important;
+}
+
+.doctors-section > div .dark-arrows .slick-new-next:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+@media (max-width: 850px) {
+  .doctors-section {
+    padding: 100px 30px;
+  }
+  .doctors-section .dark-arrows {
+    display: none;
+  }
+  .doctors-section .dark-arrows .slick-new-prev {
+    display: none !important;
+  }
+  .doctors-section .dark-arrows .slick-new-next {
+    display: none !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .doctors-section {
+    padding: 100px 30px;
+  }
+  .doctors-section > div section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 50px;
+  }
+  .doctors-section > div section button {
+    margin-top: 15px;
+  }
+  .doctors-section > div .doctors-slider .slide img {
+    margin: 0 auto;
+  }
+  .doctors-section > div .doctors-slider .slide .hide {
+    margin: 0 auto;
+  }
 }
 
 .feedback {

@@ -69,6 +69,10 @@ $(document).ready(() => {
   const doctorsSlider = $('.doctors-slider');
 
   if (doctorsSlider.length) {
+    $(doctorsSlider).on('init', function(e, slick) {
+      showSlideInfo(slick);
+    })
+
     $(doctorsSlider).slick({
       ...sliderOptions,
       slidesToShow:5,
@@ -77,6 +81,41 @@ $(document).ready(() => {
       dots: false,
       prevArrow: $(doctorsSlider).parent().find('.slick-new-prev.small'),
       nextArrow: $(doctorsSlider).parent().find('.slick-new-next.small'),
+      responsive:[
+        {
+          breakpoint:1261,
+          settings: {
+            slidesToShow:4
+          }
+        },
+        {
+          breakpoint:1051,
+          settings: {
+            slidesToShow:3
+          }
+        },
+        {
+          breakpoint:851,
+          settings: {
+            slidesToShow:3,
+            arrows: false
+          }
+        },
+        {
+          breakpoint:701,
+          settings: {
+            slidesToShow:2,
+            arrows: false
+          }
+        },
+        {
+          breakpoint:501,
+          settings: {
+            slidesToShow:1,
+            arrows: false
+          }
+        }
+      ],
     })
   }
 
@@ -132,6 +171,68 @@ $(document).ready(() => {
   }
 })
 
+function showSlideInfo(slick) {
+  const slides = slick.$slider.find('.slide');
+  let images = slides.find('img');
+
+  const prev = slick.$prevArrow;
+  const next = slick.$nextArrow;
+
+  slides.eq(0).addClass('show');
+
+  // buttons
+  if (prev || next) {
+    prev.on('click', function(e) {
+      e.preventDefault();
+      let oldSlide = slides.filter('.show').eq(0);
+
+      if (slides.index(oldSlide) === 0) {
+        return
+  
+      } else {
+        oldSlide.removeClass('show');
+  
+        if (!oldSlide.hasClass('show')) {
+          oldSlide.closest('.slick-slide').prev().find('.slide').addClass('show')
+        }
+      }
+    });
+  
+    next.on('click', function(e) {
+      e.preventDefault();
+      let oldSlide = slides.filter('.show').eq(0);
+  
+      if (slides.index(oldSlide) === slides.length - 1) {
+        return
+  
+      } else {
+        oldSlide.removeClass('show');
+  
+        if (!oldSlide.hasClass('show')) {
+          oldSlide.closest('.slick-slide').next().find('.slide').addClass('show')
+        }
+      }
+  
+    });
+  }
+
+  // on image click/touche
+  Array.from(images).forEach(function(el) {
+    ['click', 'touchstart'].forEach(function(clickEvent) {
+      el.addEventListener(clickEvent, function(event) {
+        event.preventDefault();
+        let oldSlide = slides.filter('.show').eq(0);
+
+        oldSlide.removeClass('show')
+
+        if (!oldSlide.hasClass('show')) {
+          oldSlide = $(el).closest('.slide').addClass('show')
+        }
+      })
+    })
+  })
+}
+
 var closeWindow;
 
 // open modal window and close it if autoclose set to true
@@ -168,15 +269,6 @@ function closeModalWindow(selector) {
     }
   }, 500)
 }
-
-// smooth scroll
-// $(document).on("click","a[target=_self]", function(event) {
-//     const target = $(this.getAttribute('href'));
-//     if (target.length) {
-//         event.preventDefault();
-//         $('html, body').stop().animate({scrollTop: target.offset().top}, 2000);
-//     }
-// });
 
 function fixedMenu() {
   const windowScroll = window.scrollY;

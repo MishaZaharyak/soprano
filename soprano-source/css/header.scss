@@ -1484,58 +1484,79 @@ header.doctors-page {
         margin: 100px auto;
 
         .doctors-slider {
+            text-align: left;
+
             .slide {
                 margin: 0 10px;
-    
+
                 img {
                     max-width: 200px;
                     max-height: 265px;
+                    opacity: 0.3;
+                    margin: 0 auto;
+                    filter: grayscale(100%);
+                    transition: all .5s ease;
                 }
-    
+
+                &.show {
+                    img {
+                        opacity: 1;
+                        filter: grayscale(0);
+                    }
+
+                    .hide {
+                        opacity: 1;
+                    }
+                }
+
                 .hide {
+                    opacity: 0;
+                    margin: 0 auto;
+                    transition: opacity .5s ease;
+                    max-width: 200px;
+
                     .name {
                         @include font-size(20px);
                         line-height: 1;
                         color: $active-color;
-                        margin: 20px 0 2px;
+                        margin: 20px 0 0;
                     }
-    
+
                     .post {
                         font-size: 12px;
                         line-height: 12px;
                         color: $active-color;
                         font-weight: bold;
-                        margin: 0;
+                        margin: 3px 0;
                     }
-    
+
                     div {
                         display: flex;
                         padding-top: 30px;
-    
+
                         .experience {
                             font-size: 12px;
                             line-height: 12px;
                             color: $light-text-color-3;
                             min-width: max-content;
                         }
-    
+
                         .line {
                             position: relative;
                             width: calc(100% - 10px);
-                            margin: 0 10px;
-    
+                            margin-left: 10px;
+
                             &::before {
                                 content: '';
                                 position: absolute;
                                 width: 100%;
-                                left: 0;
                                 height: 1px;
                                 top: 50%;
                                 background-color: $light-text-color-3;
                             }
                         }
                     }
-    
+
                 }
             }
         }
@@ -1543,7 +1564,7 @@ header.doctors-page {
         .dark-arrows {
         
             .position-absolute {
-                top: 20px;
+                bottom: 0;
                 right: 50%;
             }
         
@@ -1558,6 +1579,7 @@ header.doctors-page {
                 right: 4px;
                 z-index: 1;
                 cursor: pointer;
+                display: block !important;
         
                 &:focus {
                     outline: none;
@@ -1575,11 +1597,28 @@ header.doctors-page {
                 right: -18px;
                 z-index: 1;
                 cursor: pointer;
+                display: block !important;
 
                 &:focus {
                     outline: none;
                     box-shadow: none;
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    header.doctors-page .doctors-header {
+        .dark-arrows {
+            display: none;
+        
+            .slick-new-prev {
+                display: none !important;
+            }
+        
+            .slick-new-next {
+                display: none !important;
             }
         }
     }
@@ -1613,6 +1652,18 @@ header.doctors-page {
                     margin-left: 0;
                 }
             }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    header.doctors-page .doctors-header .doctors-slider .slide {
+        img {
+            margin: 0 auto;
+        }
+
+        .hide {
+            margin: 0 auto;
         }
     }
 }
