@@ -86,8 +86,13 @@ header .slider .slide .text {
 
 header .slider .slide .text h1 {
   color: #af9a68;
-  font-size: 50px;
-  line-height: 50px;
+  font-size: 3.125rem;
+}
+
+@media (max-width: 1200px) {
+  header .slider .slide .text h1 {
+    font-size: calc(1.4375rem + 2.25vw) ;
+  }
 }
 
 header .slider .slide .text h1 span {
@@ -96,7 +101,7 @@ header .slider .slide .text h1 span {
 
 header .slider .slide .text p {
   color: #c6c7c1;
-  font-size: 13px;
+  font-size: 0.8125rem;
   line-height: 16px;
   font-weight: 500;
 }
@@ -160,9 +165,6 @@ header .slider .slick-new-prev {
   top: 19px;
   right: 4px;
   z-index: 1;
-}
-
-header .slider .slick-new-prev:hover {
   cursor: pointer;
 }
 
@@ -181,9 +183,6 @@ header .slider .slick-new-next {
   top: 10px;
   right: -18px;
   z-index: 1;
-}
-
-header .slider .slick-new-next:hover {
   cursor: pointer;
 }
 
@@ -235,8 +234,7 @@ header .contact-info button::after {
 
 .contact-form-section h4 {
   color: #af9a68;
-  font-size: 20px;
-  line-height: 18px;
+  font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 18px;
 }
@@ -266,7 +264,7 @@ header .contact-info button::after {
   width: 100%;
   color: #c6c7c1;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 0.9375rem;
   outline: none;
 }
 
@@ -346,6 +344,7 @@ header .contact-info button::after {
   font-weight: bold;
   line-height: 11px;
   font-size: 13px;
+  font-size: 0.8125rem;
   margin: 20px 0 25px;
   -webkit-transition: .5s ease all;
   transition: .5s ease all;
@@ -421,10 +420,6 @@ header .contact-info button::after {
 }
 
 @media screen and (max-width: 1100px) {
-  header .slider .slide .text h1 {
-    font-size: 38px;
-    line-height: 38px;
-  }
   header .contact-form-section {
     width: 271px;
     height: 317px;
@@ -514,10 +509,6 @@ header .contact-info button::after {
   }
   header .slider .slide .text h1, header .slider .slide .text button.button-link, header .slider .slide .text p {
     max-width: 100%;
-  }
-  header .slider .slide .text h1 {
-    font-size: 30px;
-    line-height: 30px;
   }
   header .slider .slide .text button.button-link {
     margin: 19px auto;
@@ -663,17 +654,23 @@ header.page-not-found .text {
 
 header.page-not-found .text h1 {
   color: #af9a68;
-  font-size: 50px;
-  line-height: 50px;
+  font-size: 3.125rem;
+  line-height: 1;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
+@media (max-width: 1200px) {
+  header.page-not-found .text h1 {
+    font-size: calc(1.4375rem + 2.25vw) ;
+  }
+}
+
 header.page-not-found .text p {
   color: #d2d3cd;
-  font-size: 14px;
+  font-size: 0.875rem;
   letter-spacing: 0px;
-  line-height: 14px;
+  line-height: 1;
   margin-bottom: 0;
 }
 
@@ -731,10 +728,6 @@ header.page-not-found .text .contact-info button:nth-child(2) {
   header.page-not-found {
     padding: 240px 50px 150px;
   }
-  header.page-not-found .text h1 {
-    font-size: 30px;
-    line-height: 30px;
-  }
 }
 
 @media screen and (max-width: 500px) {
@@ -754,7 +747,7 @@ header.page-not-found .text .contact-info button:nth-child(2) {
 header.article-page {
   background-image: url("../images/black-sm-rect-flip.png");
   background-repeat: no-repeat;
-  background-position: 0 -100px;
+  background-position: -5px -100px;
   background-size: calc(100% + 10px) calc(100% + 100px);
   padding: 145px 50px 70px;
   font-family: "Century Gothic";
@@ -771,7 +764,7 @@ header.article-page {
 header.clinic-page {
   background-image: url("../images/black-sm-path.png");
   background-repeat: no-repeat;
-  background-position: 0 -100px;
+  background-position: -5px -100px;
   background-size: calc(100% + 10px) calc(100% + 100px);
   padding: 145px 100px 150px;
   font-family: "Century Gothic";
@@ -848,7 +841,7 @@ header.clinic-page .contact-info button::after {
 header.contact-page {
   background-image: url("../images/Path1-flip.png");
   background-repeat: no-repeat;
-  background-position: 0 -100px;
+  background-position: -5px -100px;
   background-size: calc(100% + 10px) calc(100% + 100px);
   padding: 145px 100px 290px;
   font-family: "Century Gothic";
@@ -880,11 +873,17 @@ header.contact-page .contact-info span::after {
 }
 
 header.contact-page .contact-info a.big {
-  font-size: 25px;
-  line-height: 25px;
+  font-size: 1.5625rem;
+  line-height: 1;
   color: #d2d3cd;
   text-align: center;
   margin-bottom: 10px;
+}
+
+@media (max-width: 1200px) {
+  header.contact-page .contact-info a.big {
+    font-size: calc(1.28125rem + 0.375vw) ;
+  }
 }
 
 header.contact-page .contact-info a.big:last-of-type {
@@ -942,7 +941,6 @@ header.contact-page .contact-info button::after {
   }
   header.contact-page .contact-info a.big {
     font-size: 18px;
-    line-height: 18px;
   }
   header.contact-page .contact-info a.big:first-of-type {
     margin-top: 20px;
@@ -961,7 +959,7 @@ header.contact-page .contact-info button::after {
 header.prices-page {
   background-image: url("../images/Path1-flip.png");
   background-repeat: no-repeat;
-  background-position: 0 -100px;
+  background-position: -5px -100px;
   background-size: calc(100% + 10px) calc(100% + 100px);
   padding: 145px 100px 95px;
   font-family: "Century Gothic";
@@ -1045,7 +1043,7 @@ header.prices-page .contact-info button:nth-child(2) {
 header.services-page {
   background-image: url("../images/Path1-flip.png");
   background-repeat: no-repeat;
-  background-position: 0 -100px;
+  background-position: -5px -100px;
   background-size: calc(100% + 10px) calc(100% + 100px);
   padding: 145px 100px 205px;
   font-family: "Century Gothic";
@@ -1095,11 +1093,17 @@ header.services-page .services > div .content > span {
 
 header.services-page .services > div .content button {
   color: #d2d3cd;
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: bold;
-  line-height: 22px;
+  line-height: 1;
   text-align: center;
   text-transform: none;
+}
+
+@media (max-width: 1200px) {
+  header.services-page .services > div .content button {
+    font-size: calc(1.2625rem + 0.15vw) ;
+  }
 }
 
 header.services-page .services > div .content button::after {
@@ -1126,6 +1130,13 @@ header.services-page .services > div .content ul li {
   font-weight: bold;
   padding: 6px 0;
   text-align: center;
+  -webkit-transition: color .5s ease;
+  transition: color .5s ease;
+  cursor: pointer;
+}
+
+header.services-page .services > div .content ul li:hover {
+  color: #d2d3cd;
 }
 
 @media (max-width: 991px) {
@@ -1147,16 +1158,12 @@ header.services-page .services > div .content ul li {
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
   }
-  header.services-page * {
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease;
-  }
 }
 
 header.useful-page {
   background-image: url("../images/Path1-flip.png");
   background-repeat: no-repeat;
-  background-position: 0 -100px;
+  background-position: -5px -100px;
   background-size: calc(100% + 10px) calc(100% + 100px);
   padding: 145px 100px 95px;
   font-family: "Century Gothic";
@@ -1237,10 +1244,29 @@ header.useful-page .contact-info button:nth-child(2) {
   }
 }
 
+@media (min-width: 320px) {
+  header.useful-page {
+    -webkit-transition: padding .5s ease;
+    transition: padding .5s ease;
+  }
+  header.useful-page .contact-info {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  header.useful-page .contact-info span {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  header.useful-page .contact-info button {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+}
+
 header.categoryItem-page {
   background-image: url("../images/Path1.png");
   background-repeat: no-repeat;
-  background-position: 0 -100px;
+  background-position: -5px -100px;
   background-size: calc(100% + 10px) calc(100% + 100px);
   padding: 145px 100px 95px;
   font-family: "Century Gothic";
@@ -1322,10 +1348,29 @@ header.categoryItem-page .contact-info button:nth-child(2) {
   }
 }
 
+@media (min-width: 320px) {
+  header.categoryItem-page {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  header.categoryItem-page .contact-info {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  header.categoryItem-page .contact-info span {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  header.categoryItem-page .contact-info button {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+}
+
 header.services-category-page {
   background-image: url("../images/Path1-flip.png");
   background-repeat: no-repeat;
-  background-position: 0 -100px;
+  background-position: -5px -100px;
   background-size: calc(100% + 10px) calc(100% + 100px);
   background-color: #d3d4ce;
   padding: 240px 250px 150px 320px;
@@ -1358,18 +1403,14 @@ header.services-category-page .text {
 }
 
 header.services-category-page .text h1 {
-  font-size: 50px;
   text-align: left;
-  line-height: 50px;
-  font-weight: bold;
-  margin-bottom: 20px;
 }
 
 header.services-category-page .text p {
   color: #d2d3cd;
-  font-size: 14px;
+  font-size: 0.875rem;
   letter-spacing: 0px;
-  line-height: 14px;
+  line-height: 1;
   margin-bottom: 0;
 }
 
@@ -1478,8 +1519,6 @@ header.services-category-page > div button:hover::after {
     padding: 240px 50px 150px;
   }
   header.services-category-page .text h1 {
-    font-size: 30px;
-    line-height: 30px;
     text-align: center;
   }
 }
@@ -1491,9 +1530,228 @@ header.services-category-page > div button:hover::after {
 }
 
 @media screen and (min-width: 320px) {
-  header.page-not-found {
-    -webkit-transition: .5s ease padding;
-    transition: .5s ease padding;
+  header.services-category-page {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+  header.services-category-page .text h1 {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+  header.services-category-page .text .contact-info {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+  header.services-category-page > div {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+}
+
+header.doctors-page {
+  background-image: url("../images/Path1.png");
+  background-repeat: no-repeat;
+  background-position: -5px -100px;
+  background-size: calc(100% + 10px) calc(100% + 100px);
+  padding: 145px 50px 70px;
+  font-family: "Century Gothic";
+  text-align: center;
+  background-color: #d3d4ce;
+}
+
+header.doctors-page h1 {
+  color: #af9a68;
+}
+
+header.doctors-page .contact-info {
+  padding: 55px 0 0;
+}
+
+header.doctors-page .contact-info span {
+  color: #c6c7c1;
+}
+
+header.doctors-page .contact-info span::after {
+  background-color: #c6c7c1;
+}
+
+header.doctors-page .contact-info button {
+  color: #c6c7c1;
+}
+
+header.doctors-page .contact-info button:hover {
+  color: #af9a68;
+}
+
+header.doctors-page .contact-info button:hover::after {
+  background-color: #af9a68;
+}
+
+header.doctors-page .contact-info button::after {
+  background-color: #c6c7c1;
+}
+
+header.doctors-page .contact-info button:nth-child(2) {
+  margin-left: 67px;
+}
+
+header.doctors-page .doctors-header {
+  max-width: 1035px;
+  margin: 100px auto;
+}
+
+header.doctors-page .doctors-header .doctors-slider .slide {
+  margin: 0 10px;
+}
+
+header.doctors-page .doctors-header .doctors-slider .slide img {
+  max-width: 200px;
+  max-height: 265px;
+}
+
+header.doctors-page .doctors-header .doctors-slider .slide .hide .name {
+  font-size: 1.25rem;
+  line-height: 1;
+  color: #af9a68;
+  margin: 20px 0 2px;
+}
+
+header.doctors-page .doctors-header .doctors-slider .slide .hide .post {
+  font-size: 12px;
+  line-height: 12px;
+  color: #af9a68;
+  font-weight: bold;
+  margin: 0;
+}
+
+header.doctors-page .doctors-header .doctors-slider .slide .hide div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 30px;
+}
+
+header.doctors-page .doctors-header .doctors-slider .slide .hide div .experience {
+  font-size: 12px;
+  line-height: 12px;
+  color: #b6b7b2;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+
+header.doctors-page .doctors-header .doctors-slider .slide .hide div .line {
+  position: relative;
+  width: calc(100% - 10px);
+  margin: 0 10px;
+}
+
+header.doctors-page .doctors-header .doctors-slider .slide .hide div .line::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 1px;
+  top: 50%;
+  background-color: #b6b7b2;
+}
+
+header.doctors-page .doctors-header .dark-arrows .position-absolute {
+  top: 20px;
+  right: 50%;
+}
+
+header.doctors-page .doctors-header .dark-arrows .slick-new-prev {
+  background: url("../images/Group7.png") no-repeat 100% 50%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  width: 10px;
+  height: 18px;
+  border: none;
+  position: absolute;
+  top: 19px;
+  right: 4px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+header.doctors-page .doctors-header .dark-arrows .slick-new-prev:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+header.doctors-page .doctors-header .dark-arrows .slick-new-next {
+  background: url("../images/Group7.png") no-repeat 100% 0;
+  width: 18px;
+  height: 36px;
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: -18px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+header.doctors-page .doctors-header .dark-arrows .slick-new-next:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  header.doctors-page {
+    padding: 145px 30px 70px;
+  }
+  header.doctors-page .contact-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+  }
+  header.doctors-page .contact-info span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 20px;
+    line-height: 18px;
+  }
+  header.doctors-page .contact-info span::after {
+    width: 20%;
+  }
+  header.doctors-page .contact-info button {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-top: 20px;
+  }
+  header.doctors-page .contact-info button:nth-child(2) {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  header.doctors-page {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+  header.doctors-page .contact-info {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+  header.doctors-page .contact-info span {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+  header.doctors-page .contact-info button {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
   }
 }
 /*# sourceMappingURL=header.css.map */

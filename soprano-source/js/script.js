@@ -74,11 +74,60 @@ $(document).ready(() => {
       slidesToShow:5,
       slidesToScroll:1,
       infinite: false,
-      asNavFor: '',
-      dots: true,
-      focusOnSelect: true,
+      dots: false,
       prevArrow: $(doctorsSlider).parent().find('.slick-new-prev.small'),
       nextArrow: $(doctorsSlider).parent().find('.slick-new-next.small'),
+    })
+  }
+
+  const experienceSlider = $('.experience-slider');
+
+  if (experienceSlider.length) {
+    $(experienceSlider).each(function() {
+      $(this).slick({
+        ...sliderOptions,
+        slidesToShow:4,
+        slidesToScroll:1,
+        infinite: false,
+        dots: false,
+        adaptiveHeight: true,
+        prevArrow: $(this).parent().find('.slick-new-prev.small'),
+        nextArrow: $(this).parent().find('.slick-new-next.small'),
+        responsive:[
+          {
+            breakpoint:1301,
+            settings: {
+              slidesToShow:3
+            }
+          },
+          {
+            breakpoint:992,
+            settings: {
+              slidesToShow:4
+            }
+          },
+          {
+            breakpoint:801,
+            settings: {
+              slidesToShow:3
+            }
+          },
+          {
+            breakpoint:769,
+            settings: {
+              slidesToShow:3,
+              arrows: false,
+            }
+          },
+          {
+            breakpoint:501,
+            settings: {
+              slidesToShow:2,
+              arrows: false,
+            }
+          }
+        ],
+      })
     })
   }
 })
@@ -186,7 +235,7 @@ $(document).ready(function() {
 
 // reset active link when click on brande
 $('.navbar-brand').on('click', function(e) {
-  e.preventDefault();
+  // e.preventDefault();
   $('.navigation a').each((i, el) => $(el).parent().removeClass('active'))
 })
 
@@ -198,7 +247,7 @@ $(document).on('click', '.languages a', e => {
 })
 // active link
 $(document).on('click', '.navigation a', e => {
-  e.preventDefault();
+  // e.preventDefault();
   $('.navigation a').each((i, el) => $(el).parent().removeClass('active'))
   $(e.target).parent().addClass('active')
 });

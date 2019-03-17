@@ -1,4 +1,5 @@
 @import './vars.scss';
+@import './font-size.scss';
 
 // main page
 header {
@@ -66,8 +67,7 @@ header {
 
                 h1 {
                     color: $active-color;
-                    font-size: 50px;
-                    line-height: 50px;
+                    @include font-size(50px);
 
                     span {
                         font-weight: bold;
@@ -76,7 +76,7 @@ header {
 
                 p {
                     color: $light-text-color;
-                    font-size: 13px;
+                    @include font-size(13px);
                     line-height: 16px;
                     font-weight: 500;
                 }
@@ -139,10 +139,7 @@ header {
             top: 19px;
             right: 4px;
             z-index: 1;
-
-            &:hover {
-                cursor: pointer;
-            }
+            cursor: pointer;
 
             &:focus {
                 outline: none;
@@ -159,10 +156,7 @@ header {
             top: 10px;
             right: -18px;
             z-index: 1;
-
-            &:hover {
-                cursor: pointer;
-            }
+            cursor: pointer;
 
             &:focus {
                 outline: none;
@@ -213,8 +207,7 @@ header {
 
     h4 {
         color: $active-color;
-        font-size: 20px;
-        line-height: 18px;
+        @include font-size(20px);
         font-weight: bold;
         margin-bottom: 18px;
     }
@@ -236,7 +229,7 @@ header {
             width: 100%;
             color: $light-text-color;
             font-weight: 400;
-            font-size: 15px;
+            @include font-size(15px);
             outline: none;
 
             &::placeholder {
@@ -266,6 +259,7 @@ header {
             font-weight: bold;
             line-height: 11px;
             font-size: 13px;
+            @include font-size(13px);
             margin: 20px 0 25px;
             transition: .5s ease all;
             border-radius: 2px;
@@ -364,10 +358,6 @@ header {
 }
 
 @media screen and (max-width: 1100px) {
-    header .slider .slide .text h1 {
-        font-size: 38px;
-        line-height: 38px;
-    }
     header .contact-form-section {
         width: 271px;
         height: 317px;
@@ -480,11 +470,6 @@ header {
 
         h1, button.button-link, p {
             max-width: 100%;
-        }
-
-        h1 {
-            font-size: 30px;
-            line-height: 30px;
         }
 
         button.button-link {
@@ -622,17 +607,17 @@ header.page-not-found {
 
         h1 {
             color: $active-color;
-            font-size: 50px;
-            line-height: 50px;
+            @include font-size(50px);
+            line-height: 1;
             font-weight: bold;
             margin-bottom: 20px; 
         }
 
         p {
             color: $light-text-color-2;
-            font-size: 14px;
+            @include font-size(14px);
             letter-spacing: 0px;
-            line-height: 14px;
+            line-height: 1;
             margin-bottom: 0;
         }
 
@@ -688,11 +673,6 @@ header.page-not-found {
 @media screen and (max-width: 768px) {
     header.page-not-found {
         padding: 240px 50px 150px;
-
-        .text h1 {
-            font-size: 30px;
-            line-height: 30px; 
-        }
     }
 }
 
@@ -714,7 +694,7 @@ header.page-not-found {
 header.article-page {
     background-image: url('../images/black-sm-rect-flip.png');
     background-repeat: no-repeat;
-    background-position: 0 -100px;
+    background-position: -5px -100px;
     background-size: calc(100% + 10px) calc(100% + 100px);
     padding: 145px 50px 70px;
     font-family: $centuryGothicFont;
@@ -733,7 +713,7 @@ header.article-page {
 header.clinic-page {
     background-image: url('../images/black-sm-path.png');
     background-repeat: no-repeat;
-    background-position: 0 -100px;
+    background-position: -5px -100px;
     background-size: calc(100% + 10px) calc(100% + 100px);
     padding: 145px 100px 150px;
     font-family: $centuryGothicFont;
@@ -802,11 +782,11 @@ header.clinic-page {
 }
 // end clinic page
 
-// contact page
+// contacts page
 header.contact-page {
     background-image: url('../images/Path1-flip.png');
     background-repeat: no-repeat;
-    background-position: 0 -100px;
+    background-position: -5px -100px;
     background-size: calc(100% + 10px) calc(100% + 100px);
     padding: 145px 100px 290px;
     font-family: $centuryGothicFont;
@@ -834,8 +814,8 @@ header.contact-page {
         }
 
         a.big {
-            font-size: 25px;
-            line-height: 25px;
+            @include font-size(25px);
+            line-height: 1;
             color: $light-text-color-2;
             text-align: center;
             margin-bottom: 10px;
@@ -893,7 +873,6 @@ header.contact-page {
 
             a.big {
                 font-size: 18px;
-                line-height: 18px;
 
                 &:first-of-type {
                     margin-top: 20px;
@@ -911,13 +890,13 @@ header.contact-page {
         }
     }
 }
-// end contact page
+// end contacts page
 
 // prices page
 header.prices-page {
     background-image: url('../images/Path1-flip.png');
     background-repeat: no-repeat;
-    background-position: 0 -100px;
+    background-position: -5px -100px;
     background-size: calc(100% + 10px) calc(100% + 100px);
     padding: 145px 100px 95px;
     font-family: $centuryGothicFont;
@@ -998,7 +977,7 @@ header.prices-page {
 header.services-page {
     background-image: url('../images/Path1-flip.png');
     background-repeat: no-repeat;
-    background-position: 0 -100px;
+    background-position: -5px -100px;
     background-size: calc(100% + 10px) calc(100% + 100px);
     padding: 145px 100px 205px;
     font-family: $centuryGothicFont;
@@ -1031,9 +1010,9 @@ header.services-page {
 
                 button {
                     color: $light-text-color-2;
-                    font-size: 22px;
+                    @include font-size(22px);
                     font-weight: bold;
-                    line-height: 22px;
+                    line-height: 1;
                     text-align: center;
                     text-transform: none;
 
@@ -1061,6 +1040,12 @@ header.services-page {
                         font-weight: bold;
                         padding: 6px 0;
                         text-align: center;
+                        transition: color .5s ease;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: $light-text-color-2;
+                        }
                     }
                 }
             }
@@ -1086,10 +1071,6 @@ header.services-page {
 @media (min-width: 320px) {
     header.services-page {
         transition: all .5s ease;
-
-        * {
-            transition: all .5s ease;
-        }
     }
 }
 // end services page
@@ -1098,7 +1079,7 @@ header.services-page {
 header.useful-page {
     background-image: url('../images/Path1-flip.png');
     background-repeat: no-repeat;
-    background-position: 0 -100px;
+    background-position: -5px -100px;
     background-size: calc(100% + 10px) calc(100% + 100px);
     padding: 145px 100px 95px;
     font-family: $centuryGothicFont;
@@ -1173,13 +1154,31 @@ header.useful-page {
         }
     }
 }
+
+@media (min-width: 320px) {
+    header.useful-page {
+        transition: padding .5s ease;
+
+        .contact-info {
+            transition: all .5s ease;
+    
+            span {
+                transition: all .5s ease;
+            }
+    
+            button {
+                transition: all .5s ease;
+            }
+        }
+    }
+}
 // end useful page
 
 // services category item page
 header.categoryItem-page {
     background-image: url('../images/Path1.png');
     background-repeat: no-repeat;
-    background-position: 0 -100px;
+    background-position: -5px -100px;
     background-size: calc(100% + 10px) calc(100% + 100px);
     padding: 145px 100px 95px;
     font-family: $centuryGothicFont;
@@ -1255,13 +1254,31 @@ header.categoryItem-page {
         }
     }
 }
+
+@media (min-width: 320px) {
+    header.categoryItem-page {
+        transition: all .5s ease;
+
+        .contact-info {
+            transition: all .5s ease;
+    
+            span {
+                transition: all .5s ease;
+            }
+    
+            button {
+                transition: all .5s ease;
+            }
+        }
+    }
+}
 // end services category item page
 
 // services category page
 header.services-category-page {
     background-image: url('../images/Path1-flip.png');
     background-repeat: no-repeat;
-    background-position: 0 -100px;
+    background-position: -5px -100px;
     background-size: calc(100% + 10px) calc(100% + 100px);
     background-color: $clip-bg-color;
     padding: 240px 250px 150px 320px;
@@ -1279,18 +1296,14 @@ header.services-category-page {
         z-index: 3;
 
         h1 {
-            font-size: 50px;
             text-align: left;
-            line-height: 50px;
-            font-weight: bold;
-            margin-bottom: 20px; 
         }
 
         p {
             color: $light-text-color-2;
-            font-size: 14px;
+            @include font-size(14px);
             letter-spacing: 0px;
-            line-height: 14px;
+            line-height: 1;
             margin-bottom: 0;
         }
 
@@ -1387,8 +1400,6 @@ header.services-category-page {
         padding: 240px 50px 150px;
 
         .text h1 {
-            font-size: 30px;
-            line-height: 30px; 
             text-align: center;
         }
     }
@@ -1401,8 +1412,226 @@ header.services-category-page {
 }
 
 @media screen and (min-width: 320px) {
-    header.page-not-found {
-        transition: .5s ease padding;
+    header.services-category-page {
+        transition: .5s ease all;
+
+        .text {
+            h1 {
+                transition: .5s ease all;
+            }
+
+            .contact-info {
+                transition: .5s ease all;
+            }
+        }
+
+        & > div {
+            transition: .5s ease all;
+        }
     }
 }
 // services category page
+
+// doctors page
+header.doctors-page {
+    background-image: url('../images/Path1.png');
+    background-repeat: no-repeat;
+    background-position: -5px -100px;
+    background-size: calc(100% + 10px) calc(100% + 100px);
+    padding: 145px 50px 70px;
+    font-family: $centuryGothicFont;
+    text-align: center;
+    background-color: $clip-bg-color;
+
+    h1 {
+        color: $active-color;
+    }
+
+    .contact-info {
+        padding: 55px 0 0;
+
+        span {
+            color: $light-text-color;
+
+            &::after {
+                background-color: $light-text-color;
+            }
+        }
+
+        button {
+            color: $light-text-color;
+
+            &:hover {
+                color: $active-color;
+
+                &::after {
+                    background-color: $active-color; 
+                }
+            }
+
+            &::after {
+                background-color: $light-text-color;
+            }
+
+            &:nth-child(2) {
+                margin-left: 67px;
+            }
+        }
+    }
+
+    .doctors-header {
+        max-width: 1035px;
+        margin: 100px auto;
+
+        .doctors-slider {
+            .slide {
+                margin: 0 10px;
+    
+                img {
+                    max-width: 200px;
+                    max-height: 265px;
+                }
+    
+                .hide {
+                    .name {
+                        @include font-size(20px);
+                        line-height: 1;
+                        color: $active-color;
+                        margin: 20px 0 2px;
+                    }
+    
+                    .post {
+                        font-size: 12px;
+                        line-height: 12px;
+                        color: $active-color;
+                        font-weight: bold;
+                        margin: 0;
+                    }
+    
+                    div {
+                        display: flex;
+                        padding-top: 30px;
+    
+                        .experience {
+                            font-size: 12px;
+                            line-height: 12px;
+                            color: $light-text-color-3;
+                            min-width: max-content;
+                        }
+    
+                        .line {
+                            position: relative;
+                            width: calc(100% - 10px);
+                            margin: 0 10px;
+    
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                width: 100%;
+                                left: 0;
+                                height: 1px;
+                                top: 50%;
+                                background-color: $light-text-color-3;
+                            }
+                        }
+                    }
+    
+                }
+            }
+        }
+
+        .dark-arrows {
+        
+            .position-absolute {
+                top: 20px;
+                right: 50%;
+            }
+        
+            .slick-new-prev {
+                background: url('../images/Group7.png') no-repeat 100% 50%;
+                transform: rotate(180deg);
+                width: 10px;
+                height: 18px;
+                border: none;
+                position: absolute;
+                top: 19px;
+                right: 4px;
+                z-index: 1;
+                cursor: pointer;
+        
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+        
+            .slick-new-next {
+                background: url('../images/Group7.png') no-repeat 100% 0;
+                width: 18px;
+                height: 36px;
+                border: none;
+                position: absolute;
+                top: 10px;
+                right: -18px;
+                z-index: 1;
+                cursor: pointer;
+
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header.doctors-page {
+        padding: 145px 30px 70px;
+
+        .contact-info {
+            flex-direction: column;
+            text-align: center;
+            padding-top: 20px;
+    
+            span {
+                display: flex;
+                flex-direction: column;
+                padding-top: 20px;
+                line-height: 18px;
+    
+                &::after {
+                    width: 20%;
+                }
+            }
+    
+            button {
+                align-self: center;
+                margin-top: 20px;
+
+                &:nth-child(2) {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) {
+    header.doctors-page {
+        transition: .5s ease all;
+
+        .contact-info {
+            transition: .5s ease all;
+    
+            span {
+                transition: .5s ease all;
+            }
+    
+            button {
+                transition: .5s ease all;
+            }
+        }
+    }
+}
+// end doctors page
