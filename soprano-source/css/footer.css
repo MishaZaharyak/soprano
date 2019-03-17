@@ -1,15 +1,11 @@
 .footer {
   position: relative;
+  overflow: hidden;
   font-family: "Century Gothic";
-}
-
-@media screen and (max-width: 1100px) {
-  .footer {
-    background-image: url("../images/Path49.png");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: calc(100% + 10px) 100%;
-  }
+  background-image: url("../images/Path49.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: calc(100% + 10px) 100%;
 }
 
 .footer .navbar-f {
@@ -21,6 +17,8 @@
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .footer .navbar-f div {
@@ -210,10 +208,6 @@
 }
 
 .footer.article-page {
-  background-image: url("../images/Path49.png");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: calc(100% + 10px) 100%;
   padding-top: 160px;
   overflow: hidden;
 }
@@ -250,10 +244,6 @@
 }
 
 .footer.clinic-page {
-  background-image: url("../images/Path49.png");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: calc(100% + 10px) 100%;
   padding-top: 160px;
   overflow: hidden;
 }
@@ -451,10 +441,6 @@
 }
 
 .footer.prices-page {
-  background-image: url("../images/Path49.png");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: calc(100% + 10px) 100%;
   padding-top: 160px;
   overflow: hidden;
 }
@@ -513,10 +499,6 @@ body.services-page img.lines {
 }
 
 .footer.services-page {
-  background-image: url("../images/Path49.png");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: calc(100% + 10px) 100%;
   padding-top: 100px;
 }
 
@@ -532,10 +514,6 @@ body.services-page img.lines {
 }
 
 .footer.services-category-page {
-  background-image: url("../images/Path49.png");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: calc(100% + 10px) 100%;
   padding-top: 100px;
 }
 

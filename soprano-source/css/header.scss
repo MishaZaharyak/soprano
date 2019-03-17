@@ -3,11 +3,13 @@
 
 // main page
 header {
-    &.header {
-        position: relative;
-        font-family: $centuryGothicFont;
-        padding: 91px 0 0;
-    }
+    background-image: url('../images/Path1.png');
+    background-repeat: no-repeat;
+    background-position: -5px -100px;
+    background-size: calc(100% + 10px) calc(100% + 100px);
+    font-family: $centuryGothicFont;
+    position: relative;
+    padding: 91px 0 150px;
 
     .header-socials{
         position: absolute;
@@ -167,6 +169,8 @@ header {
 
     .contact-info {
         padding: 25px 100px 0 100px;
+        position: relative;
+        z-index: 2;
 
         span {
             color: $light-text-color;
@@ -197,7 +201,7 @@ header {
 .contact-form-section {
     position: absolute;
     right: 0;
-    top: 29%;
+    top: 24%;
     height: 380px;
     z-index: 1;
     width: 360px;
@@ -693,9 +697,6 @@ header.page-not-found {
 // article page
 header.article-page {
     background-image: url('../images/black-sm-rect-flip.png');
-    background-repeat: no-repeat;
-    background-position: -5px -100px;
-    background-size: calc(100% + 10px) calc(100% + 100px);
     padding: 145px 50px 70px;
     font-family: $centuryGothicFont;
     text-align: center;
@@ -712,9 +713,6 @@ header.article-page {
 // clinic page
 header.clinic-page {
     background-image: url('../images/black-sm-path.png');
-    background-repeat: no-repeat;
-    background-position: -5px -100px;
-    background-size: calc(100% + 10px) calc(100% + 100px);
     padding: 145px 100px 150px;
     font-family: $centuryGothicFont;
     text-align: center;

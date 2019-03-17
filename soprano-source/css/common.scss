@@ -3,16 +3,62 @@
 
 // main page
 
-// advantages section
+body.main {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
 
+    img.lines {
+        position: absolute;
+        z-index: 0;
+        bottom: 4%;
+        left: -88px;
+        width: calc(100% + 100px);
+    }
+
+    img.lines-2 {
+        position: absolute;
+        z-index: 0;
+        top: 12%;
+        left: -47px;
+        width: calc(100% + 100px);
+    }
+}
+@media (max-width: 1220px) {
+    body.main {
+        img.lines-2 {
+            top: 10%;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    body.main {    
+        img.lines-2 {
+            top: 7%;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    body.main {
+    
+        img.lines, img.lines-2 {
+            display: none;
+        }
+    }
+}
+// advantages section
 .advantages {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    padding: 180px 0 0;
+    padding: 70px 0 0;
     max-width: 960px;
     justify-content: center;
     font-family: $centuryGothicFont;
+    position: relative;
+    overflow: hidden;
 
     div {
         display: flex;
@@ -42,7 +88,7 @@
 
 @media screen and (max-width: 991px) {
     .advantages {
-        padding: 165px 35px 0 35px;
+        padding: 50px 35px 0 35px;
 
         div {
             max-width: 180px;
@@ -51,15 +97,9 @@
     }
 }
 
-@media screen and (max-width: 680px) {
+@media (max-width: 850px) {
     .advantages {
-        padding: 145px 35px 0 35px;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .advantages {
-        padding: 125px 35px 0 35px;
+        padding: 0 35px;
     }
 }
 
@@ -68,7 +108,6 @@
         transition: .5s ease all; 
     }
 }
-
 // end advantages section
 
 // page links
@@ -122,6 +161,12 @@
 @media screen and (max-width: 1100px) {
     .pages-links {
         background-position: -41px 0;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .pages-links {
+        background-image: none;
     }
 }
 
@@ -478,8 +523,7 @@
 
         .slider {
             .slide {
-
-                margin: 0 3px;
+                margin: 0 5px;
 
                 div {
                     display: flex;
@@ -503,8 +547,9 @@
 
                 p {
                     max-width: 454px;
-                    // max-height: 137px;
+                    max-height: 137px;
                     font-size: 12px;
+                    margin: 0 5px;
                     line-height: 20px;
                     color: $active-color;
                 }
@@ -512,6 +557,8 @@
                 span {
                     font-size: 12px;
                     line-height: 20px;
+                    display: inline-block;
+                    margin-top: 10px;
                     color: $light-text-color-2;
                     font-weight: bold;
                 }
@@ -622,6 +669,7 @@
 
 @media screen and (max-width: 680px) {
     .reviews {
+        padding: 100px 30px;
 
         div.first h2 {
             text-align: center;
@@ -630,13 +678,6 @@
         div.last {
             padding-left: 0;
 
-            .slider .slide {
-                text-align: center;
-
-                p {
-                    margin: auto;
-                }
-            }
             .position-absolute {
                 display: none;
             }
@@ -654,9 +695,6 @@
             button {
                 transition: .5s ease all;
             }
-        }
-    
-        div.last {
         }
     }
 }
@@ -757,6 +795,8 @@
     padding: 125px 355px 100px 100px;
     display: flex;
     justify-content: flex-end;
+    position: relative;
+    z-index: 2;
 
     background-image: url('../images/image-gradient.png');
     background-repeat: no-repeat;
@@ -2482,7 +2522,6 @@ body.doctors-page {
                 p {
                     color: $dark-light;
                     max-height: 250px;
-                    overflow-y: auto;
                     font-size: 12px;
                     line-height: 18px;
 

@@ -1,3 +1,43 @@
+body.main {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body.main img.lines {
+  position: absolute;
+  z-index: 0;
+  bottom: 4%;
+  left: -88px;
+  width: calc(100% + 100px);
+}
+
+body.main img.lines-2 {
+  position: absolute;
+  z-index: 0;
+  top: 12%;
+  left: -47px;
+  width: calc(100% + 100px);
+}
+
+@media (max-width: 1220px) {
+  body.main img.lines-2 {
+    top: 10%;
+  }
+}
+
+@media (max-width: 991px) {
+  body.main img.lines-2 {
+    top: 7%;
+  }
+}
+
+@media (max-width: 850px) {
+  body.main img.lines, body.main img.lines-2 {
+    display: none;
+  }
+}
+
 .advantages {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5,12 +45,14 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0 auto;
-  padding: 180px 0 0;
+  padding: 70px 0 0;
   max-width: 960px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   font-family: "Century Gothic";
+  position: relative;
+  overflow: hidden;
 }
 
 .advantages div {
@@ -39,6 +81,12 @@
   font-weight: bold;
 }
 
+@media (max-width: 1440px) {
+  .advantages div h6 {
+    font-size: calc(0.73625rem + 0.3625vw) ;
+  }
+}
+
 .advantages div small {
   font-size: 12px;
   line-height: 16px;
@@ -47,7 +95,7 @@
 
 @media screen and (max-width: 991px) {
   .advantages {
-    padding: 165px 35px 0 35px;
+    padding: 50px 35px 0 35px;
   }
   .advantages div {
     max-width: 180px;
@@ -55,15 +103,9 @@
   }
 }
 
-@media screen and (max-width: 680px) {
+@media (max-width: 850px) {
   .advantages {
-    padding: 145px 35px 0 35px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .advantages {
-    padding: 125px 35px 0 35px;
+    padding: 0 35px;
   }
 }
 
@@ -116,9 +158,9 @@
   text-align: center;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
   .pages-links ul li .button-link {
-    font-size: calc(1.2625rem + 0.15vw) ;
+    font-size: calc(0.7675rem + 0.675vw) ;
   }
 }
 
@@ -138,6 +180,12 @@
 @media screen and (max-width: 1100px) {
   .pages-links {
     background-position: -41px 0;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .pages-links {
+    background-image: none;
   }
 }
 
@@ -191,9 +239,9 @@
   text-transform: uppercase;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
   .about-clinic article.last h2 {
-    font-size: calc(1.3125rem + 0.75vw) ;
+    font-size: calc(0.8175rem + 1.175vw) ;
   }
 }
 
@@ -252,6 +300,15 @@
     font-size: 0.9375rem;
     margin-bottom: 20px;
   }
+}
+
+@media screen and (max-width: 991px) and (max-width: 1440px) {
+  .about-clinic article.last p {
+    font-size: calc(0.72375rem + 0.2375vw) ;
+  }
+}
+
+@media screen and (max-width: 991px) {
   .about-clinic article.last button {
     margin: 40px auto 30px;
   }
@@ -323,9 +380,9 @@
   text-align: center;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
   .articles-promotions .header h2 {
-    font-size: calc(1.3125rem + 0.75vw) ;
+    font-size: calc(0.8175rem + 1.175vw) ;
   }
 }
 
@@ -367,9 +424,9 @@
   margin-top: 20px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
   .articles-promotions .articles h3 {
-    font-size: calc(1.2625rem + 0.15vw) ;
+    font-size: calc(0.7675rem + 0.675vw) ;
   }
 }
 
@@ -469,9 +526,9 @@
   font-weight: bold;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
   .reviews div.first h2 {
-    font-size: calc(1.3125rem + 0.75vw) ;
+    font-size: calc(0.8175rem + 1.175vw) ;
   }
 }
 
@@ -503,7 +560,7 @@
 }
 
 .reviews div.last .slider .slide {
-  margin: 0 3px;
+  margin: 0 5px;
 }
 
 .reviews div.last .slider .slide div {
@@ -530,15 +587,17 @@
   margin-left: 20px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
   .reviews div.last .slider .slide div h5 {
-    font-size: calc(1.2625rem + 0.15vw) ;
+    font-size: calc(0.7675rem + 0.675vw) ;
   }
 }
 
 .reviews div.last .slider .slide p {
   max-width: 454px;
+  max-height: 137px;
   font-size: 12px;
+  margin: 0 5px;
   line-height: 20px;
   color: #af9a68;
 }
@@ -546,6 +605,8 @@
 .reviews div.last .slider .slide span {
   font-size: 12px;
   line-height: 20px;
+  display: inline-block;
+  margin-top: 10px;
   color: #d2d3cd;
   font-weight: bold;
 }
@@ -650,17 +711,14 @@
 }
 
 @media screen and (max-width: 680px) {
+  .reviews {
+    padding: 100px 30px;
+  }
   .reviews div.first h2 {
     text-align: center;
   }
   .reviews div.last {
     padding-left: 0;
-  }
-  .reviews div.last .slider .slide {
-    text-align: center;
-  }
-  .reviews div.last .slider .slide p {
-    margin: auto;
   }
   .reviews div.last .position-absolute {
     display: none;
@@ -699,9 +757,9 @@
   margin-bottom: 30px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
   .about-company h2 {
-    font-size: calc(1.3125rem + 0.75vw) ;
+    font-size: calc(0.8175rem + 1.175vw) ;
   }
 }
 
@@ -782,6 +840,8 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  position: relative;
+  z-index: 2;
   background-image: url("../images/image-gradient.png");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -811,9 +871,9 @@
   text-align: center;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
   .personal-care div h2 {
-    font-size: calc(1.3125rem + 0.75vw) ;
+    font-size: calc(0.8175rem + 1.175vw) ;
   }
 }
 
@@ -913,9 +973,9 @@
   margin: 25px 0;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
   .article-with-slider-left .last > h4 {
-    font-size: calc(1.275rem + 0.3vw) ;
+    font-size: calc(0.78rem + 0.8vw) ;
   }
 }
 
@@ -1116,9 +1176,9 @@ body.clinic-page .main .first h4 {
   margin: 25px 0;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
   body.clinic-page .main .first h4 {
-    font-size: calc(1.275rem + 0.3vw) ;
+    font-size: calc(0.78rem + 0.8vw) ;
   }
 }
 
@@ -1255,9 +1315,9 @@ body.clinic-page .main .last .dark-arrows .position-absolute {
   font-weight: bold;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
   .doctors-section > div section h3 {
-    font-size: calc(1.3125rem + 0.75vw) ;
+    font-size: calc(0.8175rem + 1.175vw) ;
   }
 }
 
@@ -1314,6 +1374,12 @@ body.clinic-page .main .last .dark-arrows .position-absolute {
   line-height: 1;
   color: #af9a68;
   margin: 20px 0 0;
+}
+
+@media (max-width: 1440px) {
+  .doctors-section > div .doctors-slider .slide .hide .name {
+    font-size: calc(0.755rem + 0.55vw) ;
+  }
 }
 
 .doctors-section > div .doctors-slider .slide .hide .post {
@@ -1469,6 +1535,12 @@ body.clinic-page .main .last .dark-arrows .position-absolute {
   font-weight: bold;
 }
 
+@media (max-width: 1440px) {
+  .feedback > div h2 {
+    font-size: calc(0.755rem + 0.55vw) ;
+  }
+}
+
 .feedback > div form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1491,6 +1563,12 @@ body.clinic-page .main .last .dark-arrows .position-absolute {
   font-weight: 400;
   font-size: 0.9375rem;
   outline: none;
+}
+
+@media (max-width: 1440px) {
+  .feedback > div form input {
+    font-size: calc(0.72375rem + 0.2375vw) ;
+  }
 }
 
 .feedback > div form input::-webkit-input-placeholder {
@@ -1740,9 +1818,9 @@ body.clinic-page .main .last .dark-arrows .position-absolute {
   margin-bottom: 45px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
   .prices-section > div .content p {
-    font-size: calc(1.2625rem + 0.15vw) ;
+    font-size: calc(0.7675rem + 0.675vw) ;
   }
 }
 
@@ -1773,6 +1851,12 @@ body.clinic-page .main .last .dark-arrows .position-absolute {
   min-width: max-content;
 }
 
+@media (max-width: 1440px) {
+  .prices-section > div .content > div .name {
+    font-size: calc(0.7425rem + 0.425vw) ;
+  }
+}
+
 .prices-section > div .content > div .line {
   position: relative;
   width: 100%;
@@ -1798,9 +1882,9 @@ body.clinic-page .main .last .dark-arrows .position-absolute {
   min-width: max-content;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
   .prices-section > div .content > div .price {
-    font-size: calc(1.275rem + 0.3vw) ;
+    font-size: calc(0.78rem + 0.8vw) ;
   }
 }
 
@@ -1927,9 +2011,9 @@ body.clinic-page .main .last .dark-arrows .position-absolute {
   margin: 20px 0;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
   .article-tiles .tiles-grid .item h4 {
-    font-size: calc(1.2625rem + 0.15vw) ;
+    font-size: calc(0.7675rem + 0.675vw) ;
   }
 }
 
@@ -2119,9 +2203,9 @@ body.categoryItem-page .article-with-slider-left .last {
   margin: 25px 0;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
   .text-section > div h4 {
-    font-size: calc(1.275rem + 0.3vw) ;
+    font-size: calc(0.78rem + 0.8vw) ;
   }
 }
 
@@ -2157,6 +2241,12 @@ body.categoryItem-page .article-with-slider-left .last {
   color: #0c0d07;
   font-weight: bold;
   margin: 0;
+}
+
+@media (max-width: 1440px) {
+  .text-section > div .info div p {
+    font-size: calc(0.755rem + 0.55vw) ;
+  }
 }
 
 .text-section > div .info div a {
@@ -2204,9 +2294,9 @@ body.categoryItem-page .article-with-slider-left .last {
   font-weight: bold;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
   .text-section > div .info div span {
-    font-size: calc(1.275rem + 0.3vw) ;
+    font-size: calc(0.78rem + 0.8vw) ;
   }
 }
 
@@ -2511,9 +2601,9 @@ body.doctors-page .article-with-slider-left .last .header h4 {
   font-weight: normal;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
   body.doctors-page .article-with-slider-left .last .header h4 {
-    font-size: calc(1.3125rem + 0.75vw) ;
+    font-size: calc(0.8175rem + 1.175vw) ;
   }
 }
 
@@ -2618,7 +2708,6 @@ body.doctors-page .article-with-slider-left .last .article span {
 body.doctors-page .article-with-slider-left .last .article p {
   color: #212429;
   max-height: 250px;
-  overflow-y: auto;
   font-size: 12px;
   line-height: 18px;
 }

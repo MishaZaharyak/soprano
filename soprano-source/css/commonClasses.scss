@@ -31,6 +31,7 @@ body {
 }
 
 .p-scrollbar {
+    overflow-y: auto;
     padding-right: 10px;
 
     &::-webkit-scrollbar {
@@ -99,6 +100,8 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 40px 100px 30px 100px;
+    position: relative;
+    z-index: 2;
 
     span {
         color: $dark-light;

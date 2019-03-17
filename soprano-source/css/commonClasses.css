@@ -1,8 +1,4 @@
 body {
-  font-size: 0.875rem;
-}
-
-body {
   font-family: "Century Gothic";
 }
 
@@ -32,6 +28,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .p-scrollbar {
+  overflow-y: auto;
   padding-right: 10px;
 }
 
@@ -55,6 +52,12 @@ body::-webkit-scrollbar-thumb {
   display: inline-block;
 }
 
+@media (max-width: 1440px) {
+  .custom-span {
+    font-size: calc(0.705rem + 0.05vw) ;
+  }
+}
+
 .h1-breadcrum h1 {
   font-size: 3.125rem;
   color: #d2d3cd;
@@ -62,9 +65,9 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
   .h1-breadcrum h1 {
-    font-size: calc(1.4375rem + 2.25vw) ;
+    font-size: calc(0.9425rem + 2.425vw) ;
   }
 }
 
@@ -110,6 +113,8 @@ body::-webkit-scrollbar-thumb {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 40px 100px 30px 100px;
+  position: relative;
+  z-index: 2;
 }
 
 .contact-info span {
@@ -126,6 +131,12 @@ body::-webkit-scrollbar-thumb {
   font-weight: bold;
   -webkit-transition: .5s ease color;
   transition: .5s ease color;
+}
+
+@media (max-width: 1440px) {
+  .contact-info span {
+    font-size: calc(0.705rem + 0.05vw) ;
+  }
 }
 
 .contact-info span::after {
@@ -158,6 +169,12 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
   -webkit-transition: .5s ease color;
   transition: .5s ease color;
+}
+
+@media (max-width: 1440px) {
+  .contact-info button {
+    font-size: calc(0.705rem + 0.05vw) ;
+  }
 }
 
 .contact-info button:hover {
@@ -397,9 +414,9 @@ body::-webkit-scrollbar-thumb {
   z-index: 2;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
   .thank-you .text h1 {
-    font-size: calc(1.425rem + 2.1vw) ;
+    font-size: calc(0.93rem + 2.3vw) ;
   }
 }
 
@@ -430,9 +447,9 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-@media screen and (max-width: 500px) and (max-width: 1200px) {
+@media screen and (max-width: 500px) and (max-width: 1440px) {
   .thank-you .text h1 {
-    font-size: calc(1.28125rem + 0.375vw) ;
+    font-size: calc(0.78625rem + 0.8625vw) ;
   }
 }
 
@@ -478,6 +495,12 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 18px;
 }
 
+@media (max-width: 1440px) {
+  .registration > .register-cont .registration-form h4 {
+    font-size: calc(0.755rem + 0.55vw) ;
+  }
+}
+
 .registration > .register-cont .registration-form form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -505,6 +528,12 @@ body::-webkit-scrollbar-thumb {
   font-weight: 400;
   font-size: 0.9375rem;
   outline: none;
+}
+
+@media (max-width: 1440px) {
+  .registration > .register-cont .registration-form form input {
+    font-size: calc(0.72375rem + 0.2375vw) ;
+  }
 }
 
 .registration > .register-cont .registration-form form input::-webkit-input-placeholder {

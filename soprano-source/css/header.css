@@ -1,7 +1,11 @@
-header.header {
-  position: relative;
+header {
+  background-image: url("../images/Path1.png");
+  background-repeat: no-repeat;
+  background-position: -5px -100px;
+  background-size: calc(100% + 10px) calc(100% + 100px);
   font-family: "Century Gothic";
-  padding: 91px 0 0;
+  position: relative;
+  padding: 91px 0 150px;
 }
 
 header .header-socials {
@@ -89,9 +93,9 @@ header .slider .slide .text h1 {
   font-size: 3.125rem;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
   header .slider .slide .text h1 {
-    font-size: calc(1.4375rem + 2.25vw) ;
+    font-size: calc(0.9425rem + 2.425vw) ;
   }
 }
 
@@ -104,6 +108,12 @@ header .slider .slide .text p {
   font-size: 0.8125rem;
   line-height: 16px;
   font-weight: 500;
+}
+
+@media (max-width: 1440px) {
+  header .slider .slide .text p {
+    font-size: calc(0.71125rem + 0.1125vw) ;
+  }
 }
 
 header .slider .slide .buttonGroupe {
@@ -194,6 +204,8 @@ header .slider .slick-new-next:focus {
 
 header .contact-info {
   padding: 25px 100px 0 100px;
+  position: relative;
+  z-index: 2;
 }
 
 header .contact-info span {
@@ -223,7 +235,7 @@ header .contact-info button::after {
 .contact-form-section {
   position: absolute;
   right: 0;
-  top: 29%;
+  top: 24%;
   height: 380px;
   z-index: 1;
   width: 360px;
@@ -237,6 +249,12 @@ header .contact-info button::after {
   font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 18px;
+}
+
+@media (max-width: 1440px) {
+  .contact-form-section h4 {
+    font-size: calc(0.755rem + 0.55vw) ;
+  }
 }
 
 .contact-form-section form {
@@ -266,6 +284,12 @@ header .contact-info button::after {
   font-weight: 400;
   font-size: 0.9375rem;
   outline: none;
+}
+
+@media (max-width: 1440px) {
+  .contact-form-section form input {
+    font-size: calc(0.72375rem + 0.2375vw) ;
+  }
 }
 
 .contact-form-section form input::-webkit-input-placeholder {
@@ -349,6 +373,12 @@ header .contact-info button::after {
   -webkit-transition: .5s ease all;
   transition: .5s ease all;
   border-radius: 2px;
+}
+
+@media (max-width: 1440px) {
+  .contact-form-section form button {
+    font-size: calc(0.71125rem + 0.1125vw) ;
+  }
 }
 
 .contact-form-section form button:hover {
@@ -660,9 +690,9 @@ header.page-not-found .text h1 {
   margin-bottom: 20px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
   header.page-not-found .text h1 {
-    font-size: calc(1.4375rem + 2.25vw) ;
+    font-size: calc(0.9425rem + 2.425vw) ;
   }
 }
 
@@ -672,6 +702,12 @@ header.page-not-found .text p {
   letter-spacing: 0px;
   line-height: 1;
   margin-bottom: 0;
+}
+
+@media (max-width: 1440px) {
+  header.page-not-found .text p {
+    font-size: calc(0.7175rem + 0.175vw) ;
+  }
 }
 
 header.page-not-found .text .contact-info {
@@ -746,9 +782,6 @@ header.page-not-found .text .contact-info button:nth-child(2) {
 
 header.article-page {
   background-image: url("../images/black-sm-rect-flip.png");
-  background-repeat: no-repeat;
-  background-position: -5px -100px;
-  background-size: calc(100% + 10px) calc(100% + 100px);
   padding: 145px 50px 70px;
   font-family: "Century Gothic";
   text-align: center;
@@ -763,9 +796,6 @@ header.article-page {
 
 header.clinic-page {
   background-image: url("../images/black-sm-path.png");
-  background-repeat: no-repeat;
-  background-position: -5px -100px;
-  background-size: calc(100% + 10px) calc(100% + 100px);
   padding: 145px 100px 150px;
   font-family: "Century Gothic";
   text-align: center;
@@ -880,9 +910,9 @@ header.contact-page .contact-info a.big {
   margin-bottom: 10px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
   header.contact-page .contact-info a.big {
-    font-size: calc(1.28125rem + 0.375vw) ;
+    font-size: calc(0.78625rem + 0.8625vw) ;
   }
 }
 
@@ -1100,9 +1130,9 @@ header.services-page .services > div .content button {
   text-transform: none;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
   header.services-page .services > div .content button {
-    font-size: calc(1.2625rem + 0.15vw) ;
+    font-size: calc(0.7675rem + 0.675vw) ;
   }
 }
 
@@ -1414,6 +1444,12 @@ header.services-category-page .text p {
   margin-bottom: 0;
 }
 
+@media (max-width: 1440px) {
+  header.services-category-page .text p {
+    font-size: calc(0.7175rem + 0.175vw) ;
+  }
+}
+
 header.services-category-page .text .contact-info {
   padding: 35px 0 0;
   -webkit-box-pack: start;
@@ -1642,6 +1678,12 @@ header.doctors-page .doctors-header .doctors-slider .slide .hide .name {
   line-height: 1;
   color: #af9a68;
   margin: 20px 0 0;
+}
+
+@media (max-width: 1440px) {
+  header.doctors-page .doctors-header .doctors-slider .slide .hide .name {
+    font-size: calc(0.755rem + 0.55vw) ;
+  }
 }
 
 header.doctors-page .doctors-header .doctors-slider .slide .hide .post {
