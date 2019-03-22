@@ -1,6 +1,6 @@
-$(document).ready(() => {
+$(document).ready(function() {
 
-  const sliderOptions = {
+  var sliderOptions = {
     autoplay:false,
     arrows: true,
     autoplaySpeed:3000,
@@ -13,11 +13,10 @@ $(document).ready(() => {
     cssEase: 'linear',
   }
 
-  const sliderBig = $('.slider.big');
+  var sliderBig = $('.slider.big');
 
   if(sliderBig.length) {
-    $(sliderBig).slick({
-      ...sliderOptions,
+    $(sliderBig).slick(Object.assign(sliderOptions, {
       prevArrow: $('.slick-new-prev.big'),
       nextArrow: $('.slick-new-next.big'),
       responsive:[
@@ -25,158 +24,158 @@ $(document).ready(() => {
           arrows: false
         }}
       ],
-    });
+    }));
   }
  
-  const sliderSmall = $('.slider.small-s')
+  var sliderSmall = $('.slider.small-s')
 
   if (sliderSmall.length) {
-    $(sliderSmall).slick({
-      ...sliderOptions,
-      fade: true,
-      prevArrow: $('.slick-new-prev.small'),
-      nextArrow: $('.slick-new-next.small'),
-      responsive:[
-        {breakpoint:992,settings:{
-          centerMode: true,
-          centerPadding: '80px',
-        }},
-        {breakpoint:681,settings:{
-          arrows: false,
-          fade: false
-        }}
-      ],
-    });
+    $(sliderSmall).slick(Object.assign(sliderOptions,
+      {
+        fade: true,
+        prevArrow: $('.slick-new-prev.small'),
+        nextArrow: $('.slick-new-next.small'),
+        responsive:[
+          {breakpoint:992,settings:{
+            centerMode: true,
+            centerPadding: '80px',
+          }},
+          {breakpoint:681,settings:{
+            arrows: false,
+            fade: false
+          }}
+        ],
+      }));
   }
  
-  const reviewSlider = $(".reviews .slider")
+  var reviewSlider = $(".reviews .slider")
 
   if (reviewSlider.length) {
-    $(reviewSlider).slick({
-      ...sliderOptions,
-      fade: true,
-      prevArrow: $('.reviews .slick-new-prev'),
-      nextArrow: $('.reviews .slick-new-next'),
-      responsive:[
-        {breakpoint:681,settings:{
-          arrows: false,
-          fade: false
-        }}
-      ],
-    })
+    $(reviewSlider).slick(Object.assign(sliderOptions,
+      {
+        fade: true,
+        prevArrow: $('.reviews .slick-new-prev'),
+        nextArrow: $('.reviews .slick-new-next'),
+        responsive:[
+          {breakpoint:681,settings:{
+            arrows: false,
+            fade: false
+          }}
+        ],
+      }))
   }
 
-  const doctorsSlider = $('.doctors-slider');
+  var doctorsSlider = $('.doctors-slider');
 
   if (doctorsSlider.length) {
     $(doctorsSlider).on('init', function(e, slick) {
       showSlideInfo(slick);
     })
 
-    $(doctorsSlider).slick({
-      ...sliderOptions,
-      slidesToShow:5,
-      slidesToScroll:1,
-      infinite: false,
-      dots: false,
-      prevArrow: $(doctorsSlider).parent().find('.slick-new-prev.small'),
-      nextArrow: $(doctorsSlider).parent().find('.slick-new-next.small'),
-      responsive:[
-        {
-          breakpoint:1261,
-          settings: {
-            slidesToShow:4
-          }
-        },
-        {
-          breakpoint:1051,
-          settings: {
-            slidesToShow:3
-          }
-        },
-        {
-          breakpoint:851,
-          settings: {
-            slidesToShow:3,
-            arrows: false
-          }
-        },
-        {
-          breakpoint:701,
-          settings: {
-            slidesToShow:2,
-            arrows: false
-          }
-        },
-        {
-          breakpoint:501,
-          settings: {
-            slidesToShow:1,
-            arrows: false
-          }
-        }
-      ],
-    })
-  }
-
-  const experienceSlider = $('.experience-slider');
-
-  if (experienceSlider.length) {
-    $(experienceSlider).each(function() {
-      $(this).slick({
-        ...sliderOptions,
-        slidesToShow:4,
+    $(doctorsSlider).slick(Object.assign(sliderOptions,
+      {
+        slidesToShow:5,
         slidesToScroll:1,
         infinite: false,
         dots: false,
-        adaptiveHeight: true,
-        prevArrow: $(this).parent().find('.slick-new-prev.small'),
-        nextArrow: $(this).parent().find('.slick-new-next.small'),
+        prevArrow: $(doctorsSlider).parent().find('.slick-new-prev.small'),
+        nextArrow: $(doctorsSlider).parent().find('.slick-new-next.small'),
         responsive:[
           {
-            breakpoint:1301,
-            settings: {
-              slidesToShow:3
-            }
-          },
-          {
-            breakpoint:992,
+            breakpoint:1261,
             settings: {
               slidesToShow:4
             }
           },
           {
-            breakpoint:801,
+            breakpoint:1051,
             settings: {
               slidesToShow:3
             }
           },
           {
-            breakpoint:769,
+            breakpoint:851,
             settings: {
               slidesToShow:3,
-              arrows: false,
+              arrows: false
+            }
+          },
+          {
+            breakpoint:701,
+            settings: {
+              slidesToShow:2,
+              arrows: false
             }
           },
           {
             breakpoint:501,
             settings: {
-              slidesToShow:2,
-              arrows: false,
+              slidesToShow:1,
+              arrows: false
             }
           }
         ],
-      })
+      }))
+  }
+
+  var experienceSlider = $('.experience-slider');
+
+  if (experienceSlider.length) {
+    $(experienceSlider).each(function() {
+      $(this).slick(Object.assign(sliderOptions,
+        {
+          slidesToShow:4,
+          slidesToScroll:1,
+          infinite: false,
+          dots: false,
+          adaptiveHeight: true,
+          prevArrow: $(this).parent().find('.slick-new-prev.small'),
+          nextArrow: $(this).parent().find('.slick-new-next.small'),
+          responsive:[
+            {
+              breakpoint:1301,
+              settings: {
+                slidesToShow:3
+              }
+            },
+            {
+              breakpoint:992,
+              settings: {
+                slidesToShow:4
+              }
+            },
+            {
+              breakpoint:801,
+              settings: {
+                slidesToShow:3
+              }
+            },
+            {
+              breakpoint:769,
+              settings: {
+                slidesToShow:3,
+                arrows: false,
+              }
+            },
+            {
+              breakpoint:501,
+              settings: {
+                slidesToShow:2,
+                arrows: false,
+              }
+            }
+          ],
+        }))
     })
   }
 })
 
 function showSlideInfo(slick) {
-  const slides = slick.$slider.find('.slide');
-  let images = slides.find('img');
+  var slides = slick.$slider.find('.slide');
+  var images = slides.find('img');
 
-  const prev = slick.$prevArrow;
-  const next = slick.$nextArrow;
+  var prev = slick.$prevArrow;
+  var next = slick.$nextArrow;
 
   slides.eq(0).addClass('show');
 
@@ -184,7 +183,7 @@ function showSlideInfo(slick) {
   if (prev || next) {
     prev.on('click', function(e) {
       e.preventDefault();
-      let oldSlide = slides.filter('.show').eq(0);
+      var oldSlide = slides.filter('.show').eq(0);
 
       if (slides.index(oldSlide) === 0) {
         return
@@ -200,7 +199,7 @@ function showSlideInfo(slick) {
   
     next.on('click', function(e) {
       e.preventDefault();
-      let oldSlide = slides.filter('.show').eq(0);
+      var oldSlide = slides.filter('.show').eq(0);
   
       if (slides.index(oldSlide) === slides.length - 1) {
         return
@@ -237,7 +236,7 @@ var closeWindow;
 
 // open modal window and close it if autoclose set to true
 function openModalWindow(selector, autoclose=false) {
-  const modalWindow = document.querySelector(selector);
+  var modalWindow = document.querySelector(selector);
 
   if (autoclose) clearInterval(closeWindow);
 
@@ -259,7 +258,7 @@ function openModalWindow(selector, autoclose=false) {
 
 // close modal window 
 function closeModalWindow(selector) {
-  const modal = document.querySelector(selector);
+  var modal = document.querySelector(selector);
   modal.classList.remove('open-active');
 
   setTimeout(function() {
@@ -271,11 +270,11 @@ function closeModalWindow(selector) {
 }
 
 function fixedMenu() {
-  const windowScroll = window.scrollY;
-  const menu = document.querySelector('.topMenu');
-  const openButton = menu.querySelector('.navbar-toggler');
-  const topOfMenu = menu.offsetTop;
-  const windowWidth = window.innerWidth; 
+  var windowScroll = window.scrollY;
+  var menu = document.querySelector('.topMenu');
+  var openButton = menu.querySelector('.navbar-toggler');
+  var topOfMenu = menu.offsetTop;
+  var windowWidth = window.innerWidth; 
 
   if (windowScroll > topOfMenu) {
       menu.classList.add('fixedNav');
@@ -310,10 +309,10 @@ $(document).ready(function() {
   // menu button animation
 	$('#nav-icon3').on('click', function(e){
     e.preventDefault();
-    const menu = $(this).closest('.topMenu').get(0);
-    const hasClass = $(menu).hasClass('fixedNav');
-    const windowScroll = window.scrollY;
-    const topOfMenu = menu.offsetTop;
+    var menu = $(this).closest('.topMenu').get(0);
+    var hasClass = $(menu).hasClass('fixedNav');
+    var windowScroll = window.scrollY;
+    var topOfMenu = menu.offsetTop;
 
     if (windowScroll <= topOfMenu && !hasClass) {
       menu.classList.add('fixedNav');
@@ -327,28 +326,36 @@ $(document).ready(function() {
 
 // reset active link when click on brande
 $('.navbar-brand').on('click', function(e) {
-  $('.navigation a').each((i, el) => $(el).parent().removeClass('active'))
+  $('.navigation a').each(function(i, el) {
+    $(el).parent().removeClass('active')
+  })
 })
 
 // active language
-$(document).on('click', '.languages a', e => {
-  $('.languages a').each((i, el) => $(el).parent().removeClass('active'))
+$(document).on('click', '.languages a', function(e) {
+  $('.languages a').each(function(i, el) {
+    $(el).parent().removeClass('active')
+  })
   $(e.target).parent().addClass('active')
 })
 // active link
-$(document).on('click', '.navigation a', e => {
-  $('.navigation a').each((i, el) => $(el).parent().removeClass('active'))
+$(document).on('click', '.navigation a', function(e) {
+  $('.navigation a').each(function(i, el) {
+    $(el).parent().removeClass('active')
+  })
   $(e.target).parent().addClass('active')
 });
 
 // pagination active page
-$(document).on('click', '.pagination a:not(.nav-arrow)', e => {
-  $('.pagination a').each((i, el) => $(el).parent().removeClass('active'))
+$(document).on('click', '.pagination a:not(.nav-arrow)', function(e) {
+  $('.pagination a').each(function(i, el) {
+    $(el).parent().removeClass('active')
+  })
   $(e.target).parent().addClass('active')
 });
 
 // useful page tiles
-const tiles = $('.tiles');
+var tiles = $('.tiles');
 
 if (tiles.length) {
   $(tiles).gridalicious({
