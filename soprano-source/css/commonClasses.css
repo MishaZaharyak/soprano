@@ -276,8 +276,9 @@ body::-webkit-scrollbar-thumb {
   height: 18px;
   border: none;
   position: absolute;
+  padding: 0;
   top: 19px;
-  right: 4px;
+  right: 6px;
   z-index: 1;
   cursor: pointer;
 }
@@ -298,6 +299,7 @@ body::-webkit-scrollbar-thumb {
   right: -18px;
   z-index: 1;
   cursor: pointer;
+  padding: 0;
 }
 
 .dark-arrows .slick-new-next:focus {

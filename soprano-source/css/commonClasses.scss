@@ -222,8 +222,9 @@ body {
         height: 18px;
         border: none;
         position: absolute;
+        padding: 0;
         top: 19px;
-        right: 4px;
+        right: 6px;
         z-index: 1;
         cursor: pointer;
 
@@ -243,6 +244,7 @@ body {
         right: -18px;
         z-index: 1;
         cursor: pointer;
+        padding: 0;
 
         &:focus {
             outline: none;

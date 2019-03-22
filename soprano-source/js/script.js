@@ -327,26 +327,22 @@ $(document).ready(function() {
 
 // reset active link when click on brande
 $('.navbar-brand').on('click', function(e) {
-  // e.preventDefault();
   $('.navigation a').each((i, el) => $(el).parent().removeClass('active'))
 })
 
 // active language
 $(document).on('click', '.languages a', e => {
-  e.preventDefault();
   $('.languages a').each((i, el) => $(el).parent().removeClass('active'))
   $(e.target).parent().addClass('active')
 })
 // active link
 $(document).on('click', '.navigation a', e => {
-  // e.preventDefault();
   $('.navigation a').each((i, el) => $(el).parent().removeClass('active'))
   $(e.target).parent().addClass('active')
 });
 
 // pagination active page
 $(document).on('click', '.pagination a:not(.nav-arrow)', e => {
-  e.preventDefault();
   $('.pagination a').each((i, el) => $(el).parent().removeClass('active'))
   $(e.target).parent().addClass('active')
 });
