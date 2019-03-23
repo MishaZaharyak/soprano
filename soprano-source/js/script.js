@@ -51,8 +51,21 @@ $(document).ready(function() {
   var reviewSlider = $(".reviews .slider")
 
   if (reviewSlider.length) {
-    $(reviewSlider).slick(Object.assign(sliderOptions,
-      {
+    // $(reviewSlider).slick(Object.assign(sliderOptions,
+    //   {
+    //     fade: true,
+    //     prevArrow: $('.reviews .slick-new-prev'),
+    //     nextArrow: $('.reviews .slick-new-next'),
+    //     responsive:[
+    //       {breakpoint:681,settings:{
+    //         arrows: false,
+    //         fade: false
+    //       }}
+    //     ],
+    //   }))
+
+    $(reviewSlider).slick({...sliderOptions,
+      
         fade: true,
         prevArrow: $('.reviews .slick-new-prev'),
         nextArrow: $('.reviews .slick-new-next'),
@@ -62,7 +75,7 @@ $(document).ready(function() {
             fade: false
           }}
         ],
-      }))
+      })
   }
 
   var doctorsSlider = $('.doctors-slider');
@@ -220,7 +233,7 @@ function showSlideInfo(slick) {
     ['click', 'touchstart'].forEach(function(clickEvent) {
       el.addEventListener(clickEvent, function(event) {
         event.preventDefault();
-        let oldSlide = slides.filter('.show').eq(0);
+        var oldSlide = slides.filter('.show').eq(0);
 
         oldSlide.removeClass('show')
 
@@ -390,4 +403,4 @@ function initMap() {
               text: 'Львів вул. І. Рутковича 11а'
           }
       });
-  }
+}
