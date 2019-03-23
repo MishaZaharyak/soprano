@@ -282,134 +282,53 @@
 .footer.contact-page {
   background-image: url("../images/Layer0.png"), url("../images/Path49.png");
   background-repeat: no-repeat;
-  background-position: -49px 287px, 0 0;
+  background-position: -49px 255px, 0 0;
   background-size: calc(100% + 80px) auto, calc(100% + 10px) 100%;
-  padding-top: 160px;
-  overflow: visible;
-}
-
-.footer.contact-page nav {
-  margin-top: 150px;
-}
-
-.footer.contact-page .map-cont {
-  margin: -400px 0 0;
-  display: block;
-  max-width: 100%;
-  text-align: center;
-  padding: 0 50px;
-  max-height: 530px;
-  position: relative;
-}
-
-.footer.contact-page .map-cont div {
-  position: absolute;
-  bottom: 30%;
-  right: 45%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.footer.contact-page .map-cont div p.text {
-  background-color: #af9a68;
-  color: #212429;
-  font-size: 12px;
-  line-height: 13px;
-  font-weight: bold;
-  text-align: center;
-  margin: 0 0 10px;
-  padding: 10px;
-}
-
-.footer.contact-page .map-cont img.map {
-  max-width: 1230px;
-  width: 100%;
-}
-
-.footer.contact-page .rotate-lines {
-  z-index: 0;
-  position: absolute;
-  width: calc(100% + 200px);
-  top: 230px;
-  left: -52px;
-  -webkit-transform: rotate(-2deg);
-          transform: rotate(-2deg);
+  padding-top: 380px;
+  overflow: hidden;
 }
 
 .footer.contact-page .contact-info {
   z-index: 5;
 }
 
+#map {
+  max-height: 500px;
+  height: 100vh;
+  width: 80%;
+  margin: auto;
+  position: absolute !important;
+  z-index: 2;
+  top: 55%;
+  left: 10%;
+}
+
 @media screen and (max-width: 1150px) {
   .footer.contact-page {
-    background-position: -49px 228px, 0 0;
-  }
-  .footer.contact-page .map-cont div {
-    right: 44%;
+    background-position: -49px 320px, 0 0;
   }
 }
 
 @media screen and (max-width: 991px) {
   .footer.contact-page {
-    background-position: -49px 145px, 0 0;
+    padding-top: 200px;
+    background-image: none, url("../images/Path49.png");
   }
-  .footer.contact-page .map-cont div {
-    right: 43%;
+  #map {
+    max-height: 350px;
+    width: 100%;
+    margin: auto;
+    left: 0;
   }
 }
 
 @media screen and (max-width: 768px) {
   .footer.contact-page {
-    padding-top: 40px;
-    background-image: none, url("../images/Path49.png");
+    padding-top: 100px;
   }
-  .footer.contact-page .map-cont {
-    margin: 0;
-    padding: 0;
-  }
-  .footer.contact-page .map-cont div {
-    right: 41%;
-  }
-  .footer.contact-page .map-cont div .point {
-    max-width: 17px;
-  }
-  .footer.contact-page .map-cont div p.text {
-    padding: 5px;
-  }
-  .footer.contact-page nav {
-    margin-top: 70px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .footer.contact-page .map-cont div {
-    right: 39%;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .footer.contact-page .map-cont div {
-    right: 37%;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .footer.contact-page .map-cont div {
-    right: 33%;
-  }
-}
-
-@media screen and (max-width: 350px) {
-  .footer.contact-page .map-cont div {
-    right: 30%;
+  #map {
+    top: 0;
+    position: relative !important;
   }
 }
 
@@ -418,25 +337,9 @@
     -webkit-transition: .5s ease padding, .5s ease background-position;
     transition: .5s ease padding, .5s ease background-position;
   }
-  .footer.contact-page .map-cont {
-    -webkit-transition: .5s ease padding, .5s ease margin;
-    transition: .5s ease padding, .5s ease margin;
-  }
-  .footer.contact-page .map-cont div {
-    -webkit-transition: .5s ease right;
-    transition: .5s ease right;
-  }
-  .footer.contact-page .map-cont div .point {
-    -webkit-transition: .5s ease width;
-    transition: .5s ease width;
-  }
-  .footer.contact-page .map-cont div p.text {
-    -webkit-transition: .5s ease padding;
-    transition: .5s ease padding;
-  }
-  .footer.contact-page nav {
-    -webkit-transition: .5s ease margin;
-    transition: .5s ease margin;
+  #map {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
   }
 }
 

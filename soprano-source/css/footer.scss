@@ -259,158 +259,65 @@
 .footer.contact-page {
     background-image: url('../images/Layer0.png'), url('../images/Path49.png');
     background-repeat: no-repeat;
-    background-position: -49px 287px, 0 0;
+    background-position: -49px 255px, 0 0;
     background-size: calc(100% + 80px) auto, calc(100% + 10px) 100%;
-    padding-top: 160px;
-    overflow: visible;
+    padding-top: 380px;
+    overflow: hidden;
 
-    nav {
-        margin-top: 150px;
-    }
-
-    .map-cont {
-        margin: -400px 0 0;
-        display: block;
-        max-width: 100%;
-        text-align: center;
-        padding: 0 50px;
-        max-height: 530px;
-        position: relative;
-
-        div {
-            position: absolute;
-            bottom: 30%;
-            right: 45%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            p.text {
-                background-color: $active-color;
-                color: $dark-light;
-                font-size: 12px;
-                line-height: 13px;
-                font-weight: bold;
-                text-align: center;
-                margin: 0 0 10px;
-                padding: 10px;
-            }
-        }
-
-        img.map {
-            max-width: 1230px;
-            width: 100%;            
-        }
-    }
-
-    .rotate-lines {
-        z-index: 0;
-        position: absolute;
-        width: calc(100% + 200px);
-        top: 230px;
-        left: -52px;
-        transform: rotate(-2deg);
-    }
     .contact-info {
         z-index: 5;
     }
 }
 
+#map {
+    max-height: 500px;
+    height: 100vh;
+    width: 80%;
+    margin: auto;
+    position: absolute !important;
+    z-index: 2;
+    top: 55%;
+    left: 10%;
+}
+
 @media screen and (max-width: 1150px) {
     .footer.contact-page {
-        background-position: -49px 228px, 0 0;
-
-        .map-cont div {
-            right: 44%;
-        }
+        background-position: -49px 320px, 0 0;
     }
 }
 
 @media screen and (max-width: 991px) {
     .footer.contact-page {
-        background-position: -49px 145px, 0 0;
+        padding-top: 200px;
+        background-image: none, url('../images/Path49.png');
+    }
 
-        .map-cont div {
-            right: 43%;
-        }
+    #map {
+        max-height: 350px;
+        width: 100%;
+        margin: auto;
+        left: 0;
     }
 }
 
 @media screen and (max-width: 768px) {
     .footer.contact-page {
-        padding-top: 40px;
-        background-image: none, url('../images/Path49.png');
-
-        .map-cont {
-            margin: 0;
-            padding: 0;
-
-            div {
-                right: 41%;
-
-                .point {
-                    max-width: 17px;
-                }
-
-                p.text {
-                    padding: 5px;
-                }
-            }
-        }
-
-        nav {
-            margin-top: 70px;
-        }
+        padding-top: 100px;
     }
-}
 
-@media screen and (max-width: 600px) {
-    .footer.contact-page .map-cont div {
-        right: 39%;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .footer.contact-page .map-cont div {
-        right: 37%;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .footer.contact-page .map-cont div {
-        right: 33%;
-    }
-}
-
-@media screen and (max-width: 350px) {
-    .footer.contact-page .map-cont div {
-        right: 30%;
+    #map {
+        top: 0;
+        position: relative !important;
     }
 }
 
 @media screen and (min-width: 320px) {
     .footer.contact-page {
         transition: .5s ease padding, .5s ease background-position;
+    }
 
-        .map-cont {
-            transition: .5s ease padding, .5s ease margin;
-
-            div {
-                transition: .5s ease right;
-
-                .point {
-                    transition: .5s ease width;
-                }
-
-                p.text {
-                    transition: .5s ease padding;
-                }
-            }
-        }
-
-        nav {
-            transition: .5s ease margin;
-        }
+    #map {
+        transition: all .5s ease;
     }
 }
 // end contact page

@@ -945,6 +945,7 @@ header.contact-page .contact-info button::after {
 @media (max-width: 768px) {
   header.contact-page {
     padding: 145px 30px 70px;
+    background-size: calc(100% + 10px) calc(100% + 190px);
   }
   header.contact-page section {
     margin-left: 0;

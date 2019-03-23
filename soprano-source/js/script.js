@@ -365,3 +365,29 @@ if (tiles.length) {
     animate: true,
   });
 }
+
+// google map
+function initMap() {
+  var uluru = {lat: 49.827875, lng: 24.033106};
+  var  icon = {
+      url: './soprano-source/images/Group299.png',
+      size: new google.maps.Size(28, 38),
+      scaledSize: new google.maps.Size(28, 38),
+      labelOrigin: new google.maps.Point(20, -20),
+      className: 'name'
+  };
+
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 16, center: uluru});
+      var marker = new google.maps.Marker({
+          position: uluru, 
+          icon: icon,
+          map: map,
+          label: { 
+              color: '#0c0d07', 
+              fontWeight: '600', 
+              fontSize: '14px', 
+              text: 'Львів вул. І. Рутковича 11а'
+          }
+      });
+  }
